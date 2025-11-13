@@ -5,7 +5,6 @@ export default function Finding() {
     <section className="py-20 bg-[#F4F4F2]">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between items-center">
-          {/* Text Content */}
           <div className="col-span-1 w-full">
             <span className="text-[17px] text-primary font-normal font-sans">
               NOT JUST A STAFFING AGENCY
@@ -26,7 +25,6 @@ export default function Finding() {
             </p>
           </div>
 
-          {/* Images */}
           <div className="col-span-1 flex lg:flex-row flex-col md:flex-col justify-center items-center space-x-10">
             <div className="p-[4px] w-[200px] max-h-[235px] animate-border bg-gradient-to-r from-primary via-transparent to-primary">
               <div className="bg-white w-[200px]">
@@ -39,7 +37,6 @@ export default function Finding() {
             </div>
 
             <div className="flex flex-col space-y-10">
-              {/* First animated border image */}
               <div className="p-[3px] rounded-full animate-border bg-gradient-to-r from-[#dd0525] via-transparent to-[#dd0525]">
                 <img
                   src="/images/find2.png"
@@ -48,7 +45,6 @@ export default function Finding() {
                 />
               </div>
 
-              {/* Second animated border image */}
               <div className="p-[3px] rounded-full animate-border bg-gradient-to-r from-[#dd0525] via-transparent to-[#dd0525]">
                 <img
                   src="/images/find3.png"

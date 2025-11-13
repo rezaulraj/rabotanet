@@ -13,7 +13,6 @@ export default function Footer() {
   return (
     <footer className="bg-[#0f2529] text-white py-12">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-        {/* Left Section */}
         <div>
           <h2 className="text-2xl font-bold">
             RabotaNet Recruitment <span className="text-primary">®</span>
@@ -33,7 +32,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Middle Section */}
         <div>
           <h3 className="text-lg font-bold mb-3">Contact us</h3>
           <p className="flex items-center gap-2">
@@ -43,7 +41,6 @@ export default function Footer() {
             </a>
           </p>
 
-          {/* Social icons */}
           <div className="flex space-x-3 mt-6">
             <a
               href="https://www.facebook.com/RabotaNet00"
@@ -96,7 +93,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Right Section */}
         <div>
           <h3 className="text-lg font-bold mb-3">Links</h3>
           <ul className="space-y-2">
@@ -123,7 +119,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Office Section */}
         <div className="space-y-5">
           <h3 className="text-lg font-bold mb-3">Office</h3>
 
@@ -189,7 +184,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Section */}
       <div className="border-t border-gray-600 mt-10 pt-6 text-sm text-gray-400 text-center container max-w-7xl mx-auto px-6">
         <p className="text-sm text-center">
           Copyright © 2025 RabotaNet Recruitment

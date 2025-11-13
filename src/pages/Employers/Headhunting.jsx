@@ -5,7 +5,6 @@ export default function Headhunting() {
     <section className="py-20 bg-[#F4F4F2]">
       <div className="container mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-12">
-          {/* Text Section */}
           <div>
             <div className="flex flex-col justify-center items-start">
               <span className="text-[17px] text-primary font-normal font-sans">
@@ -25,7 +24,6 @@ export default function Headhunting() {
             </div>
           </div>
 
-          {/* Image Section */}
           <div className="flex justify-center items-center">
             <div>
               <div className="relative p-[3px] rounded-4xl animate-border bg-gradient-to-r from-primary via-transparent to-primary">

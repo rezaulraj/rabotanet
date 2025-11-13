@@ -27,12 +27,11 @@ export default function Brand() {
       setCurrentIndex((prevIndex) =>
         prevIndex === brand.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // slide every 3s
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // show 4 brands per slide
   const visibleBrands = [];
   for (let i = 0; i < 4; i++) {
     const index = (currentIndex + i) % brand.length;
@@ -46,7 +45,6 @@ export default function Brand() {
           Trusted for Over 15 Years in HR by:
         </h4>
 
-        {/* Auto-sliding Brand Carousel */}
         <div className="my-8 overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
@@ -74,7 +72,6 @@ export default function Brand() {
           </AnimatePresence>
         </div>
 
-        {/* Partners Section */}
         <div className="max-w-5xl mx-auto">
           <p className="text-secondary text-center text-[20px] font-semibold">
             Our partners:

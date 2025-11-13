@@ -22,7 +22,6 @@ export default function Professional() {
         </button>
       </div>
 
-      {/* Modal */}
       {isOpen && <ModeForm isOpen={isOpen} setIsOpen={setIsOpen} />}
     </section>
   );

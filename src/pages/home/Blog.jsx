@@ -26,7 +26,6 @@ export default function BlogHome() {
   return (
     <section className="py-20 bg-[#F4F4F2]">
       <div className="container max-w-7xl mx-auto px-4">
-        {/* Heading */}
         <div className="flex flex-col justify-center items-center text-center max-w-3xl mx-auto">
           <span className="text-[17px] text-primary font-normal font-sans">
             Blog & NEWS
@@ -36,11 +35,9 @@ export default function BlogHome() {
           </h2>
         </div>
 
-        {/* Blog Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
           {blogs.map((blog) => (
             <div key={blog.id} className="flex flex-col">
-              {/* Image */}
               <div className="w-full h-[350px] overflow-hidden rounded-lg">
                 <img
                   src={blog.image}
@@ -49,7 +46,6 @@ export default function BlogHome() {
                 />
               </div>
 
-              {/* Content */}
               <div className="mt-4">
                 <h3 className="text-xl font-semibold text-secondary leading-snug">
                   {blog.title}

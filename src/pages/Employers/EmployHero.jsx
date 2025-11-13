@@ -15,7 +15,6 @@ export default function EmployHero() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-          {/* Headhunting Card */}
           <div>
             <div className="bg-white p-5 rounded-4xl">
               <img
@@ -42,7 +41,6 @@ export default function EmployHero() {
             </div>
           </div>
 
-          {/* Recruiting Card */}
           <div>
             <div className="bg-white p-5 rounded-4xl px-5">
               <img

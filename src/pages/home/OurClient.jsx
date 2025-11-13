@@ -6,10 +6,9 @@ export default function OurClient() {
       className="relative py-20 bg-fixed bg-center bg-cover"
       style={{ backgroundImage: "url('/images/banner.png')" }}
     >
-      {/* Overlay for background opacity */}
+
       <div className="absolute inset-0 bg-white/30 z-0"></div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="flex flex-col justify-center items-center max-w-6xl mx-auto">
           <span className="text-[17px] text-primary font-normal font-sans">
@@ -19,7 +18,6 @@ export default function OurClient() {
             How we’ve delivered results for <br /> our clients
           </h2>
 
-          {/* Headhunting Card */}
           <div className="bg-white w-full text-start p-10 max-w-5xl rounded-lg shadow-sm lg:mt-20 md:mt-10 sm:mt-5 mt-5">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">Headhunting</h1>
             <div className="flex items-start mb-4">
@@ -39,7 +37,6 @@ export default function OurClient() {
             </div>
           </div>
 
-          {/* Recruiting Card */}
           <div className="bg-white w-full text-start p-10 max-w-5xl rounded-lg shadow-sm lg:mt-20 md:mt-10 sm:mt-5 mt-5">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">Recruiting</h1>
             <div className="flex items-start mb-4">

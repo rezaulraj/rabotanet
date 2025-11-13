@@ -21,8 +21,6 @@ export default function Improve() {
           I want the best people.
         </button>
       </div>
-
-      {/* Modal */}
       <ModeForm isOpen={isOpen} setIsOpen={setIsOpen} />
     </section>
   );

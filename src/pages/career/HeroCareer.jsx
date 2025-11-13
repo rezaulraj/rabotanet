@@ -4,7 +4,6 @@ const HeroCareer = () => {
   return (
     <section className="relative bg-primary text-white py-30">
       <div className="relative container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-        {/* Left Content */}
         <div className="flex-1 text-center md:text-left">
           <span className="text-lg uppercase font-medium tracking-widest text-gray-900">
             Join Our Team
@@ -26,7 +25,6 @@ const HeroCareer = () => {
           </div>
         </div>
 
-        {/* Right Content */}
         <div className="flex-1 relative w-full max-w-lg">
           <img
             src="/images/career.jpg"

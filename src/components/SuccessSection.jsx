@@ -15,7 +15,6 @@ export default function SuccessSection({
             reverse ? "md:flex-row-reverse" : ""
           }`}
         >
-          {/* Image with border animation */}
           <div>
             <div className="relative p-[3px] rounded-4xl animate-border bg-gradient-to-r from-[#dd0525] via-transparent to-[#dd0525]">
               <div className="relative aspect-square overflow-hidden rounded-4xl bg-white">
@@ -28,7 +27,6 @@ export default function SuccessSection({
             </div>
           </div>
 
-          {/* Text */}
           <div className="flex flex-col justify-center items-start">
             <h2 className="text-[24px] md:text-[32px] font-medium font-sans mt-4 text-secondary">
               {title}

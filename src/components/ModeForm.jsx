@@ -6,7 +6,6 @@ export default function ModeForm({ isOpen, setIsOpen }) {
       {isOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 flex justify-center items-center">
           <div className="bg-white w-full py-20 max-w-3xl mx-4 rounded-lg shadow-lg relative p-20">
-            {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
               className="absolute cursor-pointer top-4 right-4 text-gray-500 hover:text-black text-3xl"
@@ -14,7 +13,6 @@ export default function ModeForm({ isOpen, setIsOpen }) {
               ×
             </button>
 
-            {/* Modal Content */}
             <div className="text-center mb-6">
               <h2 className="text-2xl font-bold text-secondary">Contact us</h2>
               <p className="text-gray-600 mt-2 text-sm">
@@ -23,7 +21,6 @@ export default function ModeForm({ isOpen, setIsOpen }) {
               </p>
             </div>
 
-            {/* Form */}
             <form
               action="https://formsubmit.co/c1d43152b428ec51129c2dd47b1799b0"
               method="POST"
@@ -74,7 +71,6 @@ export default function ModeForm({ isOpen, setIsOpen }) {
                 </label>
               </div>
 
-              {/* Hidden inputs for FormSubmit */}
               <input type="hidden" name="_captcha" value="false" />
               <input
                 type="hidden"

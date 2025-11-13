@@ -34,7 +34,6 @@ export default function Competitive() {
         </motion.div>
       </div>
 
-      {/* Modal with animation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

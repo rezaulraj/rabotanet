@@ -7,7 +7,6 @@ export default function Service() {
     <section className="py-20 bg-[#F4F4F2]">
       <div className="container max-w-7xl mx-auto px-4 mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-center">
-          {/* Left Content */}
           <div>
             <div className="flex flex-col justify-center items-start">
               <span className="text-[17px] text-primary font-normal font-sans">
@@ -27,9 +26,7 @@ export default function Service() {
             </button>
           </div>
 
-          {/* Right Content */}
           <div className="relative flex justify-center items-center">
-            {/* Background Round Image */}
             <div className="absolute inset-0 z-0 flex justify-center items-center max-w-[500px] mx-auto">
               <img
                 src="/images/round.png"
@@ -38,9 +35,7 @@ export default function Service() {
               />
             </div>
 
-            {/* Service Boxes */}
             <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-[550px]">
-              {/* Card 1 */}
               <div className="bg-white p-6 shadow-md rounded-md hover:shadow-xl duration-300">
                 <div className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full mb-4">
                   <TiMessages size={20} />
@@ -54,7 +49,6 @@ export default function Service() {
                 </p>
               </div>
 
-              {/* Card 2 */}
               <div className="bg-white p-6 shadow-md rounded-md hover:shadow-xl duration-300">
                 <div className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full mb-4">
                   <FaPen size={18} />
@@ -68,7 +62,6 @@ export default function Service() {
                 </p>
               </div>
 
-              {/* Card 3 */}
               <div className="bg-white p-6 shadow-md rounded-md hover:shadow-xl duration-300">
                 <div className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full mb-4">
                   <FaCalendarAlt size={18} />
@@ -82,7 +75,6 @@ export default function Service() {
                 </p>
               </div>
 
-              {/* Card 4 */}
               <div className="bg-white p-6 shadow-md rounded-md hover:shadow-xl duration-300">
                 <div className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full mb-4">
                   <FaQuestionCircle size={18} />
@@ -99,7 +91,6 @@ export default function Service() {
           </div>
         </div>
 
-        {/* Stats Section */}
         <div className="lg:mt-20 md:mt-10 mt-5 bg-[#192C33] w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-4 p-10">
             <div>

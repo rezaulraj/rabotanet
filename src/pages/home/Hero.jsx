@@ -9,7 +9,6 @@ export default function Hero() {
   return (
     <>
       <section className="relative h-screen overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src="/images/banner.png"
@@ -20,7 +19,6 @@ export default function Hero() {
 
         <div className="container max-w-7xl mx-auto relative z-10 h-full flex justify-between w-full px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between items-center">
-            {/* Text Content */}
             <div className="col-span-1 w-full">
               <span className="text-[17px] text-primary font-normal font-sans">
                 RECRUITING & HEADHUNTING
@@ -44,7 +42,6 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Play Button */}
             <div className="col-span-1 flex justify-center">
               <button
                 className="cursor-pointer"
@@ -57,7 +54,6 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* Modal */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -66,14 +62,12 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {/* Modal Content */}
             <motion.div
               className="bg-black rounded-lg overflow-hidden w-[100%] max-w-7xl relative"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
             >
-              {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
                 className="absolute top-3 right-3 text-white text-2xl z-10"
@@ -81,7 +75,6 @@ export default function Hero() {
                 ✕
               </button>
 
-              {/* Video */}
               <div className="aspect-video">
                 <video
                   width="100%"

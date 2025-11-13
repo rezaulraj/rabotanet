@@ -6,7 +6,6 @@ export default function Banner() {
     <section className="py-20 bg-[#F4F4F2]">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
-          {/* Left Image Section */}
           <div className="col-span-7">
             <img
               src="/images/bannerb.png"
@@ -14,8 +13,6 @@ export default function Banner() {
               className="object-cover rounded-r-4xl w-full h-auto"
             />
           </div>
-
-          {/* Right Text Section */}
           <div className="col-span-5 flex flex-col justify-center items-start">
             <h2 className="text-[52px] font-bold font-sans mt-4 text-secondary">
               RabotaNet Recruitment Company
@@ -35,7 +32,6 @@ export default function Banner() {
               needs.
             </p>
 
-            {/* Feature List */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
               {[
                 "Expertise across industries",
@@ -54,7 +50,6 @@ export default function Banner() {
               ))}
             </div>
 
-            {/* CTA Button */}
             <a
               href="/about"
               className="text-[20px] font-bold font-sans text-white bg-primary px-10 py-3 rounded-4xl mt-16 hover:bg-secondary duration-300"

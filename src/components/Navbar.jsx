@@ -36,7 +36,6 @@ export default function Navbar() {
       }`}
     >
       <div className="container max-w-7xl mx-auto flex items-center justify-between py-3 px-4">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
             src="/logo.png"
@@ -47,7 +46,6 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
@@ -71,7 +69,6 @@ export default function Navbar() {
           </button>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-2xl text-gray-800"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -79,8 +76,6 @@ export default function Navbar() {
           {isMenuOpen ? <HiX /> : <HiMenu />}
         </button>
       </div>
-
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <motion.div
           initial={{ y: -20, opacity: 0 }}

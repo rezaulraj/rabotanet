@@ -16,7 +16,6 @@ export default function InfoSection({
             reverse ? "md:flex-row-reverse" : ""
           }`}
         >
-          {/* Text Content */}
           <div>
             <div className="flex flex-col justify-center items-start">
               <span className="text-[17px] text-primary font-normal font-sans">
@@ -31,7 +30,6 @@ export default function InfoSection({
             </div>
           </div>
 
-          {/* Image */}
           <div className="flex justify-center items-center">
             <img
               src={image}

@@ -10,7 +10,6 @@ export default function Advantages() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* First Advantage */}
           <div className="bg-white p-8 rounded-lg shadow-md text-start hover:border border-secondary cursor-pointer">
             <div className="flex justify-center mb-6">
               <div className="bg-secondary p-4 rounded-full">
@@ -27,7 +26,6 @@ export default function Advantages() {
             </p>
           </div>
 
-          {/* Second Advantage */}
           <div className="bg-white p-8 rounded-lg shadow-md text-start hover:border border-secondary cursor-pointer">
             <div className="flex justify-center mb-6">
               <div className="bg-secondary p-4 rounded-full">
@@ -44,7 +42,6 @@ export default function Advantages() {
             </p>
           </div>
 
-          {/* Third Advantage */}
           <div className="bg-white p-8 rounded-lg shadow-md text-start hover:border border-secondary cursor-pointer">
             <div className="flex justify-center mb-6">
               <div className="bg-secondary p-4 rounded-full">

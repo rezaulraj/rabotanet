@@ -5,7 +5,6 @@ export default function Employers() {
     <section className="py-20 bg-[#F4F4F2]">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-center">
-          {/* Images */}
           <div className="relative">
             <div className="inset-0 z-0 absolute flex justify-center items-center max-w-[500px]">
               <img
@@ -31,7 +30,6 @@ export default function Employers() {
             </div>
           </div>
 
-          {/* Text content */}
           <div className="flex flex-col justify-center items-start">
             <span className="text-[17px] text-primary font-normal font-sans">
               COMPREHENSIVE HR SERVICE

@@ -16,7 +16,6 @@ export default function Personality() {
             </div>
           </div>
 
-          {/* Optional Heading */}
           {/* <h3 className="lg:text-[21px] md:text-2xl font-display font-medium mb-4">
             DISC test
           </h3> */}

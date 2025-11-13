@@ -8,7 +8,6 @@ export default function Success() {
           <div>
             <div className="relative p-[3px] rounded-4xl animate-border bg-gradient-to-r from-[#dd0525] via-transparent to-[#dd0525]">
               <div className="relative aspect-square overflow-hidden rounded-4xl bg-white">
-                {/* Replaced Next.js Image with standard img */}
                 <img
                   src="/images/employee1.png"
                   alt="Headhunting"

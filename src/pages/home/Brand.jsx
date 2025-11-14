@@ -64,7 +64,7 @@ export default function Brand() {
                   <img
                     src={brandImg}
                     alt={`brand ${index}`}
-                    className="object-contain h-16"
+                    className="object-contain h-44"
                   />
                 </motion.div>
               ))}
@@ -82,7 +82,7 @@ export default function Brand() {
                 key={index}
                 src={partner}
                 alt="partner"
-                className="object-contain h-16 mx-auto"
+                className="object-contain h-48 mx-auto"
               />
             ))}
           </div>

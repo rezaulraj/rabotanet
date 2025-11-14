@@ -703,8 +703,12 @@ const JobPage = () => {
 
   const categories = [
     { id: "all", name: "All Jobs", color: "bg-gray-500" },
-    { id: "HandsOn_Jobs", name: "HandsOn Jobs", color: "bg-[#db4f3c]" },
-    { id: "Featured_Jobs", name: "Featured Jobs", color: "bg-yellow-500" },
+    { id: "HandsOn_Jobs", name: "Skilled Labour", color: "bg-[#db4f3c]" },
+    {
+      id: "Administrative_Jobs",
+      name: "Featured Jobs",
+      color: "bg-yellow-500",
+    },
   ];
 
   useEffect(() => {
@@ -799,7 +803,10 @@ const JobPage = () => {
   const displayedJobs = filteredJobs.slice(0, visibleJobs);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-8">
+    <div
+      id="jobs"
+      className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-8"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">

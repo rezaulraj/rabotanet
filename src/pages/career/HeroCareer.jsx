@@ -16,7 +16,13 @@ const HeroCareer = () => {
             the perfect role that matches your skills and ambitions.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="bg-gray-900 hover:bg-gray-800 text-gray-100 font-semibold px-6 py-3 rounded-full transition duration-300 cursor-pointer">
+            <button
+              onClick={() => {
+                const section = document.querySelector("#jobs");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-gray-900 hover:bg-gray-800 text-gray-100 font-semibold px-6 py-3 rounded-full transition duration-300 cursor-pointer"
+            >
               Explore Jobs
             </button>
             <button className="border border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-full transition duration-300 cursor-pointer">

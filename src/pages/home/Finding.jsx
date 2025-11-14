@@ -132,24 +132,23 @@ export default function Finding() {
             className="col-span-1 flex lg:flex-row flex-col md:flex-col justify-center items-center lg:space-x-8 space-y-8 lg:space-y-0"
             variants={slideInFromRight}
           >
-
             <motion.div
               className="relative"
               variants={floatingImageVariants}
               animate="float"
             >
               <motion.div
-                className="p-[4px] w-[200px] max-h-[235px] rounded-lg"
-                style={{
-                  background:
-                    "linear-gradient(45deg, #dd0525, transparent, #dd0525)",
-                  backgroundSize: "200% 200%",
-                }}
+                className="p-[4px] w-[200px] max-h-[235px] "
+                // style={{
+                //   background:
+                //     "linear-gradient(45deg, #dd0525, transparent, #dd0525)",
+                //   backgroundSize: "200% 200%",
+                // }}
                 variants={gradientBorderVariants}
                 animate="animate"
               >
                 <motion.div
-                  className="bg-white w-[250px] rounded-lg overflow-hidden shadow-xl"
+                  className="w-full overflow-hidden"
                   whileHover={{
                     scale: 1.05,
                     transition: { duration: 0.3 },
@@ -165,7 +164,6 @@ export default function Finding() {
             </motion.div>
 
             <div className="flex flex-col space-y-8">
-         
               <motion.div
                 className="relative"
                 variants={floatingImageVariants}

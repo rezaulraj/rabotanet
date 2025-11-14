@@ -703,7 +703,7 @@ const JobPage = () => {
 
   const categories = [
     { id: "all", name: "All Jobs", color: "bg-gray-500" },
-    { id: "HandsOn_Jobs", name: "Skilled Labour", color: "bg-[#db4f3c]" },
+    { id: "HandsOn_Jobs", name: "Skilled Labor", color: "bg-[#db4f3c]" },
     {
       id: "Administrative_Jobs",
       name: "Featured Jobs",

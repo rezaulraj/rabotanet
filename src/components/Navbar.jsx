@@ -138,7 +138,6 @@ export default function Navbar() {
         onClick={item.hasVacancy ? handleCareerClick : undefined}
         className="font-medium relative inline-block"
       >
-        {/* Animated Career Text */}
         <motion.span
           className="block"
           animate={

@@ -1,73 +1,313 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // use <a> if not using React Router
 
 export default function EmployHero() {
-  return (
-    <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-4">
-        <div className="mt-12">
-          <span className="text-2xl font-bold text-primary ">
-            COMPREHENSIVE HR SERVICES
-          </span>
-          <h1 className="lg:text-[48px] md:text-3xl sm:text-2xl font-sans max-w-2xl mt-4 font-bold text-white">
-            Tailored recruitment and headhunting solutions for employers.
-          </h1>
-        </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-          <div>
-            <div className="bg-white p-5 rounded-4xl">
-              <img
-                src="/images/employee1.png"
-                alt="Employers"
-                className="object-cover rounded-4xl w-full h-auto"
-              />
-              <div className="py-5">
-                <h2 className="text-[30px] text-secondary font-bold font-sans">
+  const itemVariants = {
+    hidden: {
+      y: 50,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      y: 80,
+      opacity: 0,
+      scale: 0.9,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 80,
+        damping: 15,
+        duration: 0.8,
+      },
+    },
+  };
+
+  const imageVariants = {
+    hidden: {
+      scale: 1.1,
+      opacity: 0,
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.4,
+      },
+    },
+  };
+
+  const buttonVariants = {
+    initial: {
+      scale: 1,
+      y: 0,
+    },
+    hover: {
+      scale: 1.05,
+      y: -3,
+      boxShadow: "0 20px 40px rgba(221, 5, 37, 0.3)",
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10,
+      },
+    },
+    tap: {
+      scale: 0.98,
+      y: 0,
+    },
+  };
+
+  const floatingVariants = {
+    float: {
+      y: [0, -10, 0],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const staggerCardVariants = {
+    hidden: {
+      y: 60,
+      opacity: 0,
+    },
+    visible: (i) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.2,
+        type: "spring",
+        stiffness: 80,
+        damping: 15,
+        duration: 0.8,
+      },
+    }),
+  };
+
+  return (
+    <motion.section
+      className="py-20 bg-primary overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      variants={containerVariants}
+    >
+      <motion.div
+        className="absolute top-1/4 left-10 w-16 h-16 bg-white/10 rounded-full blur-xl"
+        variants={floatingVariants}
+        animate="float"
+      />
+      <motion.div
+        className="absolute bottom-1/3 right-20 w-12 h-12 bg-secondary/20 rounded-full blur-lg"
+        variants={floatingVariants}
+        animate="float"
+        transition={{ delay: 1 }}
+      />
+      <motion.div
+        className="absolute top-1/2 left-1/4 w-8 h-8 bg-white/5 rounded-full blur-md"
+        variants={floatingVariants}
+        animate="float"
+        transition={{ delay: 0.5 }}
+      />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div className="mt-12" variants={containerVariants}>
+          <motion.span
+            className="text-2xl font-bold text-secondary block"
+            variants={itemVariants}
+          >
+            COMPREHENSIVE HR SERVICES
+          </motion.span>
+          <motion.h1
+            className="lg:text-[48px] md:text-3xl sm:text-2xl font-sans max-w-2xl mt-4 font-bold text-white leading-tight"
+            variants={itemVariants}
+          >
+            Tailored recruitment and headhunting solutions for employers.
+          </motion.h1>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"
+          variants={containerVariants}
+        >
+          <motion.div
+            custom={0}
+            variants={staggerCardVariants}
+            whileHover={{
+              y: -8,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <motion.div
+              className="bg-white p-6 rounded-4xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col"
+              variants={cardVariants}
+              whileHover="hover"
+            >
+              <motion.div
+                className="overflow-hidden rounded-3xl"
+                variants={imageVariants}
+              >
+                <motion.img
+                  src="/images/employee1.png"
+                  alt="Headhunting"
+                  className="object-cover w-full h-auto"
+                  whileHover="hover"
+                />
+              </motion.div>
+
+              <div className="py-6 flex-grow">
+                <motion.h2
+                  className="text-[30px] text-secondary font-bold font-sans mb-4"
+                  whileHover={{ color: "#dd0525" }}
+                  transition={{ duration: 0.3 }}
+                >
                   Headhunting
-                </h2>
-                <p className="text-secondary text-[14px] font-normal font-sans">
+                </motion.h2>
+                <motion.p
+                  className="text-secondary text-[15px] font-normal font-sans leading-6"
+                  variants={itemVariants}
+                >
                   Headhunting goes beyond simply filling roles; it is a
                   strategic process of identifying and attracting exceptional
                   talent capable of driving real business impact and giving your
                   organisation a measurable competitive edge.
-                </p>
+                </motion.p>
               </div>
-              <Link to="/about">
-                <button className="text-[20px] rounded-4xl cursor-pointer font-bold font-sans text-white bg-primary px-10 py-3 w-full hover:bg-secondary duration-300">
-                  More Information
-                </button>
-              </Link>
-            </div>
-          </div>
 
-          <div>
-            <div className="bg-white p-5 rounded-4xl px-5">
-              <img
-                src="/images/employee2.png"
-                alt="Employers"
-                className="object-cover rounded-4xl w-full h-auto"
-              />
-              <div className="py-5">
-                <h2 className="text-[30px] text-secondary font-bold font-sans">
+              <motion.div
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2 },
+                }}
+              >
+                <Link to="/about">
+                  <motion.button
+                    className="text-[18px] rounded-4xl cursor-pointer font-bold font-sans text-white bg-primary hover:bg-secondary px-8 py-4 w-full hover:shadow-xl relative overflow-hidden"
+                    variants={buttonVariants}
+                    initial="initial"
+                    whileHover="hover"
+                    whileTap="tap"
+                  >
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                      initial={{ x: "-100%" }}
+                      whileHover={{ x: "100%" }}
+                      transition={{ duration: 0.6 }}
+                    />
+                    <span className="relative z-10">More Information</span>
+                  </motion.button>
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            custom={1}
+            variants={staggerCardVariants}
+            whileHover={{
+              y: -8,
+              transition: { duration: 0.3 },
+            }}
+          >
+            <motion.div
+              className="bg-white p-6 rounded-4xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col"
+              variants={cardVariants}
+              whileHover="hover"
+            >
+              <motion.div
+                className="overflow-hidden rounded-3xl"
+                variants={imageVariants}
+              >
+                <motion.img
+                  src="/images/employee2.png"
+                  alt="Recruiting"
+                  className="object-cover w-full h-auto"
+                  whileHover="hover"
+                />
+              </motion.div>
+
+              <div className="py-6 flex-grow">
+                <motion.h2
+                  className="text-[30px] text-secondary font-bold font-sans mb-4"
+                  whileHover={{ color: "#dd0525" }}
+                  transition={{ duration: 0.3 }}
+                >
                   Recruiting
-                </h2>
-                <p className="text-secondary text-[14px] font-normal font-sans">
+                </motion.h2>
+                <motion.p
+                  className="text-secondary text-[15px] font-normal font-sans leading-6"
+                  variants={itemVariants}
+                >
                   A structured and thorough process of sourcing, attracting, and
                   securing employees for diverse roles across your organisation.
                   Our recruiters employ modern tools, market insights, and
                   proven methods to connect you with the right candidates.
-                </p>
+                </motion.p>
               </div>
-              <Link to="/about">
-                <button className="text-[20px] rounded-4xl cursor-pointer font-bold font-sans text-white bg-primary px-10 py-3 w-full hover:bg-secondary duration-300">
-                  More Information
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
+
+              <motion.div
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2 },
+                }}
+              >
+                <Link to="/about">
+                  <motion.button
+                    className="text-[18px] rounded-4xl cursor-pointer font-bold font-sans text-white bg-primary hover:bg-secondary px-8 py-4 w-full hover:shadow-xl relative overflow-hidden"
+                    variants={buttonVariants}
+                    initial="initial"
+                    whileHover="hover"
+                    whileTap="tap"
+                  >
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                      initial={{ x: "-100%" }}
+                      whileHover={{ x: "100%" }}
+                      transition={{ duration: 0.6 }}
+                    />
+                    <span className="relative z-10">More Information</span>
+                  </motion.button>
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaRegComments,
   FaPencilAlt,
@@ -36,27 +37,181 @@ const items = [
 ];
 
 export default function Consultations() {
-  return (
-    <section className="py-20 bg-[#F4F4F2]">
-      <div className="container max-w-7xl mx-auto px-4">
-        <h2 className="text-center lg:text-[48px] md:text-2xl font-semibold text-gray-800 mb-12">
-          Our Consultation Services Include:
-        </h2>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  const itemVariants = {
+    hidden: {
+      y: 40,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      y: 50,
+      opacity: 0,
+      scale: 0.9,
+    },
+    visible: (i) => ({
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: i * 0.1,
+        type: "spring",
+        stiffness: 80,
+        damping: 15,
+        duration: 0.8,
+      },
+    }),
+    hover: {
+      y: -8,
+      scale: 1.05,
+      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10,
+      },
+    },
+  };
+
+  const iconVariants = {
+    hidden: {
+      scale: 0,
+      rotate: -180,
+    },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 10,
+        duration: 0.6,
+      },
+    },
+    hover: {
+      scale: 1.2,
+      rotate: 360,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  const rotateVariants = {
+    rotate: {
+      rotate: 360,
+      transition: {
+        duration: 30,
+        repeat: Infinity,
+        ease: "linear",
+      },
+    },
+  };
+
+  return (
+    <motion.section
+      className="py-20 bg-[#F4F4F2] overflow-hidden relative"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      variants={containerVariants}
+    >
+      <motion.div
+        className="absolute top-1/2 left-1/3 opacity-10 z-0"
+        variants={rotateVariants}
+        animate="rotate"
+        transition={{ duration: 50 }}
+        style={{ width: "150px", height: "150px" }}
+      >
+        <img
+          src="/images/round.png"
+          alt="Rotating Background"
+          className="w-full h-full object-contain"
+        />
+      </motion.div>
+      <motion.div
+        className="absolute top-1/2 left-1/2 opacity-10 z-0"
+        variants={rotateVariants}
+        animate="rotate"
+        transition={{ duration: 50 }}
+        style={{ width: "150px", height: "150px" }}
+      >
+        <img
+          src="/images/round.png"
+          alt="Rotating Background"
+          className="w-full h-full object-contain"
+        />
+      </motion.div>
+
+      <div className="container max-w-7xl mx-auto px-4 relative z-10">
+        <motion.h2
+          className="text-center lg:text-[48px] md:text-2xl font-semibold text-gray-800 mb-12 leading-tight"
+          variants={itemVariants}
+        >
+          Our Consultation Services Include:
+        </motion.h2>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+          variants={containerVariants}
+        >
           {items.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white shadow-sm rounded-md p-6 flex flex-col items-start text-start"
+              custom={index}
+              variants={cardVariants}
+              whileHover="hover"
+              className="bg-white rounded-xl p-6 flex flex-col items-start text-start border-2 border-transparent hover:border-primary/20 relative overflow-hidden cursor-pointer"
             >
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center mb-4">
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 hover:opacity-100"
+                transition={{ duration: 0.3 }}
+              />
+
+              <motion.div
+                className="w-12 h-12 rounded-full bg-primary flex items-center justify-center mb-4 shadow-md relative z-10"
+                variants={iconVariants}
+                whileHover="hover"
+              >
                 {item.icon}
-              </div>
-              <p className="text-gray-800 font-medium">{item.title}</p>
-            </div>
+              </motion.div>
+
+              <motion.p
+                className="text-gray-800 font-semibold text-lg leading-6 relative z-10"
+                whileHover={{ color: "#dd0525" }}
+                transition={{ duration: 0.3 }}
+              >
+                {item.title}
+              </motion.p>
+
+              <motion.div
+                className="absolute inset-0 rounded-xl border-2 border-primary/0 hover:border-primary/30"
+                transition={{ duration: 0.3 }}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -48,9 +48,9 @@ export default function Navbar() {
 
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.href}
-              to={item.href}
+              href={item.href}
               className={`font-medium transition-colors ${
                 location.pathname === item.href
                   ? "text-primary font-semibold"
@@ -58,7 +58,7 @@ export default function Navbar() {
               }`}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
           <ModeForm isOpen={isOpen} setIsOpen={setIsOpen} />
           <button

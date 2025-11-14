@@ -1,79 +1,192 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaPlayCircle } from "react-icons/fa";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setScale((prevScale) => (prevScale === 1 ? 1.1 : 1));
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const playButtonVariants = {
+    initial: { scale: 1 },
+    hover: {
+      scale: 1.2,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10,
+      },
+    },
+    tap: { scale: 0.9 },
+  };
+
+  const arrowVariants = {
+    animate: {
+      y: [0, 10, 0],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
     <>
       <section className="relative h-screen overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <motion.div
+          className="absolute inset-0 z-0"
+          animate={{ scale }}
+          transition={{
+            duration: 8,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+        >
           <img
             src="/images/banner.png"
             alt="Hero"
             className="object-cover opacity-60 w-full h-full"
           />
-        </div>
+
+          
+        </motion.div>
 
         <div className="container max-w-7xl mx-auto relative z-10 h-full flex justify-between w-full px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between items-center">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between items-center w-full"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <div className="col-span-1 w-full">
-              <span className="text-[17px] text-primary font-normal font-sans">
+              <motion.span
+                className="text-[17px] text-primary font-normal font-sans block"
+                variants={itemVariants}
+              >
                 RECRUITING & HEADHUNTING
-              </span>
-              <h2 className="text-[52px] font-bold font-sans mt-4 text-secondary">
-                We find exceptional talent for your company.
-              </h2>
+              </motion.span>
 
-              <p className="text-[14px] text-secondary text-normal font-sans mt-4">
+              <motion.h2
+                className="text-[52px] font-bold font-sans mt-4 text-secondary"
+                variants={itemVariants}
+              >
+                We find exceptional talent for your company.
+              </motion.h2>
+
+              <motion.p
+                className="text-[14px] text-secondary text-normal font-sans mt-4"
+                variants={itemVariants}
+              >
                 A unique professional whose expertise and value are rare in the
                 marketplace like finding a needle in a haystack. When others
                 struggle to locate such talent,{" "}
                 <strong>RabotaNet Recruitment</strong> delivers.
-              </p>
+              </motion.p>
 
-              <a
+              <motion.a
                 href="#brand"
                 className="text-primary block font-semibold font-sans mt-4"
+                variants={arrowVariants}
+                animate="animate"
               >
                 <IoArrowDownCircleOutline className="text-6xl" />
-              </a>
+              </motion.a>
             </div>
 
-            <div className="col-span-1 flex justify-center">
-              <button
+            <motion.div
+              className="col-span-1 flex justify-center"
+              variants={itemVariants}
+            >
+              <motion.button
                 className="cursor-pointer"
                 onClick={() => setIsOpen(true)}
+                variants={playButtonVariants}
+                initial="initial"
+                whileHover="hover"
+                whileTap="tap"
               >
                 <FaPlayCircle className="text-6xl text-primary" />
-              </button>
-            </div>
-          </div>
+              </motion.button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
-
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="bg-black rounded-lg overflow-hidden w-[100%] max-w-7xl relative"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
+              className="bg-black rounded-2xl overflow-hidden w-full max-w-6xl relative shadow-2xl"
+              initial={{
+                scale: 0.8,
+                opacity: 0,
+                y: 50,
+              }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{
+                scale: 0.8,
+                opacity: 0,
+                y: 50,
+              }}
+              transition={{
+                type: "spring",
+                damping: 25,
+                stiffness: 200,
+              }}
             >
-              <button
+              <motion.button
                 onClick={() => setIsOpen(false)}
-                className="absolute top-3 right-3 text-white text-2xl z-10"
+                className="absolute -top-12 right-0 text-white text-3xl z-10 bg-white/20 rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm"
+                whileHover={{
+                  scale: 1.1,
+                  backgroundColor: "rgba(255,255,255,0.3)",
+                }}
+                whileTap={{ scale: 0.9 }}
               >
                 ✕
-              </button>
+              </motion.button>
 
               <div className="aspect-video">
                 <video
@@ -81,10 +194,16 @@ export default function Hero() {
                   height="100%"
                   controls
                   autoPlay
+                  className="rounded-lg"
                   src="https://res.cloudinary.com/dtw7qhd69/video/upload/v1757318262/rabota_website_video_o9rfri.mp4"
                 />
               </div>
             </motion.div>
+
+            <div
+              className="absolute inset-0 -z-10"
+              onClick={() => setIsOpen(false)}
+            />
           </motion.div>
         )}
       </AnimatePresence>

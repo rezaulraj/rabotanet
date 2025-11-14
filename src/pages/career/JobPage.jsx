@@ -706,7 +706,7 @@ const JobPage = () => {
     { id: "HandsOn_Jobs", name: "Operational Jobs", color: "bg-[#db4f3c]" },
     {
       id: "Administrative_Jobs",
-      name: "Featured Jobs",
+      name: "Corporate Jobs",
       color: "bg-yellow-500",
     },
   ];

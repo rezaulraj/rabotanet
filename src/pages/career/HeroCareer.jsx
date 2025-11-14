@@ -27,13 +27,12 @@ const HeroCareer = () => {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      // Check file type and size
       const allowedTypes = [
         "application/pdf",
         "application/msword",
         "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
       ];
-      const maxSize = 5 * 1024 * 1024; // 5MB
+      const maxSize = 5 * 1024 * 1024;
 
       if (!allowedTypes.includes(file.type)) {
         alert("Please upload a PDF or DOC file");
@@ -49,8 +48,6 @@ const HeroCareer = () => {
         ...prev,
         cv: file,
       }));
-
-      // Simulate upload progress
       simulateUpload(file);
     }
   };
@@ -75,9 +72,7 @@ const HeroCareer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log("Form submitted:", formData);
-    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -178,7 +173,6 @@ const HeroCareer = () => {
         </div>
       </section>
 
-      {/* CV Submission Modal */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
@@ -195,7 +189,6 @@ const HeroCareer = () => {
               animate="visible"
               exit="exit"
             >
-              {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
                 <h2 className="text-2xl font-bold text-gray-900">
                   Submit Your CV
@@ -211,9 +204,7 @@ const HeroCareer = () => {
                 </button>
               </div>
 
-              {/* Form */}
               <form onSubmit={handleSubmit} className="p-6 space-y-6">
-                {/* Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
@@ -229,7 +220,6 @@ const HeroCareer = () => {
                   />
                 </div>
 
-                {/* Email and Phone */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -261,7 +251,6 @@ const HeroCareer = () => {
                   </div>
                 </div>
 
-                {/* Subject */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Subject *
@@ -273,11 +262,10 @@ const HeroCareer = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                    placeholder="e.g., Frontend Developer Application"
+                    placeholder="e.g., Welder, Constraction Worker"
                   />
                 </div>
 
-                {/* Message */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Message
@@ -292,7 +280,6 @@ const HeroCareer = () => {
                   />
                 </div>
 
-                {/* CV Upload */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Upload CV *
@@ -323,7 +310,6 @@ const HeroCareer = () => {
                     </label>
                   </div>
 
-                  {/* Upload Progress */}
                   {formData.cv && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -341,7 +327,6 @@ const HeroCareer = () => {
                         ) : null}
                       </div>
 
-                      {/* Progress Bar */}
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <motion.div
                           className="bg-primary h-2 rounded-full transition-all duration-300"
@@ -360,7 +345,6 @@ const HeroCareer = () => {
                   )}
                 </div>
 
-                {/* Submit Button */}
                 <div className="flex gap-4 pt-4">
                   <button
                     type="button"

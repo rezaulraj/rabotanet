@@ -127,73 +127,44 @@ export default function Navbar() {
     </motion.div>
   );
 
-  const ClickMeEffect = () => (
-    <motion.div
-      className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap"
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3 }}
-    >
-      <motion.div
-        className="flex items-center gap-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg"
-        animate={{
-          scale: [1, 1.05, 1],
-          y: [0, -2, 0],
-        }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <FaStar className="text-yellow-300" />
-        <span>Hot Jobs Available!</span>
-        <FaStar className="text-yellow-300" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-full left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 3, 0] }}
-        transition={{ duration: 0.8, repeat: Infinity }}
-      >
-        <div className="text-primary text-lg">▼</div>
-      </motion.div>
-    </motion.div>
-  );
-
   const CareerButton = ({ item, isMobile = false }) => (
     <motion.div
       className="relative"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <AnimatePresence>
-        {!userInteracted &&
-          activeVacancy &&
-          item.hasVacancy &&
-          !clickedCareer && <ClickMeEffect />}
-      </AnimatePresence>
-
       <Link
         to={item.href}
         onClick={item.hasVacancy ? handleCareerClick : undefined}
-        className={`font-medium relative inline-block ${
-          location.pathname === item.href
-            ? "text-primary font-semibold"
-            : "text-gray-800 hover:text-primary"
-        }`}
+        className="font-medium relative inline-block"
       >
+        {/* Animated Career Text */}
         <motion.span
+          className="block"
           animate={
-            clickedCareer && item.hasVacancy
+            !userInteracted && activeVacancy && !clickedCareer
               ? {
-                  color: ["#000", "#10b981", "#000"],
+                  fontSize: ["16px", "20px", "16px"],
+                  fontWeight: ["500", "800", "500"],
+                  color: ["#000", "#ef4444", "#000"],
                   scale: [1, 1.2, 1],
                 }
-              : {}
+              : location.pathname === item.href
+              ? {
+                  color: "#ef4444",
+                  fontWeight: "700",
+                }
+              : {
+                  color: "#1f2937",
+                  fontWeight: "500",
+                }
           }
-          transition={{ duration: 0.5 }}
+          transition={{
+            duration: 1.5,
+            repeat:
+              !userInteracted && activeVacancy && !clickedCareer ? Infinity : 0,
+            ease: "easeInOut",
+          }}
         >
           {item.label}
         </motion.span>
@@ -237,6 +208,19 @@ export default function Navbar() {
     </motion.div>
   );
 
+  const RegularNavLink = ({ item }) => (
+    <a
+      href={item.href}
+      className={`font-medium transition-colors ${
+        location.pathname === item.href
+          ? "text-primary font-semibold"
+          : "text-gray-800 hover:text-primary"
+      }`}
+    >
+      {item.label}
+    </a>
+  );
+
   const RegularCareerLink = ({ item }) => (
     <a
       href={item.href}
@@ -273,10 +257,14 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <div key={item.href} className="relative">
-              {item.hasVacancy && !userInteracted ? (
-                <CareerButton item={item} />
+              {item.hasVacancy ? (
+                !userInteracted ? (
+                  <CareerButton item={item} />
+                ) : (
+                  <RegularCareerLink item={item} />
+                )
               ) : (
-                <RegularCareerLink item={item} />
+                <RegularNavLink item={item} />
               )}
             </div>
           ))}
@@ -311,8 +299,21 @@ export default function Navbar() {
             <nav className="flex flex-col p-4 gap-4">
               {navItems.map((item) => (
                 <div key={item.href} className="relative py-2">
-                  {item.hasVacancy && !userInteracted ? (
-                    <CareerButton item={item} isMobile={true} />
+                  {item.hasVacancy ? (
+                    !userInteracted ? (
+                      <CareerButton item={item} isMobile={true} />
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className={`font-medium block ${
+                          location.pathname === item.href
+                            ? "text-primary font-semibold"
+                            : "text-gray-800"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )
                   ) : (
                     <Link
                       to={item.href}

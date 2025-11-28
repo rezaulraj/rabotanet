@@ -82,7 +82,7 @@ export default function Success() {
             variants={imageContainerVariants}
           >
             <motion.div
-              className="absolute inset-0 -left-40 flex justify-center w-full items-center z-0"
+              className="absolute inset-0 -left-40 -top-36 flex justify-center w-full items-center z-0"
               variants={rotateVariants}
               animate="rotate"
             >

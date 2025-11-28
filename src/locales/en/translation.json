@@ -1,0 +1,253 @@
+{
+  "nav": {
+    "home": "Home",
+    "employers": "Employers",
+    "applicants": "Applicants",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "language": "Language",
+    "career": "Careers",
+    "success": "Success Story"
+  },
+  "homepage": {
+    "hero": {
+      "heroTopTitle": "RECRUITING & HEADHUNTING",
+      "heroBigTitle": "We find exceptional talent for your company.",
+      "heropara1": "Exceptional talent is rare — the kind everyone hopes to find but few ever do. While others search endlessly, ",
+      "heropara2": "RabotaNet Recruitment ",
+      "heropara3": "consistently discovers the professionals who truly make a difference."
+    },
+    "brand": {
+      "brandText": "Trusted by HR professionals for more than 15 years:"
+    },
+    "finding": {
+      "findTopHeading": "NOT JUST A STAFFING AGENCY",
+      "findBig1Heading": "Finding the right talent takes both expertise and intuition.",
+      "findBig2Heading": "Every organisation is built by its people, and those peopledetermine its success. That is why our work goes beyond filling vacancies.",
+      "findParagraph1": "Cloud Konektion ",
+      "findParagraph2": "is committed to the success of every employer and every professional we serve. We recognise that each client and candidate is unique, and we approach every engagement with precision, dedication, and integrity."
+    },
+    "employer": {
+      "employerExaperence": "Years of Experience",
+      "employerHeading1": "COMPREHENSIVE HR SERVICE ",
+      "employerHeading2": "FOR EMPLOYERS",
+      "employerparagraph": "We provide comprehensive recruitment solutions designed to secure top-tier talent for your business.",
+      "section1employerHeading1": "Headhunting",
+      "section1employeroara": "This is more than candidate sourcing; it is the strategic art of identifying and engaging high-calibre professionals who can deliver measurable value and competitive advantage.",
+      "section2employerHeading1": "Recruiting",
+      "section2employeroara": "A structured process of sourcing, attracting, and selecting candidates for diverse roles within your organisation. Our recruiters use modern tools, targeted outreach, and data-driven strategies to connect you with the right people.",
+      "employerbutton": "More Information for Employers"
+    },
+    "service": {
+      "serviceTopHeading": "SERVICES FOR APPLICANTS",
+      "serviceHeading1": "How to stand out in today’s",
+      "serviceHeading2": "job market.",
+      "servicePara": "If you are pursuing a new opportunity, we will help you present yourself with confidence and clarity, maximising your chances of securing your ideal role.",
+      "serviceButton": "More Information for Applicants",
+      "servicesInterviewheading": "Interview Preparation",
+      "serviceInterviewPara": "We equip you with interview techniques, conduct mock interviews, and build your confidence.",
+      "serviceCvHeading": "CV & LinkedIn Profile Enhancement",
+      "serviceCvPara": "We refine your CV and LinkedIn profile to make a strong first impression.",
+      "serviceLaborHeading": "Labour Market Analysis",
+      "serviceLaborPara": "We analyse your career opportunities across industries and regions, identifying the most suitable positions.",
+      "serviceParsonalHeading": "Personality Assessments",
+      "serviceParsonalPara": "We provide assessments that help both you and potential employers understand your strengths and optimal fit.",
+      "serviceStat1": "interviews conducted",
+      "serviceStat2": "verified CVs",
+      "serviceStat3": "satisfied employers",
+      "serviceStat4": "professional articles published"
+    },
+    "ourCliend": {
+      "cliendTopHeading": "CASE STUDIES & CLIENT REFERENCES",
+      "cliendHeading1": "How we’ve delivered results for ",
+      "cliendHeading2": "our clients",
+      "cliendHeadhuntingHead": "Headhunting",
+      "cliendHeadhuntingPara": "A global company urgently sought to fill a specialised role after their previous agency failed to deliver suitable candidates. Through a detailed consultation, we uncovered overly restrictive technical requirements that were limiting the search. By refining the criteria and leveraging our extensive talent database, we presented three strong shortliste candidates within just two weeks two of whom proved to be an excellent fit both technically and culturally.",
+      "clientRecuitHead": "Recruiting",
+      "clientRecuitPara": "A company was searching for a proactive sales representative with strong industry connections. Although the role appeared best suited for headhunting, we implemented a broader recruitment strategy that combined targeted advertising, marketing campaigns, social media outreach, and database searches. Within just two weeks, we identified and secured a candidate whose personality profile and professional background aligned perfectly with the role’s demands."
+    },
+    "compitator": {
+      "compitatorHeading": "Specialised Recruitment Services – Powered by Our Expertise",
+      "compitatorButton": "I want the best people."
+    },
+    "formModel": {
+      "formHeading": "Contact us",
+      "formPara": "Are you interested in our services? Fill out the short form and we will contact you soon.",
+      "name": "Name*",
+      "company": "company*",
+      "phone": "Phone contact*",
+      "email": "Email*",
+      "report": "Report",
+      "policy": "I have read the Personal Data Processing Policy",
+      "button": "Send →"
+    },
+    "banner": {
+      "bannertopheading": "RabotaNet Recruitment Company",
+      "bannerservies": "Fleet Service",
+      "bannerHeading": "Specialised Recruitment Services – Powered by Our Expertise",
+      "bannerPara1": "In addition to standard hiring solutions,",
+      "bannerPara2": "RabotaNet Recruitment",
+      "bannerPara3": "delivers specialised recruitment support tailored to businesses with unique workforce needs.",
+      "bannerSecHeading": "Expertise across industries",
+      "bannerThiHeading": "Fast and reliable hiring",
+      "bannerFortHeading": "Access to diverse talent pools",
+      "bannerFiftHeading": "Long-term support",
+      "bannerLink": "More about the service"
+    }
+  },
+  "employeepage": {
+    "heroEmployee": {
+      "heroEmployeeTopHeading": "EMPLOYERS SERVICES",
+      "heroEmployeeHeading": "Tailored recruitment and headhunting solutions for employers.",
+      "heroHuntingHead": "Headhunting",
+      "heroHuntingPara": "Headhunting goes beyond simply filling roles; it is a strategic process of identifying and attracting exceptional talent capable of driving real business impact and giving your organisation a measurable competitive edge.",
+      "heroHuntingLink": "More Information",
+      "heroRecuitHead": "Recruiting",
+      "heroRecuitPara": "A structured and thorough process of sourcing, attracting, and securing employees for diverse roles across your organisation. Our recruiters employ modern tools, market insights, and proven methods to connect you with the right candidates.",
+      "heroRecuitLink": "More Information"
+    },
+    "headHunting": {
+      "headHuntingTopHeading": "Headhunting",
+      "headHuntingHeading": "How Headhunting Works at RabotaNet Recruitment",
+      "headHuntingPara": "Our headhunters specialise in sourcing high-calibre professionals currently employed in other organisations. These individuals often possess the precise skills and experience your business requires. Our approach involves identifying, approaching, and engaging them with tailored opportunities that align with their career ambitions and your company's needs."
+    },
+    "success": {
+      "successHeading": "Why Headhunting Matters for Your Success",
+      "successPara1": "In today's competitive labour market, attracting and retaining top performers is vital. Many of the most talented professionals are not actively seeking new roles. Through our headhunting services, ",
+      "successPara2": "RabotaNet Recruitment",
+      "successPara3": "enables you to reach beyond traditional channels and connect directly with this exceptional talent pool.",
+      "successpart": "Success Guaranteed",
+      "successtats1": "Success Rate",
+      "successtats2": "Support",
+      "successtats3": "Clients"
+    },
+    "advantage": {
+      "advantageTopHeading": "Advantages of RabotaNet Recruitment Headhunting",
+      "advantageHeadingStats1": "Access to passive candidates",
+      "advantageParaStats1": "We help you engage with professionals who are not actively applying for jobs, giving you the chance to hire rare and exceptional talent.",
+      "advantageHeadingStats2": "Industry-specific expertise",
+      "advantageParaStats2": "Our headhunters focus on defined industries and functional areas, ensuring a deeper understanding of your requirements and more precise candidate matches.",
+      "advantageHeadingStats3": "Time and resource efficiency",
+      "advantageParaStats3": "Outsourcing to our experts saves you valuable time and internal resources, while ensuring a professional and discreet search process."
+    },
+    "professional": {
+      "professionalHeading": "By combining our expertise with an extensive network of professional headhunters, we help you elevate your recruitment process and secure the kind of exceptional talent that drives long-term success. Our goal is simple: we connect you with the very best people, the rare professionals who truly make a difference.",
+      "professionalButton": "I want the best people.",
+      "textstat": "Let's find the exceptional talent your business deserves"
+    },
+    "workRecuit": {
+      "workRecuitTopHeading": "Recruiting",
+      "workRecuitHeading": "How Recruiting Works at RabotaNet Recruitment",
+      "workRecuitPara": "Our recruitment specialists follow a comprehensive process to ensure you hire the right fit. This includes advertising vacancies on targeted platforms, carefully screening and shortlisting CVs, coordinating interviews, and conducting thorough reference checks. We also place strong emphasis on ensuring each candidate aligns with your organisation's values and culture. Every step is designed to help you build strong, lasting teams that contribute to long-term success."
+    },
+    "successSection": {
+      "title": "Why Recruiting Is Essential to Business Success",
+      "description": "Recruitment forms the backbone of a motivated and high-performing workforce. RabotaNet Recruitment understands that the right hiring decisions shape employee morale, efficiency, and company culture, which is why we tailor every recruitment process to the unique needs of each employer we partner with."
+    },
+    "parsonality": {
+      "parsonalityHeading": "Personality Assessments",
+      "parsonalityPara": "Our personality assessments provide valuable insights into candidates' behavioural styles and workplace motivations. They help reveal whether an individual is more introverted or extroverted, whether their drive is focused on achieving goals or building relationships, how their traits may develop over time, and any potential challenges that could affect long-term performance. These insights support smarter hiring decisions and ensure stronger alignment between candidates and organisational needs."
+    }
+  },
+  "applicant": {
+    "heroApplicant": {
+      "heroTopHeading": "Services for Candidates",
+      "heroHeading": "How to succeed in today’s job market.",
+      "heroSubHeading1": "Consultations",
+      "heroSubPara1": "Our candidate consultations are designed to help you present yourself confidently and professionally. With guidance from experienced consultants, you will improve your interview skills, strengthen your personal brand, and increase your chances of securing the right role.",
+      "heroSubHeading2": "Personality Assessments",
+      "heroSubPara2": "We provide personality assessments that help you and potential employers better understand your strengths, motivations, and ideal work style. These insights allow for better job alignment and stronger career development."
+    },
+    "opertunity": {
+      "opertunityHeading": "Consultations with Candidates – Be Ready for New Opportunities",
+      "opertunityPara": "Our consultations go beyond interview preparation. We support you in refining your CV, optimising your LinkedIn profile, and enhancing your visibility to potential employers. By improving your presentation skills and professional branding, we help you stand out in a competitive market and improve your chances of landing your desired role."
+    },
+    "consultation": {
+      "consltationHeading": "Our Consultation Services Include:",
+      "consltationService1": "Interview preparation and coaching",
+      "consltationService2": "CV editing and enhancement",
+      "consltationService3": "LinkedIn profile optimisation",
+      "consltationService4": "Labour market insights and career guidance",
+      "consltationService5": "Mock interviews to build confidence",
+      "consltationService6": "Personality assessments for deeper self-awareness"
+    },
+    "inprove": {
+      "inproveHeading": "We connect skilled and hardworking individuals with employers who value dedication, craftsmanship, and reliability. Whether you are seeking full-time, part-time, or contract work, our vacancies cover a wide range of blue-collar roles across industries.",
+      "inproveButton": "I want the best people."
+    }
+  },
+  "about": {
+    "heroAbout": {
+      "heroTopHeading": "ABOUT US",
+      "heroHeading": "15 Years of Recruitment Expertise",
+      "heroPara1": "RabotaNet ",
+      "heroPara2": "is a recognized name in Europe's human resources industry and has recently expanded its operations to Belarus. With more than 15 years of expertise in manpower management, we are committed to delivering solutions that address the unique needs of every client.",
+      "heroPara3": "We take pride in our ability to match the right talent with the right opportunities, drawing on top-tier resources and proven industry knowledge. Our team of seasoned professionals brings extensive experience in manpower consulting, ensuring exceptional service at every stage.",
+      "heroPara4": "Our services are flexible and tailored designed to align with each client's specific goals and budget. From temporary placements to long-term recruitment, we offer comprehensive human capital solutions worldwide.",
+      "heroPara5": "Our vision is to be the trusted HR partner of choice for both government and non-government organizations."
+    },
+    "whatValue": {
+      "valueHeading": "Our Values",
+      "valueStatsTitle1": "Quality",
+      "valueStatsDescription1": "We are committed to delivering recruitment services of the highest standard. Through continuous innovation and process improvement, we aim not only to meet but to exceed client expectations. For us, quality is the cornerstone of long-term success.",
+      "valueStatsTitle2": "Flexibility",
+      "valueStatsDescription2": "In today’s fast-changing world, adaptability is key. We pride ourselves on offering flexible solutions that respond quickly and effectively to each client’s unique needs.",
+      "valueStatsTitle3": "Partnership",
+      "valueStatsDescription3": "We believe strong, long-term partnerships drive mutual growth. Building trust with clients and business partners is central to our mission, creating a stable foundation for future success."
+    },
+    "missionvission": {
+      "heading1": "Our ",
+      "heading2": "Purpose",
+      "para": "Redefining talent acquisition through innovation, empathy, and exceptional partnerships that transform careers and businesses alike.",
+      "missionh": "Our Mission",
+      "missionpara": "To architect meaningful connections between exceptional talent and visionary organizations. We don't just fill positions—we build bridges that empower careers and accelerate business growth through personalized, empathetic recruitment strategies.",
+      "missionstat1": "Excellence",
+      "missionstat2": "Connection",
+      "missionstat3": "Growth",
+      "missionstat4": "Impact",
+      "vissionh": "Our Vision",
+      "vissionpara": "To pioneer the future of recruitment by creating a world where every professional discovers their perfect role and every organization unlocks its full potential through ideal talent matches. We envision a global ecosystem of opportunity and growth.",
+      "vissionstat1": "Innovation",
+      "vissionstat2": "Trust",
+      "vissionstat3": "Global Impact",
+      "vissionstat4": "Future Ready",
+      "btn": "Join Our Journey of Excellence"
+    }
+  },
+  "career": {
+    "careertoph": "Join Our Team",
+    "careerh1": "Build Your Career with RabotaNet",
+    "careerpara": "Explore exciting opportunities, connect with top employers, and find the perfect role that matches your skills and ambitions.",
+    "careerstat1": "Flexible Hours",
+    "careerstat2": "100% Job Placement",
+    "careerstat3": "100% Career Growth",
+    "careerstat4": "100% Job Security",
+    "careerbtn1": "Explore Jobs",
+    "careerbtn2": "Submit CV",
+    "careersubh": "Available Jobs",
+    "careersubpara": "Discover your next career opportunity with our diverse range of positions across various industries and locations.",
+    "careerhero1": "All Jobs",
+    "careerhero2": "Operational Jobs",
+    "careerhero3": "Corporate Jobs"
+  },
+  "successstory": {
+    "headingsuccess": "Visa Success Stories",
+    "paragraph": "Real people, real dreams, real success stories. Join thousands who have transformed their lives through our visa services.",
+    "btn": "Start Your Success Story",
+    "subheading1": "Success",
+    "subheading2": " Stories"
+  },
+
+  "footer": {
+    "footerFront": "RabotaNet Recruitment",
+    "footerPara": "We find exceptional talent for your company",
+    "footerContact": "Contact us",
+    "footerOffice": "Office",
+    "footerAddress": "Address:",
+    "footerLink1": "Home",
+    "footerLink2": "Employers",
+    "footerLink3": "Applicants",
+    "footerLink4": "About Us",
+    "footertext": "Links"
+  }
+}

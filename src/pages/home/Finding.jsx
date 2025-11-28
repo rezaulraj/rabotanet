@@ -138,12 +138,7 @@ export default function Finding() {
               animate="float"
             >
               <motion.div
-                className="p-[4px] w-[200px] max-h-[235px] "
-                // style={{
-                //   background:
-                //     "linear-gradient(45deg, #dd0525, transparent, #dd0525)",
-                //   backgroundSize: "200% 200%",
-                // }}
+                className="p-[4px] w-[200px] max-h-[235px]"
                 variants={gradientBorderVariants}
                 animate="animate"
               >

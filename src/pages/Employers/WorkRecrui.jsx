@@ -113,7 +113,7 @@ export default function WorkRecrui() {
           >
 
             <motion.div
-              className="absolute inset-0 left-40 flex w-full justify-center items-center z-0"
+              className="absolute inset-0 left-40 -top-36 flex w-full justify-center items-center z-0"
               variants={rotateVariants}
               animate="rotate"
             >

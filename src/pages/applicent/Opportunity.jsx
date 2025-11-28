@@ -83,7 +83,7 @@ export default function Opportunity() {
           >
            
             <motion.div
-              className="absolute inset-0 -left-40 w-full flex justify-center items-center z-0"
+              className="absolute inset-0 -left-40 -top-36 w-full flex justify-center items-center z-0"
               variants={rotateVariants}
               animate="rotate"
             >

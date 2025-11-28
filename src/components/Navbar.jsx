@@ -4,6 +4,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { useLocation, Link } from "react-router-dom";
 import ModeForm from "./ModeForm";
 import { FaStar, FaFire, FaCheck } from "react-icons/fa";
+import ReactCountryFlag from "react-country-flag";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,8 @@ export default function Navbar() {
   const [clickedCareer, setClickedCareer] = useState(false);
   const [pulseEffect, setPulseEffect] = useState(true);
   const [userInteracted, setUserInteracted] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
   const location = useLocation();
 
   useEffect(() => {
@@ -61,6 +64,18 @@ export default function Navbar() {
     setPulseEffect(false);
 
     setTimeout(() => setClickedCareer(false), 1500);
+  };
+
+  const languages = [
+    { code: "en", country: "US", name: "English" },
+    { code: "ru", country: "RU", name: "Russian" },
+    { code: "ro", country: "RO", name: "Romanian" },
+  ];
+
+  const handleLanguageSelect = (languageCode) => {
+    setSelectedLanguage(languageCode);
+    setIsLanguageOpen(false);
+    // Add your language change logic here
   };
 
   const navItems = [
@@ -233,6 +248,126 @@ export default function Navbar() {
     </a>
   );
 
+  const LanguageDropdown = () => (
+    <div className="relative">
+      <motion.button
+        onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+        className="hidden md:flex items-center gap-2 cursor-pointer bg-primary/30 font-bold px-4 py-2 rounded-md hover:bg-primary/40 transition-colors border-gray-200"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <ReactCountryFlag
+          countryCode={
+            languages.find((lang) => lang.code === selectedLanguage)?.country
+          }
+          svg
+          style={{
+            width: "20px",
+            height: "15px",
+          }}
+        />
+        <span className="text-sm">
+          {languages.find((lang) => lang.code === selectedLanguage)?.name}
+        </span>
+      </motion.button>
+
+      <AnimatePresence>
+        {isLanguageOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[140px] z-50"
+          >
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                onClick={() => handleLanguageSelect(language.code)}
+                className={`w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors flex items-center gap-3 ${
+                  selectedLanguage === language.code
+                    ? "bg-blue-50 text-blue-600"
+                    : ""
+                }`}
+              >
+                <ReactCountryFlag
+                  countryCode={language.country}
+                  svg
+                  style={{
+                    width: "20px",
+                    height: "15px",
+                  }}
+                />
+                <span className="text-sm">{language.name}</span>
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+
+  const MobileLanguageDropdown = () => (
+    <div className="relative">
+      <button
+        onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+        className="w-full flex items-center justify-between gap-2 cursor-pointer font-bold px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200"
+      >
+        <div className="flex items-center gap-3">
+          <ReactCountryFlag
+            countryCode={
+              languages.find((lang) => lang.code === selectedLanguage)?.country
+            }
+            svg
+            style={{
+              width: "20px",
+              height: "15px",
+            }}
+          />
+          <span>
+            {languages.find((lang) => lang.code === selectedLanguage)?.name}
+          </span>
+        </div>
+      </button>
+
+      <AnimatePresence>
+        {isLanguageOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="mt-2 bg-gray-50 rounded-lg border border-gray-200 py-2">
+              {languages.map((language) => (
+                <button
+                  key={language.code}
+                  onClick={() => handleLanguageSelect(language.code)}
+                  className={`w-full px-4 py-3 text-left hover:bg-gray-100 transition-colors flex items-center gap-3 ${
+                    selectedLanguage === language.code
+                      ? "bg-blue-50 text-blue-600"
+                      : ""
+                  }`}
+                >
+                  <ReactCountryFlag
+                    countryCode={language.country}
+                    svg
+                    style={{
+                      width: "20px",
+                      height: "15px",
+                    }}
+                  />
+                  <span>{language.name}</span>
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -276,6 +411,7 @@ export default function Navbar() {
           >
             Contact Us
           </motion.button>
+          <LanguageDropdown />
         </nav>
 
         <button
@@ -333,6 +469,7 @@ export default function Navbar() {
               >
                 Contact
               </a>
+              <MobileLanguageDropdown />
             </nav>
           </motion.div>
         )}

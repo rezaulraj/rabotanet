@@ -8,7 +8,6 @@ export default function SuccessSection({
   imageAlt = "Success Image",
   reverse = false,
 }) {
-  // Same animation variants as Headhunting component
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -88,14 +87,12 @@ export default function SuccessSection({
             reverse ? "md:flex-row-reverse" : ""
           }`}
         >
-          {/* Image with Rotating Background */}
           <motion.div
             className="flex justify-center items-center relative"
             variants={imageContainerVariants}
           >
-            {/* Rotating Round Background */}
             <motion.div
-              className="absolute inset-0 -left-40 w-full flex justify-center items-center z-0"
+              className="absolute inset-0 -left-40 -bottom-36 w-full flex justify-center items-center z-0"
               variants={rotateVariants}
               animate="rotate"
             >
@@ -106,7 +103,6 @@ export default function SuccessSection({
               />
             </motion.div>
 
-            {/* Main Image with Animated Border */}
             <motion.div
               className="relative z-10 p-[4px] rounded-4xl"
               style={{

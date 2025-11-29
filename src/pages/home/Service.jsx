@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TiMessages } from "react-icons/ti";
 import { FaPen, FaCalendarAlt, FaQuestionCircle } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Service() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -139,26 +141,27 @@ export default function Service() {
           <motion.div variants={containerVariants}>
             <div className="flex flex-col justify-center items-start">
               <motion.span
-                className="text-[17px] text-primary font-normal font-sans"
+                className="text-[17px] text-primary font-normal font-sans tracking-wider"
                 variants={itemVariants}
               >
-                SERVICES FOR APPLICANTS
+                {t("homepage.service.serviceTopHeading")}
               </motion.span>
 
               <motion.h2
                 className="text-[52px] font-bold font-sans mt-4 text-secondary leading-snug"
                 variants={itemVariants}
               >
-                How to stand out in today's <br /> job market.
+                {t("homepage.service.serviceHeading1")}{" "}
+                <span className="text-primary">
+                  {t("homepage.service.serviceHeading2")}
+                </span>
               </motion.h2>
 
               <motion.p
                 className="text-[16px] text-secondary text-normal font-sans mt-4 max-w-md leading-7"
                 variants={itemVariants}
               >
-                If you are pursuing a new opportunity, we will help you present
-                yourself with confidence and clarity, maximising your chances of
-                securing your ideal role.
+                {t("homepage.service.servicePara")}
               </motion.p>
             </div>
 
@@ -169,7 +172,7 @@ export default function Service() {
               whileHover="hover"
               whileTap="tap"
             >
-              More Information for Applicants
+              {t("homepage.service.serviceButton")}
             </motion.button>
           </motion.div>
 
@@ -206,11 +209,10 @@ export default function Service() {
                   <TiMessages size={22} />
                 </motion.div>
                 <h3 className="text-lg font-semibold text-secondary mb-3">
-                  Interview Preparation
+                  {t("homepage.service.servicesInterviewheading")}
                 </h3>
                 <p className="text-sm text-gray-600 leading-6">
-                  We equip you with interview techniques, conduct mock
-                  interviews, and build your confidence.
+                  {t("homepage.service.serviceInterviewPara")}
                 </p>
               </motion.div>
 
@@ -227,11 +229,10 @@ export default function Service() {
                   <FaPen size={20} />
                 </motion.div>
                 <h3 className="text-lg font-semibold text-secondary mb-3">
-                  CV & LinkedIn Profile Enhancement
+                  {t("homepage.service.serviceCvHeading")}
                 </h3>
                 <p className="text-sm text-gray-600 leading-6">
-                  We refine your CV and LinkedIn profile to make a strong first
-                  impression.
+                  {t("homepage.service.serviceCvPara")}
                 </p>
               </motion.div>
 
@@ -248,11 +249,10 @@ export default function Service() {
                   <FaCalendarAlt size={20} />
                 </motion.div>
                 <h3 className="text-lg font-semibold text-secondary mb-3">
-                  Labour Market Analysis
+                  {t("homepage.service.serviceLaborHeading")}
                 </h3>
                 <p className="text-sm text-gray-600 leading-6">
-                  We analyse your career opportunities across industries and
-                  regions, identifying the most suitable positions.
+                  {t("homepage.service.serviceLaborPara")}
                 </p>
               </motion.div>
               <motion.div
@@ -268,11 +268,10 @@ export default function Service() {
                   <FaQuestionCircle size={20} />
                 </motion.div>
                 <h3 className="text-lg font-semibold text-secondary mb-3">
-                  Personality Assessments
+                  {t("homepage.service.serviceParsonalHeading")}
                 </h3>
                 <p className="text-sm text-gray-600 leading-6">
-                  We provide assessments that help both you and potential
-                  employers understand your strengths and optimal fit.
+                  {t("homepage.service.serviceParsonalPara")}
                 </p>
               </motion.div>
             </motion.div>
@@ -291,10 +290,10 @@ export default function Service() {
             variants={containerVariants}
           >
             {[
-              { number: "6,000+", text: "interviews conducted" },
-              { number: "1,600+", text: "verified CVs" },
-              { number: "180+", text: "satisfied employers" },
-              { number: "62+", text: "professional articles published" },
+              { number: "6,000+", text: t("homepage.service.serviceStat1") },
+              { number: "1,600+", text: t("homepage.service.serviceStat2") },
+              { number: "180+", text: t("homepage.service.serviceStat3") },
+              { number: "62+", text: t("homepage.service.serviceStat4") },
             ].map((stat, index) => (
               <motion.div
                 key={index}

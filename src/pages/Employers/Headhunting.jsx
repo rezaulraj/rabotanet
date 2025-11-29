@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Headhunting() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -80,27 +82,22 @@ export default function Headhunting() {
           <motion.div variants={containerVariants}>
             <div className="flex flex-col justify-center items-start">
               <motion.span
-                className="text-[17px] text-primary font-normal font-sans"
+                className="text-[17px] text-primary font-semibold font-sans tracking-wider "
                 variants={itemVariants}
               >
-                Headhunting
+                {t("employeepage.headHunting.headHuntingTopHeading")}
               </motion.span>
               <motion.h2
                 className="text-[52px] font-medium font-sans mt-4 text-secondary leading-tight"
                 variants={itemVariants}
               >
-                How Headhunting Works at RabotaNet Recruitment
+                {t("employeepage.headHunting.headHuntingHeading")}
               </motion.h2>
               <motion.p
                 className="text-[16px] text-secondary text-normal font-sans mt-4 leading-7"
                 variants={itemVariants}
               >
-                Our headhunters specialise in sourcing high-calibre
-                professionals currently employed in other organisations. These
-                individuals often possess the precise skills and experience your
-                business requires. Our approach involves identifying,
-                approaching, and engaging them with tailored opportunities that
-                align with their career ambitions and your company's needs.
+                {t("employeepage.headHunting.headHuntingPara")}
               </motion.p>
             </div>
           </motion.div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const blogs = [
   {
@@ -23,6 +24,7 @@ const blogs = [
 ];
 
 export default function BlogHome() {
+  const { t } = useTranslation();
   return (
     <section className="py-20 bg-[#F4F4F2]">
       <div className="container max-w-7xl mx-auto px-4">

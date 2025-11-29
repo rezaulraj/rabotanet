@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaSearchDollar } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Personality() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -93,7 +95,7 @@ export default function Personality() {
           className="lg:text-[48px] text-secondary md:text-4xl font-bold text-center mb-16 leading-tight"
           variants={itemVariants}
         >
-          Personality Assessments
+          {t("employeepage.parsonality.parsonalityHeading")}
         </motion.h2>
 
         <motion.div
@@ -115,14 +117,7 @@ export default function Personality() {
             className="text-gray-600 text-[16px] font-sans leading-7"
             variants={itemVariants}
           >
-            Our personality assessments provide valuable insights into
-            candidates' behavioural styles and workplace motivations. They help
-            reveal whether an individual is more introverted or extroverted,
-            whether their drive is focused on achieving goals or building
-            relationships, how their traits may develop over time, and any
-            potential challenges that could affect long-term performance. These
-            insights support smarter hiring decisions and ensure stronger
-            alignment between candidates and organisational needs.
+            {t("employeepage.parsonality.parsonalityPara")}
           </motion.p>
         </motion.div>
       </div>

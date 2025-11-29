@@ -1,26 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaMedal, FaSyncAlt, FaHandshake } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Whatvalue() {
+  const { t } = useTranslation();
   const values = [
     {
       icon: <FaMedal className="w-6 h-6 text-white" />,
-      title: "Quality",
-      description:
-        "We are committed to delivering recruitment services of the highest standard. Through continuous innovation and process improvement, we aim not only to meet but to exceed client expectations. For us, quality is the cornerstone of long-term success.",
+      title: t("about.whatValue.valueStatsTitle1"),
+      description: t("about.whatValue.valueStatsDescription1"),
     },
     {
       icon: <FaSyncAlt className="w-6 h-6 text-white" />,
-      title: "Flexibility",
-      description:
-        "In today's fast-changing world, adaptability is key. We pride ourselves on offering flexible solutions that respond quickly and effectively to each client's unique needs.",
+      title: t("about.whatValue.valueStatsTitle2"),
+      description: t("about.whatValue.valueStatsDescription2"),
     },
     {
       icon: <FaHandshake className="w-6 h-6 text-white" />,
-      title: "Partnership",
-      description:
-        "We believe strong, long-term partnerships drive mutual growth. Building trust with clients and business partners is central to our mission, creating a stable foundation for future success.",
+      title: t("about.whatValue.valueStatsTitle3"),
+      description: t("about.whatValue.valueStatsDescription3"),
     },
   ];
 
@@ -107,7 +106,7 @@ export default function Whatvalue() {
           className="lg:text-[48px] md:text-3xl font-bold text-center mb-12 text-secondary font-sans"
           variants={itemVariants}
         >
-          Our Values
+          {t("about.whatValue.valueHeading")}
         </motion.h2>
 
         <motion.div

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const partners = [
   "/images/partners1.png",
@@ -20,6 +21,7 @@ const brand = [
 ];
 
 export default function Brand() {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -42,7 +44,7 @@ export default function Brand() {
     <section id="brand" className="py-20 bg-[#F4F4F2]">
       <div className="container max-w-7xl mx-auto px-4">
         <h4 className="text-secondary text-center text-[26px] font-bold">
-          Trusted for Over 15 Years in HR by:
+          {t("homepage.brand.brandText")}
         </h4>
 
         <div className="my-8 overflow-hidden">
@@ -74,7 +76,7 @@ export default function Brand() {
 
         <div className="max-w-5xl mx-auto">
           <p className="text-secondary text-center text-[20px] font-semibold">
-            Our partners:
+            {t("homepage.brand.partner")}
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 mt-4 gap-4">
             {partners.map((partner, index) => (

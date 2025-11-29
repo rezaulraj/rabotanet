@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function AppicantHero() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -64,13 +66,13 @@ export default function AppicantHero() {
             className="text-2xl font-bold text-secondary block"
             variants={itemVariants}
           >
-            Services for Candidates
+            {t("applicant.heroApplicant.heroTopHeading")}
           </motion.span>
           <motion.h1
             className="text-4xl md:text-5xl font-bold text-white mt-4"
             variants={itemVariants}
           >
-            How to succeed in today's job market.
+            {t("applicant.heroApplicant.heroHeading")}
           </motion.h1>
         </motion.div>
 
@@ -90,14 +92,10 @@ export default function AppicantHero() {
             />
             <div className="px-8 py-6">
               <h2 className="text-[30px] text-white font-bold font-sans mb-4">
-                Consultations
+                {t("applicant.heroApplicant.heroSubHeading1")}
               </h2>
               <p className="text-white text-[15px] font-normal font-sans leading-6">
-                Our candidate consultations are designed to help you present
-                yourself confidently and professionally. With guidance from
-                experienced consultants, you will improve your interview skills,
-                strengthen your personal brand, and increase your chances of
-                securing the right role.
+                {t("applicant.heroApplicant.heroSubPara1")}
               </p>
             </div>
           </motion.div>
@@ -114,13 +112,10 @@ export default function AppicantHero() {
             />
             <div className="px-8 py-6">
               <h2 className="text-[30px] text-white font-bold font-sans mb-4">
-                Personality Assessments
+                {t("applicant.heroApplicant.heroSubHeading2")}
               </h2>
               <p className="text-white text-[15px] font-normal font-sans leading-6">
-                We provide personality assessments that help you and potential
-                employers better understand your strengths, motivations, and
-                ideal work style. These insights allow for better job alignment
-                and stronger career development.
+                {t("applicant.heroApplicant.heroSubPara2")}
               </p>
             </div>
           </motion.div>

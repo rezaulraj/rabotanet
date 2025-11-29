@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Recruiting() {
+  const { t } = useTranslation();
   return (
     <section className="py-20 bg-[#F4F4F2]">
       <div className="container mx-auto max-w-6xl px-4">

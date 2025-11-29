@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Employers() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -134,7 +136,7 @@ export default function Employers() {
                 15 +
               </h2>
               <p className="text-[16px] font-bold font-sans text-white text-center">
-                Years of Experience
+                {t("homepage.employer.employerExaperence")}
               </p>
             </motion.div>
           </motion.div>
@@ -146,22 +148,21 @@ export default function Employers() {
               className="text-[17px] text-primary font-normal font-sans"
               variants={itemVariants}
             >
-              COMPREHENSIVE HR SERVICE
+              {t("homepage.employer.employerHeading1")}
             </motion.span>
 
             <motion.h2
               className="text-[52px] font-bold font-sans mt-4 text-secondary leading-tight"
               variants={itemVariants}
             >
-              FOR EMPLOYERS
+              {t("homepage.employer.employerHeading2")}
             </motion.h2>
 
             <motion.p
               className="text-[16px] text-secondary text-normal font-sans mt-4 leading-7"
               variants={itemVariants}
             >
-              We provide comprehensive recruitment solutions designed to secure
-              top-tier talent for your business.
+              {t("homepage.employer.employerparagraph")}
             </motion.p>
 
             <div className="w-full">
@@ -185,12 +186,10 @@ export default function Employers() {
                 </motion.span>
                 <div className="max-w-[400px] ml-6">
                   <h5 className="text-[22px] font-bold font-sans text-gray-800">
-                    Headhunting
+                    {t("homepage.employer.section1employerHeading1")}
                   </h5>
                   <p className="text-[15px] text-secondary text-normal font-sans mt-3 leading-6">
-                    This is more than candidate sourcing; it is the strategic
-                    art of identifying and engaging high-calibre professionals
-                    who can deliver measurable value and competitive advantage.
+                    {t("homepage.employer.section1employeroara")}
                   </p>
                 </div>
               </motion.div>
@@ -215,13 +214,10 @@ export default function Employers() {
                 </motion.span>
                 <div className="max-w-[400px] ml-6">
                   <h5 className="text-[22px] font-bold font-sans text-gray-800">
-                    Recruiting
+                    {t("homepage.employer.section2employerHeading1")}
                   </h5>
                   <p className="text-[15px] text-secondary text-normal font-sans mt-3 leading-6">
-                    A structured process of sourcing, attracting, and selecting
-                    candidates for diverse roles within your organisation. Our
-                    recruiters use modern tools, targeted outreach, and
-                    data-driven strategies to connect you with the right people.
+                    {t("homepage.employer.section2employeroara")}
                   </p>
                 </div>
               </motion.div>
@@ -234,7 +230,7 @@ export default function Employers() {
                   whileHover="hover"
                   whileTap="tap"
                 >
-                  More Information for Employers
+                  {t("homepage.employer.employerbutton")}
                 </motion.button>
               </motion.a>
             </div>

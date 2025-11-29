@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function AboutHero() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -93,55 +95,43 @@ export default function AboutHero() {
               className="text-[16px] font-sans font-bold text-primary mb-4"
               variants={itemVariants}
             >
-              ABOUT US
+              {t("about.heroAbout.heroTopHeading")}
             </motion.span>
 
             <motion.h1
               className="text-[48px] text-secondary font-sans leading-tight"
               variants={itemVariants}
             >
-              15 Years of Recruitment Expertise
+              {t("about.heroAbout.heroHeading")}
             </motion.h1>
 
             <motion.p
               className="text-[16px] font-sans text-[#192c33] mt-6 leading-7"
               variants={itemVariants}
             >
-              <strong className="text-primary">RabotaNet </strong> is a
-              recognized name in Europe's human resources industry and has
-              recently expanded its operations to Belarus. With more than 15
-              years of expertise in manpower management, we are committed to
-              delivering solutions that address the unique needs of every
-              client.
+              <strong className="text-primary">RabotaNet </strong>{" "}
+              {t("about.heroAbout.heroPara2")}
             </motion.p>
 
             <motion.p
               className="text-[16px] font-sans text-[#192c33] mt-6 leading-7"
               variants={itemVariants}
             >
-              We take pride in our ability to match the right talent with the
-              right opportunities, drawing on top-tier resources and proven
-              industry knowledge. Our team of seasoned professionals brings
-              extensive experience in manpower consulting, ensuring exceptional
-              service at every stage.
+              {t("about.heroAbout.heroPara3")}
             </motion.p>
 
             <motion.p
               className="text-[16px] font-sans text-[#192c33] mt-6 leading-7"
               variants={itemVariants}
             >
-              Our services are flexible and tailored designed to align with each
-              client's specific goals and budget. From temporary placements to
-              long-term recruitment, we offer comprehensive human capital
-              solutions worldwide.
+              {t("about.heroAbout.heroPara4")}
             </motion.p>
 
             <motion.p
               className="text-[16px] font-sans text-[#192c33] mt-6 leading-7"
               variants={itemVariants}
             >
-              Our vision is to be the trusted HR partner of choice for both
-              government and non-government organizations.
+              {t("about.heroAbout.heroPara5")}
             </motion.p>
           </motion.div>
 

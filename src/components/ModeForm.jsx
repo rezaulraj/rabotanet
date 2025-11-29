@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ModeForm({ isOpen, setIsOpen }) {
+  const { t } = useTranslation();
   return (
     <>
       {isOpen && (
@@ -14,10 +16,11 @@ export default function ModeForm({ isOpen, setIsOpen }) {
             </button>
 
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-secondary">Contact us</h2>
+              <h2 className="text-2xl font-bold text-secondary">
+                {t("homepage.formModel.formHeading")}
+              </h2>
               <p className="text-gray-600 mt-2 text-sm">
-                Are you interested in our services? Fill out the short form and
-                we will contact you soon.
+                {t("homepage.formModel.formPara")}
               </p>
             </div>
 
@@ -29,14 +32,14 @@ export default function ModeForm({ isOpen, setIsOpen }) {
               <input
                 type="text"
                 name="name"
-                placeholder="Name"
+                placeholder={t("homepage.formModel.name")}
                 required
                 className="w-full border border-primary px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <input
                 type="text"
                 name="company"
-                placeholder="Company"
+                placeholder={t("homepage.formModel.company")}
                 className="w-full border border-primary px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
               />
 
@@ -44,14 +47,14 @@ export default function ModeForm({ isOpen, setIsOpen }) {
                 <input
                   type="text"
                   name="phone"
-                  placeholder="Phone contact*"
+                  placeholder={t("homepage.formModel.phone")}
                   required
                   className="w-full border border-primary px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email*"
+                  placeholder={t("homepage.formModel.email")}
                   required
                   className="w-full border border-primary px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
                 />
@@ -59,7 +62,7 @@ export default function ModeForm({ isOpen, setIsOpen }) {
 
               <textarea
                 name="report"
-                placeholder="Report"
+                placeholder={t("homepage.formModel.report")}
                 rows="4"
                 className="w-full border border-primary px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
               ></textarea>
@@ -67,7 +70,7 @@ export default function ModeForm({ isOpen, setIsOpen }) {
               <div className="flex items-center space-x-2">
                 <input type="checkbox" id="policy" required />
                 <label htmlFor="policy" className="text-sm text-gray-700">
-                  I have read the Personal Data Processing Policy
+                  {t("homepage.formModel.policy")}
                 </label>
               </div>
 
@@ -83,7 +86,7 @@ export default function ModeForm({ isOpen, setIsOpen }) {
                 type="submit"
                 className="bg-primary cursor-pointer text-white px-8 py-2 rounded hover:bg-secondary duration-300"
               >
-                Send →
+                {t("homepage.formModel.button")}
               </button>
             </form>
           </div>

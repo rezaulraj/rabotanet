@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function WorkRecrui() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -83,26 +85,19 @@ export default function WorkRecrui() {
                 className="text-[17px] text-primary uppercase font-normal font-sans"
                 variants={itemVariants}
               >
-                Recruiting
+                {t("employeepage.workRecuit.workRecuitTopHeading")}
               </motion.span>
               <motion.h2
                 className="text-[52px] font-medium font-sans mt-4 text-secondary leading-tight"
                 variants={itemVariants}
               >
-                How Recruiting Works at RabotaNet Recruitment
+                {t("employeepage.workRecuit.workRecuitHeading")}
               </motion.h2>
               <motion.p
                 className="text-[16px] text-secondary text-normal font-sans mt-4 leading-7"
                 variants={itemVariants}
               >
-                Our recruitment specialists follow a comprehensive process to
-                ensure you hire the right fit. This includes advertising
-                vacancies on targeted platforms, carefully screening and
-                shortlisting CVs, coordinating interviews, and conducting
-                thorough reference checks. We also place strong emphasis on
-                ensuring each candidate aligns with your organisation's values
-                and culture. Every step is designed to help you build strong,
-                lasting teams that contribute to long-term success.
+                {t("employeepage.workRecuit.workRecuitPara")}
               </motion.p>
             </div>
           </motion.div>
@@ -111,7 +106,6 @@ export default function WorkRecrui() {
             className="flex justify-center items-center relative"
             variants={imageContainerVariants}
           >
-
             <motion.div
               className="absolute inset-0 left-40 -top-36 flex w-full justify-center items-center z-0"
               variants={rotateVariants}

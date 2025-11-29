@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaUserClock, FaSearchDollar, FaClock } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Advantages() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -97,21 +99,21 @@ export default function Advantages() {
   const advantages = [
     {
       icon: FaUserClock,
-      title: "Access to passive candidates",
+      title: t("employeepage.advantage.advantageHeadingStats1"),
       description:
-        "We help you engage with professionals who are not actively applying for jobs, giving you the chance to hire rare and exceptional talent.",
+        t("employeepage.advantage.advantageParaStats1"),
     },
     {
       icon: FaSearchDollar,
-      title: "Industry-specific expertise",
+      title: t("employeepage.advantage.advantageHeadingStats2"),
       description:
-        "Our headhunters focus on defined industries and functional areas, ensuring a deeper understanding of your requirements and more precise candidate matches.",
+        t("employeepage.advantage.advantageParaStats2"),
     },
     {
       icon: FaClock,
-      title: "Time and resource efficiency",
+      title: t("employeepage.advantage.advantageHeadingStats3"),
       description:
-        "Outsourcing to our experts saves you valuable time and internal resources, while ensuring a professional and discreet search process.",
+        t("employeepage.advantage.advantageParaStats3"),
     },
   ];
 
@@ -127,7 +129,7 @@ export default function Advantages() {
         className="lg:text-[48px] text-secondary md:text-4xl font-bold text-center mb-16 leading-tight"
         variants={itemVariants}
       >
-        Advantages of RabotaNet Recruitment Headhunting
+        {t("employeepage.advantage.advantageTopHeading")}
       </motion.h2>
       <motion.div
         className="absolute inset-0 flex justify-center items-center z-0"

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaUpload, FaCheck, FaSpinner } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const HeroCareer = () => {
+  const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -134,15 +136,14 @@ const HeroCareer = () => {
       <section className="relative bg-primary text-white py-30">
         <div className="relative container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           <div className="flex-1 text-center md:text-left">
-            <span className="text-lg uppercase font-medium tracking-widest text-gray-900">
-              Join Our Team
+            <span className="text-lg uppercase font-semibold tracking-widest text-gray-900">
+              {t("career.careertoph")}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 leading-tight">
-              Build Your Career with RabotaNet
+              {t("career.careerh1")}
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-xl">
-              Explore exciting opportunities, connect with top employers, and
-              find the perfect role that matches your skills and ambitions.
+              {t("career.careerpara")}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <button
@@ -152,13 +153,13 @@ const HeroCareer = () => {
                 }}
                 className="bg-gray-900 hover:bg-gray-800 text-gray-100 font-semibold px-6 py-3 rounded-full transition duration-300 cursor-pointer"
               >
-                Explore Jobs
+                {t("career.careerbtn1")}
               </button>
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="border border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-full transition duration-300 cursor-pointer"
               >
-                Submit CV
+                {t("career.careerbtn2")}
               </button>
             </div>
           </div>
@@ -191,7 +192,7 @@ const HeroCareer = () => {
             >
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
                 <h2 className="text-2xl font-bold text-gray-900">
-                  Submit Your CV
+                  {t("careerform.heading")}
                 </h2>
                 <button
                   onClick={() => {
@@ -207,7 +208,7 @@ const HeroCareer = () => {
               <form onSubmit={handleSubmit} className="p-6 space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
+                    {t("careerform.name")}
                   </label>
                   <input
                     type="text"
@@ -223,7 +224,7 @@ const HeroCareer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
+                      {t("careerform.email")}
                     </label>
                     <input
                       type="email"
@@ -237,7 +238,7 @@ const HeroCareer = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number *
+                      {t("careerform.phone")}
                     </label>
                     <input
                       type="tel"
@@ -253,7 +254,7 @@ const HeroCareer = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
+                    {t("careerform.subject")}
                   </label>
                   <input
                     type="text"
@@ -268,7 +269,7 @@ const HeroCareer = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
+                    {t("careerform.message")}
                   </label>
                   <textarea
                     name="message"
@@ -282,7 +283,7 @@ const HeroCareer = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Upload CV *
+                    {t("careerform.cv")}
                   </label>
                   <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center transition-all hover:border-primary">
                     <input
@@ -354,7 +355,7 @@ const HeroCareer = () => {
                     }}
                     className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                   >
-                    Cancel
+                    {t("careerform.cancel")}
                   </button>
                   <button
                     type="submit"
@@ -368,7 +369,7 @@ const HeroCareer = () => {
                     }
                     className="flex-1 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
-                    Submit Application
+                    {t("careerform.submit")}
                   </button>
                 </div>
               </form>

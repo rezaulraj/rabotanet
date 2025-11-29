@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactCountryFlag from "react-country-flag";
+import { useTranslation } from "react-i18next";
 
 const countryCodes = {
   Albania: "AL",
@@ -692,6 +693,7 @@ const JobCard = ({ job, onApply, onShare }) => {
 };
 
 const JobPage = () => {
+  const { t } = useTranslation();
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -702,11 +704,15 @@ const JobPage = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   const categories = [
-    { id: "all", name: "All Jobs", color: "bg-gray-500" },
-    { id: "HandsOn_Jobs", name: "Operational Jobs", color: "bg-[#db4f3c]" },
+    { id: "all", name: t("career.careerhero1"), color: "bg-gray-500" },
+    {
+      id: "HandsOn_Jobs",
+      name: t("career.careerhero2"),
+      color: "bg-[#db4f3c]",
+    },
     {
       id: "Administrative_Jobs",
-      name: "Corporate Jobs",
+      name: t("career.careerhero3"),
       color: "bg-yellow-500",
     },
   ];
@@ -810,11 +816,10 @@ const JobPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Available Jobs
+            {t("career.careersubh")}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover your next career opportunity with our diverse range of
-            positions across various industries and locations.
+            {t("career.careersubpara")}
           </p>
         </div>
 

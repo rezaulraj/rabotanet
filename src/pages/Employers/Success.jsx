@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Success() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -67,6 +69,18 @@ export default function Success() {
     },
   };
 
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
   return (
     <motion.section
       className="py-20 bg-[#F4F4F2] overflow-hidden"
@@ -131,21 +145,60 @@ export default function Success() {
                 className="text-[32px] font-medium font-sans text-secondary leading-tight"
                 variants={itemVariants}
               >
-                Why Headhunting Matters for Your Success
+                {t("employeepage.success.successHeading")}
               </motion.h2>
               <motion.p
                 className="text-[16px] text-secondary text-normal font-sans mt-4 leading-7"
                 variants={itemVariants}
               >
-                In today's competitive labour market, attracting and retaining
-                top performers is vital. Many of the most talented professionals
-                are not actively seeking new roles. Through our headhunting
-                services,{" "}
-                <strong className="text-primary">RabotaNet Recruitment</strong>{" "}
-                enables you to reach beyond traditional channels and connect
-                directly with this exceptional talent pool.
+                {t("employeepage.success.successPara1")}{" "}
+                <strong className="text-primary">
+                  {t("employeepage.success.successPara2")}
+                </strong>{" "}
+                {t("employeepage.success.successPara3")}
               </motion.p>
             </div>
+            <motion.div
+              className="grid grid-cols-3 gap-4 w-full max-w-md mt-10"
+              variants={textVariants}
+              transition={{ delay: 0.3 }}
+            >
+              {[
+                {
+                  number: "98%",
+                  label: t("employeepage.success.successtats1"),
+                },
+                {
+                  number: "24/7",
+                  label: t("employeepage.success.successtats2"),
+                },
+                {
+                  number: "100+",
+                  label: t("employeepage.success.successtats3"),
+                },
+              ].map((metric, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center p-4 bg-white rounded-2xl shadow-sm"
+                  whileHover={{
+                    boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <motion.div
+                    className="text-lg font-bold text-primary"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+                  >
+                    {metric.number}
+                  </motion.div>
+                  <div className="text-xs text-gray-600 mt-1">
+                    {metric.label}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -8,8 +8,10 @@ import WorkRecrui from "./WorkRecrui";
 import SuccessSection from "../../components/SuccessSection";
 import Personality from "./Personality";
 import Banner from "../../components/Banner";
+import { useTranslation } from "react-i18next";
 
 const EmployerPage = () => {
+  const { t } = useTranslation();
   return (
     <div>
       <EmployHero />
@@ -19,8 +21,8 @@ const EmployerPage = () => {
       <Professional />
       <WorkRecrui />
       <SuccessSection
-        title=" Why Recruiting Is Essential to Business Success"
-        description="Recruitment forms the backbone of a motivated and high-performing workforce. RabotaNet Recruitment understands that the right hiring decisions shape employee morale, efficiency, and company culture, which is why we tailor every recruitment process to the unique needs of each employer we partner with."
+        title={t("employeepage.successSection.title")}
+        description={t("employeepage.successSection.description")}
         image="/images/employee2.png"
         imageAlt="Bob"
       />

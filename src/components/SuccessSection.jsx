@@ -135,7 +135,6 @@ export default function SuccessSection({
               </motion.div>
             </motion.div>
 
-            {/* Decorative Elements */}
             <motion.div
               className="absolute -top-2 -right-2 w-10 h-10 bg-primary/30 rounded-full z-20"
               animate={{
@@ -163,7 +162,6 @@ export default function SuccessSection({
             />
           </motion.div>
 
-          {/* Text Content */}
           <motion.div variants={containerVariants}>
             <div className="flex flex-col justify-center items-start">
               <motion.h2

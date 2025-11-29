@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiMenu, HiX, HiChevronDown } from "react-icons/hi";
 import { useLocation, Link } from "react-router-dom";
 import ModeForm from "./ModeForm";
 import { FaStar, FaFire, FaCheck } from "react-icons/fa";
 import ReactCountryFlag from "react-country-flag";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +17,6 @@ export default function Navbar() {
   const [pulseEffect, setPulseEffect] = useState(true);
   const [userInteracted, setUserInteracted] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
   const location = useLocation();
 
   useEffect(() => {
@@ -57,35 +58,36 @@ export default function Navbar() {
 
   const handleCareerClick = () => {
     sessionStorage.setItem("careerNavInteracted", "true");
-
     setUserInteracted(true);
     setClickedCareer(true);
     setActiveVacancy(false);
     setPulseEffect(false);
-
     setTimeout(() => setClickedCareer(false), 1500);
   };
 
   const languages = [
     { code: "en", country: "US", name: "English" },
     { code: "ru", country: "RU", name: "Russian" },
-    { code: "ro", country: "RO", name: "Romanian" },
+    // { code: "ro", country: "RO", name: "Romanian" },
   ];
 
-  const handleLanguageSelect = (languageCode) => {
-    setSelectedLanguage(languageCode);
+  const changeLanguage = (langCode) => {
+    i18n.changeLanguage(langCode);
     setIsLanguageOpen(false);
-    // Add your language change logic here
+    if (isMenuOpen) setIsMenuOpen(false);
   };
 
+  const currentLanguage =
+    languages.find((lang) => lang.code === i18n.language) || languages[0];
+
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/employers", label: "Employers" },
-    { href: "/applicants", label: "Applicants" },
-    { href: "/about", label: "About Us" },
+    { href: "/", label: t("nav.home") },
+    { href: "/employers", label: t("nav.employers") },
+    { href: "/applicants", label: t("nav.applicants") },
+    { href: "/about", label: t("nav.about") },
     {
       href: "/career",
-      label: "Career",
+      label: t("nav.career"),
       hasVacancy: true,
     },
   ];
@@ -223,8 +225,8 @@ export default function Navbar() {
   );
 
   const RegularNavLink = ({ item }) => (
-    <a
-      href={item.href}
+    <Link
+      to={item.href}
       className={`font-medium transition-colors ${
         location.pathname === item.href
           ? "text-primary font-semibold"
@@ -232,12 +234,12 @@ export default function Navbar() {
       }`}
     >
       {item.label}
-    </a>
+    </Link>
   );
 
   const RegularCareerLink = ({ item }) => (
-    <a
-      href={item.href}
+    <Link
+      to={item.href}
       className={`font-medium transition-colors ${
         location.pathname === item.href
           ? "text-primary font-semibold"
@@ -245,126 +247,129 @@ export default function Navbar() {
       }`}
     >
       {item.label}
-    </a>
+    </Link>
   );
 
   const LanguageDropdown = () => (
     <div className="relative">
       <motion.button
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
         onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-        className="hidden md:flex items-center gap-2 cursor-pointer bg-primary/30 font-bold px-4 py-2 rounded-md hover:bg-primary/40 transition-colors border-gray-200"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        onBlur={() => setTimeout(() => setIsLanguageOpen(false), 150)}
+        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-primary/50 hover:border-primary transition-colors shadow-sm  cursor-pointer"
       >
         <ReactCountryFlag
-          countryCode={
-            languages.find((lang) => lang.code === selectedLanguage)?.country
-          }
+          countryCode={currentLanguage.country}
           svg
           style={{
             width: "20px",
             height: "15px",
           }}
+          title={currentLanguage.name}
         />
-        <span className="text-sm">
-          {languages.find((lang) => lang.code === selectedLanguage)?.name}
-        </span>
+        {/* <span className="text-sm font-medium text-gray-700 hidden lg:block">
+          {currentLanguage.name}
+        </span> */}
+        <HiChevronDown
+          className={`w-4 h-4 text-gray-500 transition-transform ${
+            isLanguageOpen ? "rotate-180" : ""
+          }`}
+        />
       </motion.button>
 
-      <AnimatePresence>
-        {isLanguageOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[140px] z-50"
-          >
-            {languages.map((language) => (
-              <button
-                key={language.code}
-                onClick={() => handleLanguageSelect(language.code)}
-                className={`w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors flex items-center gap-3 ${
-                  selectedLanguage === language.code
-                    ? "bg-blue-50 text-blue-600"
-                    : ""
-                }`}
-              >
-                <ReactCountryFlag
-                  countryCode={language.country}
-                  svg
-                  style={{
-                    width: "20px",
-                    height: "15px",
-                  }}
-                />
-                <span className="text-sm">{language.name}</span>
-              </button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isLanguageOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
+          className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+        >
+          {languages.map((lang) => (
+            <motion.button
+              key={lang.code}
+              whileHover={{ backgroundColor: "#f8fafc" }}
+              onClick={() => changeLanguage(lang.code)}
+              className={`flex items-center gap-3 w-full px-4 py-2 text-left transition-colors cursor-pointer ${
+                i18n.language === lang.code
+                  ? "bg-primary/10 text-primary font-semibold"
+                  : "text-gray-700 hover:bg-gray-50"
+              }`}
+            >
+              <ReactCountryFlag
+                countryCode={lang.country}
+                svg
+                style={{
+                  width: "20px",
+                  height: "15px",
+                }}
+                title={lang.name}
+              />
+              <span className="text-sm">{lang.name}</span>
+            </motion.button>
+          ))}
+        </motion.div>
+      )}
     </div>
   );
 
-  const MobileLanguageDropdown = () => (
+  const MobileLanguageButton = () => (
     <div className="relative">
-      <button
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-        className="w-full flex items-center justify-between gap-2 cursor-pointer font-bold px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200"
+        onBlur={() => setTimeout(() => setIsLanguageOpen(false), 150)}
+        className="flex items-center gap-1 p-2 rounded-lg bg-white border border-gray-200 shadow-sm cursor-pointer"
       >
-        <div className="flex items-center gap-3">
-          <ReactCountryFlag
-            countryCode={
-              languages.find((lang) => lang.code === selectedLanguage)?.country
-            }
-            svg
-            style={{
-              width: "20px",
-              height: "15px",
-            }}
-          />
-          <span>
-            {languages.find((lang) => lang.code === selectedLanguage)?.name}
-          </span>
-        </div>
-      </button>
+        <ReactCountryFlag
+          countryCode={currentLanguage.country}
+          svg
+          style={{
+            width: "20px",
+            height: "15px",
+          }}
+          title={currentLanguage.name}
+        />
+        <HiChevronDown
+          className={`w-3 h-3 text-gray-500 transition-transform ${
+            isLanguageOpen ? "rotate-180" : ""
+          }`}
+        />
+      </motion.button>
 
-      <AnimatePresence>
-        {isLanguageOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
-          >
-            <div className="mt-2 bg-gray-50 rounded-lg border border-gray-200 py-2">
-              {languages.map((language) => (
-                <button
-                  key={language.code}
-                  onClick={() => handleLanguageSelect(language.code)}
-                  className={`w-full px-4 py-3 text-left hover:bg-gray-100 transition-colors flex items-center gap-3 ${
-                    selectedLanguage === language.code
-                      ? "bg-blue-50 text-blue-600"
-                      : ""
-                  }`}
-                >
-                  <ReactCountryFlag
-                    countryCode={language.country}
-                    svg
-                    style={{
-                      width: "20px",
-                      height: "15px",
-                    }}
-                  />
-                  <span>{language.name}</span>
-                </button>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isLanguageOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
+          className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+        >
+          {languages.map((lang) => (
+            <motion.button
+              key={lang.code}
+              whileHover={{ backgroundColor: "#f8fafc" }}
+              onClick={() => changeLanguage(lang.code)}
+              className={`flex items-center gap-3 w-full px-3 py-2 text-left transition-colors cursor-pointer ${
+                i18n.language === lang.code
+                  ? "bg-primary/10 text-primary font-semibold"
+                  : "text-gray-700 hover:bg-gray-50"
+              }`}
+            >
+              <ReactCountryFlag
+                countryCode={lang.country}
+                svg
+                style={{
+                  width: "20px",
+                  height: "15px",
+                }}
+                title={lang.name}
+              />
+              <span className="text-sm">{lang.name}</span>
+            </motion.button>
+          ))}
+        </motion.div>
+      )}
     </div>
   );
 
@@ -402,49 +407,64 @@ export default function Navbar() {
               )}
             </div>
           ))}
-          <ModeForm isOpen={isOpen} setIsOpen={setIsOpen} />
+
+          <div className={`fixed inset-0 ${isOpen ? "block" : "hidden"}`}>
+            <ModeForm isOpen={isOpen} setIsOpen={setIsOpen} />
+          </div>
+
           <motion.button
-            onClick={() => setIsOpen(!isOpen)}
-            className="hidden md:inline-block cursor-pointer bg-primary text-white font-bold px-5 py-2 rounded-full hover:bg-secondary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setIsOpen(!isOpen)}
+            className="hidden md:inline-block cursor-pointer bg-primary text-white font-bold px-5 py-2 rounded-full hover:bg-secondary transition-colors"
           >
-            Contact Us
+            {t("nav.contact")}
           </motion.button>
+
           <LanguageDropdown />
         </nav>
 
-        <button
-          className="md:hidden text-2xl text-gray-800"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <HiX /> : <HiMenu />}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <MobileLanguageButton />
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-2xl text-gray-800 p-1 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <HiX /> : <HiMenu />}
+          </motion.button>
+        </div>
       </div>
 
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white shadow-lg overflow-hidden"
+            className="md:hidden bg-white shadow-lg border-t"
           >
-            <nav className="flex flex-col p-4 gap-4">
+            <nav className="flex flex-col p-4 gap-3">
               {navItems.map((item) => (
-                <div key={item.href} className="relative py-2">
+                <motion.div
+                  key={item.href}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
                   {item.hasVacancy ? (
                     !userInteracted ? (
                       <CareerButton item={item} isMobile={true} />
                     ) : (
                       <Link
                         to={item.href}
-                        className={`font-medium block ${
+                        className={`font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-between cursor-pointer ${
                           location.pathname === item.href
-                            ? "text-primary font-semibold"
-                            : "text-gray-800"
+                            ? "text-primary font-semibold bg-primary/10"
+                            : "text-gray-800 hover:bg-gray-50"
                         }`}
+                        onClick={() => setIsMenuOpen(false)}
                       >
                         {item.label}
                       </Link>
@@ -452,24 +472,30 @@ export default function Navbar() {
                   ) : (
                     <Link
                       to={item.href}
-                      className={`font-medium block ${
+                      className={`font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-between cursor-pointer ${
                         location.pathname === item.href
-                          ? "text-primary font-semibold"
-                          : "text-gray-800"
+                          ? "text-primary font-semibold bg-primary/10"
+                          : "text-gray-800 hover:bg-gray-50"
                       }`}
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
                     </Link>
                   )}
-                </div>
+                </motion.div>
               ))}
-              <a
-                href="mailto:manager@rabotanet.com"
-                className="bg-primary text-white font-bold px-5 py-2 rounded-full text-center"
+
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => {
+                  setIsOpen(true);
+                  setIsMenuOpen(false);
+                }}
+                className="bg-primary text-white font-bold py-3 px-4 rounded-full text-center mt-4 hover:bg-secondary transition-colors cursor-pointer"
               >
-                Contact
-              </a>
-              <MobileLanguageDropdown />
+                {t("nav.contact")}
+              </motion.button>
             </nav>
           </motion.div>
         )}

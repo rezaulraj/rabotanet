@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ModeForm from "../../components/ModeForm";
+import { useTranslation } from "react-i18next";
 
 export default function Competitive() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -20,7 +22,7 @@ export default function Competitive() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.7 }}
           >
-            Specialised Recruitment Services – Powered by Our Expertise
+            {t("homepage.compitator.compitatorHeading")}
           </motion.h2>
 
           <motion.button
@@ -29,7 +31,7 @@ export default function Competitive() {
             onClick={() => setIsOpen(true)}
             className="text-[20px] cursor-pointer font-bold font-sans text-white bg-primary px-10 py-3 rounded-4xl mt-5 hover:bg-secondary duration-300"
           >
-            I want the best people.
+            {t("homepage.compitator.compitatorButton")}
           </motion.button>
         </motion.div>
       </div>

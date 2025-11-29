@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Opportunity() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -159,18 +161,13 @@ export default function Opportunity() {
                 className="text-[24px] md:text-[32px] font-medium font-sans mt-4 text-secondary leading-tight"
                 variants={itemVariants}
               >
-                Consultations with Candidates – Be Ready for New Opportunities
+                {t("applicant.opertunity.opertunityHeading")}
               </motion.h2>
               <motion.p
                 className="text-[14px] md:text-[16px] text-secondary font-sans mt-4 leading-7"
                 variants={itemVariants}
               >
-                Our consultations go beyond interview preparation. We support
-                you in refining your CV, optimising your LinkedIn profile, and
-                enhancing your visibility to potential employers. By improving
-                your presentation skills and professional branding, we help you
-                stand out in a competitive market and improve your chances of
-                landing your desired role.
+                {t("applicant.opertunity.opertunityPara")}
               </motion.p>
             </div>
           </motion.div>

@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MdOutlineDoneOutline } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 export default function Banner() {
-  // Animation variants
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -148,7 +149,6 @@ export default function Banner() {
     >
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-          {/* Image Section */}
           <motion.div className="col-span-7" variants={imageVariants}>
             <motion.div variants={floatingImageVariants} animate="float">
               <motion.img
@@ -163,7 +163,6 @@ export default function Banner() {
             </motion.div>
           </motion.div>
 
-          {/* Content Section */}
           <motion.div
             className="col-span-5 flex flex-col justify-center items-start"
             variants={contentVariants}
@@ -172,43 +171,43 @@ export default function Banner() {
               className="text-[52px] font-bold font-sans mt-4 text-secondary leading-tight"
               variants={itemVariants}
             >
-              RabotaNet Recruitment Company
+              {t("homepage.banner.bannertopheading")}
             </motion.h2>
 
             <motion.span
               className="text-[24px] text-primary font-normal font-sans mt-2"
               variants={itemVariants}
             >
-              Fleet Service
+              {t("homepage.banner.bannerservies")}
             </motion.span>
 
             <motion.h5
               className="text-[17px] font-bold font-sans mt-6 text-secondary leading-relaxed"
               variants={itemVariants}
             >
-              Specialised Recruitment Services – Powered by Our Expertise
+              {t("homepage.banner.bannerHeading")}
             </motion.h5>
 
             <motion.p
               className="text-[17px] text-secondary font-sans mt-4 leading-8"
               variants={itemVariants}
             >
-              In addition to standard hiring solutions,{" "}
-              <strong className="text-primary">RabotaNet Recruitment</strong>{" "}
-              offers specialised recruitment support tailored to businesses with
-              unique workforce needs.
+              {t("homepage.banner.bannerPara1")}{" "}
+              <strong className="text-primary">
+                {t("homepage.banner.bannerPara2")}
+              </strong>{" "}
+              {t("homepage.banner.bannerPara3")}
             </motion.p>
 
-            {/* Features Grid */}
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 w-full"
               variants={containerVariants}
             >
               {[
-                "Expertise across industries",
-                "Fast, reliable hiring solutions",
-                "Access to diverse talent pools",
-                "Long-term support",
+                t("homepage.banner.bannerSecHeading"),
+                t("homepage.banner.bannerThiHeading"),
+                t("homepage.banner.bannerFortHeading"),
+                t("homepage.banner.bannerFiftHeading"),
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -237,7 +236,6 @@ export default function Banner() {
               ))}
             </motion.div>
 
-            {/* CTA Button */}
             <motion.a
               href="/about"
               className="text-[20px] font-bold font-sans text-white bg-primary hover:bg-secondary px-12 py-4 rounded-4xl mt-12 shadow-lg hover:shadow-xl relative overflow-hidden"
@@ -246,7 +244,6 @@ export default function Banner() {
               whileHover="hover"
               whileTap="tap"
             >
-              {/* Button Shine Effect */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                 initial={{ x: "-100%" }}
@@ -254,7 +251,9 @@ export default function Banner() {
                 transition={{ duration: 0.6 }}
               />
 
-              <span className="relative z-10">More about the service</span>
+              <span className="relative z-10">
+                {t("homepage.banner.bannerLink")}
+              </span>
             </motion.a>
           </motion.div>
         </div>

@@ -18,13 +18,14 @@
       "heropara3": "consistently discovers the professionals who truly make a difference."
     },
     "brand": {
-      "brandText": "Trusted by HR professionals for more than 15 years:"
+      "brandText": "Trusted by HR professionals for more than 15 years:",
+      "partner": "Our partners:"
     },
     "finding": {
       "findTopHeading": "NOT JUST A STAFFING AGENCY",
       "findBig1Heading": "Finding the right talent takes both expertise and intuition.",
-      "findBig2Heading": "Every organisation is built by its people, and those peopledetermine its success. That is why our work goes beyond filling vacancies.",
-      "findParagraph1": "Cloud Konektion ",
+      "findBig2Heading": "Every organisation is built by its people, and those people determine its success. That is why our work goes beyond filling vacancies.",
+      "findParagraph1": "RabotaNet Recruitment ",
       "findParagraph2": "is committed to the success of every employer and every professional we serve. We recognise that each client and candidate is unique, and we approach every engagement with precision, dedication, and integrity."
     },
     "employer": {
@@ -60,7 +61,7 @@
     "ourCliend": {
       "cliendTopHeading": "CASE STUDIES & CLIENT REFERENCES",
       "cliendHeading1": "How we’ve delivered results for ",
-      "cliendHeading2": "our clients",
+      "cliendHeading2": "Our Clients",
       "cliendHeadhuntingHead": "Headhunting",
       "cliendHeadhuntingPara": "A global company urgently sought to fill a specialised role after their previous agency failed to deliver suitable candidates. Through a detailed consultation, we uncovered overly restrictive technical requirements that were limiting the search. By refining the criteria and leveraging our extensive talent database, we presented three strong shortliste candidates within just two weeks two of whom proved to be an excellent fit both technically and culturally.",
       "clientRecuitHead": "Recruiting",
@@ -92,7 +93,7 @@
       "bannerThiHeading": "Fast and reliable hiring",
       "bannerFortHeading": "Access to diverse talent pools",
       "bannerFiftHeading": "Long-term support",
-      "bannerLink": "More about the service"
+      "bannerLink": "More about the services"
     }
   },
   "employeepage": {
@@ -224,11 +225,23 @@
     "careerstat4": "100% Job Security",
     "careerbtn1": "Explore Jobs",
     "careerbtn2": "Submit CV",
+
     "careersubh": "Available Jobs",
     "careersubpara": "Discover your next career opportunity with our diverse range of positions across various industries and locations.",
     "careerhero1": "All Jobs",
     "careerhero2": "Operational Jobs",
     "careerhero3": "Corporate Jobs"
+  },
+  "careerform": {
+    "heading": "Submit Your CV",
+    "name": "Full Name *",
+    "email": "Email Address *",
+    "phone": "Phone Number *",
+    "subject": "Subject *",
+    "message": "Message",
+    "cv": "Upload CV *",
+    "submit":"Submit Application",
+    "cancel":"Cancel"
   },
   "successstory": {
     "headingsuccess": "Visa Success Stories",

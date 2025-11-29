@@ -8,35 +8,12 @@ import {
   FaUsers,
   FaQuestionCircle,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
-const items = [
-  {
-    icon: <FaRegComments className="text-white text-2xl" />,
-    title: "Interview preparation and coaching",
-  },
-  {
-    icon: <FaPencilAlt className="text-white text-2xl" />,
-    title: "CV editing and enhancement",
-  },
-  {
-    icon: <FaLinkedin className="text-white text-2xl" />,
-    title: "LinkedIn profile optimisation",
-  },
-  {
-    icon: <FaIdBadge className="text-white text-2xl" />,
-    title: "Labour market insights and career guidance",
-  },
-  {
-    icon: <FaUsers className="text-white text-2xl" />,
-    title: "Mock interviews to build confidence",
-  },
-  {
-    icon: <FaQuestionCircle className="text-white text-2xl" />,
-    title: "Personality assessments for deeper self-awareness",
-  },
-];
+
 
 export default function Consultations() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -128,6 +105,33 @@ export default function Consultations() {
     },
   };
 
+  const items = [
+  {
+    icon: <FaRegComments className="text-white text-2xl" />,
+    title: t("applicant.consultation.consltationService1"),
+  },
+  {
+    icon: <FaPencilAlt className="text-white text-2xl" />,
+    title: t("applicant.consultation.consltationService2"),
+  },
+  {
+    icon: <FaLinkedin className="text-white text-2xl" />,
+    title: t("applicant.consultation.consltationService3"),
+  },
+  {
+    icon: <FaIdBadge className="text-white text-2xl" />,
+    title: t("applicant.consultation.consltationService4"),
+  },
+  {
+    icon: <FaUsers className="text-white text-2xl" />,
+    title: t("applicant.consultation.consltationService5"),
+  },
+  {
+    icon: <FaQuestionCircle className="text-white text-2xl" />,
+    title: t("applicant.consultation.consltationService6"),
+  },
+];
+
   return (
     <motion.section
       className="py-20 bg-[#F4F4F2] overflow-hidden relative"
@@ -168,7 +172,7 @@ export default function Consultations() {
           className="text-center lg:text-[48px] md:text-2xl font-semibold text-gray-800 mb-12 leading-tight"
           variants={itemVariants}
         >
-          Our Consultation Services Include:
+          {t("applicant.consultation.consltationHeading")}
         </motion.h2>
 
         <motion.div

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ModeForm from "../../components/ModeForm";
+import { useTranslation } from "react-i18next";
 
 export default function Professional() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const containerVariants = {
@@ -60,11 +62,7 @@ export default function Professional() {
           className="text-[33px] font-medium font-sans mt-4 text-secondary leading-relaxed"
           variants={itemVariants}
         >
-          By combining our expertise with an extensive network of professional
-          headhunters, we help you elevate your recruitment process and secure
-          the kind of exceptional talent that drives long-term success. Our goal
-          is simple: we connect you with the very best people, the rare
-          professionals who truly make a difference.
+          {t("employeepage.professional.professionalHeading")}
         </motion.h2>
 
         <motion.button
@@ -75,14 +73,14 @@ export default function Professional() {
           whileHover="hover"
           whileTap="tap"
         >
-          I want the best people.
+          {t("employeepage.professional.professionalButton")}
         </motion.button>
 
         <motion.p
           className="text-gray-600 text-[16px] font-sans mt-6"
           variants={itemVariants}
         >
-          Let's find the exceptional talent your business deserves
+          {t("employeepage.professional.textstat")}
         </motion.p>
       </div>
 

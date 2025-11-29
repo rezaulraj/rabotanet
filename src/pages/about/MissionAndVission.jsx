@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const MissionAndVission = () => {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -76,8 +78,6 @@ const MissionAndVission = () => {
     "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.1&auto=format&fit=crop&w=1200&q=80";
   const visionImage =
     "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.1&auto=format&fit=crop&w=1200&q=80";
-  const backgroundPattern =
-    "https://images.unsplash.com/photo-1558591710-4b4a643ae5d8?ixlib=rb-4.0.1&auto=format&fit=crop&w=1200&q=80";
 
   return (
     <div className="min-h-screen relative overflow-hidden py-20 px-4 bg-primary">
@@ -117,15 +117,13 @@ const MissionAndVission = () => {
             </div>
           </motion.div>
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Our{" "}
+            {t("about.missionvission.heading1")}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-gray-900 to-gray-950">
-              Purpose
+              {t("about.missionvission.heading2")}
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Redefining talent acquisition through innovation, empathy, and
-            exceptional partnerships that transform careers and businesses
-            alike.
+            {t("about.missionvission.para")}
           </p>
         </motion.div>
 
@@ -201,32 +199,32 @@ const MissionAndVission = () => {
                 </motion.div>
                 <div>
                   <h2 className="text-4xl font-bold text-white mb-2">
-                    Our Mission
+                    {t("about.missionvission.missionh")}
                   </h2>
                   <div className="w-20 h-1 bg-linear-to-r from-cyan-400 to-blue-400 rounded-full"></div>
                 </div>
               </div>
 
               <p className="text-lg text-white/90 leading-relaxed mb-8">
-                To architect meaningful connections between exceptional talent
-                and visionary organizations. We don't just fill positions—we
-                build bridges that empower careers and accelerate business
-                growth through personalized, empathetic recruitment strategies.
+                {t("about.missionvission.missionpara")}
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
-                {["Excellence", "Connection", "Growth", "Impact"].map(
-                  (item, index) => (
-                    <motion.div
-                      key={item}
-                      className="flex items-center text-white/80"
-                      whileHover={{ x: 5 }}
-                    >
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                      <span className="font-semibold">{item}</span>
-                    </motion.div>
-                  )
-                )}
+                {[
+                  t("about.missionvission.missionstat1"),
+                  t("about.missionvission.missionstat2"),
+                  t("about.missionvission.missionstat3"),
+                  t("about.missionvission.missionstat4"),
+                ].map((item) => (
+                  <motion.div
+                    key={item}
+                    className="flex items-center text-white/80"
+                    whileHover={{ x: 5 }}
+                  >
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                    <span className="font-semibold">{item}</span>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </motion.div>
@@ -272,33 +270,32 @@ const MissionAndVission = () => {
                 </motion.div>
                 <div>
                   <h2 className="text-4xl font-bold text-white mb-2">
-                    Our Vision
+                    {t("about.missionvission.vissionh")}
                   </h2>
                   <div className="w-20 h-1 bg-linear-to-r from-purple-400 to-pink-400 rounded-full"></div>
                 </div>
               </div>
 
               <p className="text-lg text-white/90 leading-relaxed mb-8">
-                To pioneer the future of recruitment by creating a world where
-                every professional discovers their perfect role and every
-                organization unlocks its full potential through ideal talent
-                matches. We envision a global ecosystem of opportunity and
-                growth.
+                {t("about.missionvission.vissionpara")}
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
-                {["Innovation", "Trust", "Global Impact", "Future Ready"].map(
-                  (item, index) => (
-                    <motion.div
-                      key={item}
-                      className="flex items-center text-white/80"
-                      whileHover={{ x: 5 }}
-                    >
-                      <div className="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
-                      <span className="font-semibold">{item}</span>
-                    </motion.div>
-                  )
-                )}
+                {[
+                  t("about.missionvission.vissionstat1"),
+                  t("about.missionvission.vissionstat2"),
+                  t("about.missionvission.vissionstat3"),
+                  t("about.missionvission.vissionstat4"),
+                ].map((item) => (
+                  <motion.div
+                    key={item}
+                    className="flex items-center text-white/80"
+                    whileHover={{ x: 5 }}
+                  >
+                    <div className="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
+                    <span className="font-semibold">{item}</span>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </motion.div>
@@ -344,14 +341,15 @@ const MissionAndVission = () => {
         </div>
 
         <motion.div className="text-center mt-20" variants={cardVariants}>
-          <motion.div
+          <motion.a
+            href="/career"
             className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-md rounded-2xl text-white font-bold text-lg border border-white/30 shadow-2xl"
             whileHover={{
               scale: 1.05,
               backgroundColor: "rgba(255,255,255,0.3)",
             }}
           >
-            <span>Join Our Journey of Excellence</span>
+            <span>{t("about.missionvission.btn")}</span>
             <motion.div
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
@@ -370,7 +368,7 @@ const MissionAndVission = () => {
                 />
               </svg>
             </motion.div>
-          </motion.div>
+          </motion.a>
         </motion.div>
       </motion.div>
     </div>

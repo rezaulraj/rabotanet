@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { FaPlayCircle } from "react-icons/fa";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scale, setScale] = useState(1);
 
@@ -80,8 +82,6 @@ export default function Hero() {
             alt="Hero"
             className="object-cover opacity-60 w-full h-full"
           />
-
-          
         </motion.div>
 
         <div className="container max-w-7xl mx-auto relative z-10 h-full flex justify-between w-full px-4">
@@ -96,24 +96,23 @@ export default function Hero() {
                 className="text-[17px] text-primary font-normal font-sans block"
                 variants={itemVariants}
               >
-                RECRUITING & HEADHUNTING
+                {t("homepage.hero.heroTopTitle")}
               </motion.span>
 
               <motion.h2
                 className="text-[52px] font-bold font-sans mt-4 text-secondary"
                 variants={itemVariants}
               >
-                We find exceptional talent for your company.
+                {t("homepage.hero.heroBigTitle")}
               </motion.h2>
 
               <motion.p
                 className="text-[14px] text-secondary text-normal font-sans mt-4"
                 variants={itemVariants}
               >
-                A unique professional whose expertise and value are rare in the
-                marketplace like finding a needle in a haystack. When others
-                struggle to locate such talent,{" "}
-                <strong>RabotaNet Recruitment</strong> delivers.
+                {t("homepage.hero.heropara1")}
+                <strong className="text-primary">{t("homepage.hero.heropara2")}</strong>{" "}
+                {t("homepage.hero.heropara3")}
               </motion.p>
 
               <motion.a

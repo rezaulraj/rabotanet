@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; // use <a> if not using React Router
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function EmployHero() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -151,13 +153,13 @@ export default function EmployHero() {
             className="text-2xl font-bold text-secondary block"
             variants={itemVariants}
           >
-            COMPREHENSIVE HR SERVICES
+            {t("employeepage.heroEmployee.heroEmployeeTopHeading")}
           </motion.span>
           <motion.h1
             className="lg:text-[48px] md:text-3xl sm:text-2xl font-sans max-w-2xl mt-4 font-bold text-white leading-tight"
             variants={itemVariants}
           >
-            Tailored recruitment and headhunting solutions for employers.
+            {t("employeepage.heroEmployee.heroEmployeeHeading")}
           </motion.h1>
         </motion.div>
 
@@ -196,16 +198,13 @@ export default function EmployHero() {
                   whileHover={{ color: "#dd0525" }}
                   transition={{ duration: 0.3 }}
                 >
-                  Headhunting
+                  {t("employeepage.heroEmployee.heroHuntingHead")}
                 </motion.h2>
                 <motion.p
                   className="text-secondary text-[15px] font-normal font-sans leading-6"
                   variants={itemVariants}
                 >
-                  Headhunting goes beyond simply filling roles; it is a
-                  strategic process of identifying and attracting exceptional
-                  talent capable of driving real business impact and giving your
-                  organisation a measurable competitive edge.
+                  {t("employeepage.heroEmployee.heroHuntingPara")}
                 </motion.p>
               </div>
 
@@ -229,7 +228,9 @@ export default function EmployHero() {
                       whileHover={{ x: "100%" }}
                       transition={{ duration: 0.6 }}
                     />
-                    <span className="relative z-10">More Information</span>
+                    <span className="relative z-10">
+                      {t("employeepage.heroEmployee.heroHuntingLink")}
+                    </span>
                   </motion.button>
                 </Link>
               </motion.div>
@@ -267,16 +268,13 @@ export default function EmployHero() {
                   whileHover={{ color: "#dd0525" }}
                   transition={{ duration: 0.3 }}
                 >
-                  Recruiting
+                  {t("employeepage.heroEmployee.heroRecuitHead")}
                 </motion.h2>
                 <motion.p
                   className="text-secondary text-[15px] font-normal font-sans leading-6"
                   variants={itemVariants}
                 >
-                  A structured and thorough process of sourcing, attracting, and
-                  securing employees for diverse roles across your organisation.
-                  Our recruiters employ modern tools, market insights, and
-                  proven methods to connect you with the right candidates.
+                  {t("employeepage.heroEmployee.heroRecuitPara")}
                 </motion.p>
               </div>
 
@@ -300,7 +298,9 @@ export default function EmployHero() {
                       whileHover={{ x: "100%" }}
                       transition={{ duration: 0.6 }}
                     />
-                    <span className="relative z-10">More Information</span>
+                    <span className="relative z-10">
+                      {t("employeepage.heroEmployee.heroRecuitLink")}
+                    </span>
                   </motion.button>
                 </Link>
               </motion.div>

@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Finding() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -24,21 +26,6 @@ export default function Finding() {
       transition: {
         duration: 0.8,
         ease: [0.25, 0.46, 0.45, 0.94],
-      },
-    },
-  };
-
-  const imageContainerVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1,
-        ease: "easeOut",
       },
     },
   };
@@ -95,36 +82,32 @@ export default function Finding() {
             variants={containerVariants}
           >
             <motion.span
-              className="text-[17px] text-primary font-normal font-sans block"
+              className="text-[17px] text-primary font-normal font-sans block tracking-wider"
               variants={itemVariants}
             >
-              NOT JUST A STAFFING AGENCY
+              {t("homepage.finding.findTopHeading")}
             </motion.span>
 
             <motion.h2
               className="text-[52px] font-bold font-sans mt-4 text-secondary leading-tight"
               variants={itemVariants}
             >
-              Finding the right person is both an art and a science.
+              {t("homepage.finding.findBig1Heading")}
             </motion.h2>
 
             <motion.h5
               className="text-[20px] font-bold font-sans mt-6 text-gray-800 leading-relaxed"
               variants={itemVariants}
             >
-              Every organisation is built by its people, and those people
-              determine its success. That is why our work goes beyond filling
-              vacancies.
+              {t("homepage.finding.findBig2Heading")}
             </motion.h5>
 
             <motion.p
               className="text-[16px] text-secondary text-normal font-sans mt-6 leading-7"
               variants={itemVariants}
             >
-              <strong>RabotaNet Recruitment</strong> is committed to the success
-              of every employer and every professional we serve. We know that
-              each client and candidate is unique, and we treat every engagement
-              with precision, dedication, and integrity.
+              <strong className="text-primary">{t("homepage.finding.findParagraph1")}</strong>{" "}
+              {t("homepage.finding.findParagraph2")}
             </motion.p>
           </motion.div>
 

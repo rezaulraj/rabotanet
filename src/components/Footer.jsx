@@ -9,8 +9,10 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -100,14 +102,13 @@ export default function Footer() {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        {/* Company Info */}
         <motion.div variants={itemVariants}>
           <motion.h2
             className="text-2xl font-bold"
             whileHover={{ color: "#ef4444" }}
             transition={{ duration: 0.3 }}
           >
-            RabotaNet Recruitment <span className="text-primary">®</span>
+            {t("footer.footerFront")} <span className="text-primary">®</span>
           </motion.h2>
           <motion.p
             className="text-sm text-red-400 mt-2"
@@ -116,7 +117,7 @@ export default function Footer() {
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
           >
-            We find exceptional talent for your company
+            {t("footer.footerPara")}
           </motion.p>
 
           <motion.div
@@ -138,14 +139,13 @@ export default function Footer() {
           </motion.div>
         </motion.div>
 
-        {/* Contact & Social */}
         <motion.div variants={itemVariants}>
           <motion.h3
             className="text-lg font-bold mb-3"
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            Contact us
+            {t("footer.footerContact")}
           </motion.h3>
           <motion.p
             className="flex items-center gap-2 mb-6"
@@ -197,21 +197,21 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* Quick Links */}
         <motion.div variants={itemVariants}>
           <motion.h3
             className="text-lg font-bold mb-3"
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            Links
+            {t("footer.footertext")}
           </motion.h3>
           <ul className="space-y-2">
             {[
-              { to: "/", label: "Home" },
-              { to: "/employers", label: "Employers" },
-              { to: "/applicants", label: "Applicants" },
-              { to: "/about", label: "About Us" },
+              { to: "/", label: t("footer.footerLink1") },
+              { to: "/employers", label: t("footer.footerLink2") },
+              { to: "/applicants", label: t("footer.footerLink3") },
+              { to: "/about", label: t("footer.footerLink4") },
+              { to: "/career", label: t("nav.career") },
             ].map((link, index) => (
               <motion.li key={index} whileHover="hover">
                 <motion.div variants={linkVariants}>
@@ -231,7 +231,7 @@ export default function Footer() {
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            Office
+            {t("footer.footerOffice")}
           </motion.h3>
 
           {[

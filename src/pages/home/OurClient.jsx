@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function OurClient() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -142,17 +144,20 @@ export default function OurClient() {
           variants={containerVariants}
         >
           <motion.span
-            className="text-[17px] text-primary font-normal font-sans"
+            className="text-[17px] text-primary font-normal font-sans tracking-wider"
             variants={itemVariants}
           >
-            CASE STUDIES & CLIENT REFERENCES
+            {t("homepage.ourCliend.cliendTopHeading")}
           </motion.span>
 
           <motion.h2
             className="text-[52px] font-bold font-sans mt-4 text-secondary leading-snug"
             variants={itemVariants}
           >
-            How we've delivered results for <br /> our clients
+            {t("homepage.ourCliend.cliendHeading1")}{" "}
+            <span className="text-primary">
+              {t("homepage.ourCliend.cliendHeading2")}
+            </span>
           </motion.h2>
           <motion.div
             className="bg-white w-full text-start p-10 max-w-5xl rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 lg:mt-20 md:mt-10 sm:mt-5 mt-5 border border-gray-100"
@@ -164,7 +169,7 @@ export default function OurClient() {
             }}
           >
             <h1 className="text-2xl font-bold text-gray-800 mb-4">
-              Headhunting
+              {t("homepage.ourCliend.cliendHeadhuntingHead")}
             </h1>
 
             <div className="flex items-start mb-4">
@@ -199,14 +204,7 @@ export default function OurClient() {
                 className="text-gray-700 text-base leading-7 font-medium"
                 variants={itemVariants}
               >
-                A global company faced challenges filling a highly specialised
-                role after their previous agency failed to deliver suitable
-                candidates. Through a detailed consultation, we discovered that
-                overly restrictive technical requirements were limiting the
-                search. By refining the criteria and tapping into our extensive
-                talent database, we provided three strong shortlisted candidates
-                within just two weeks, two of whom proved to be an excellent
-                match both technically and culturally.
+                {t("homepage.ourCliend.cliendHeadhuntingPara")}
               </motion.p>
             </motion.div>
 
@@ -230,7 +228,7 @@ export default function OurClient() {
             }}
           >
             <h1 className="text-2xl font-bold text-gray-800 mb-4">
-              Recruiting
+              {t("homepage.ourCliend.clientRecuitHead")}
             </h1>
 
             <div className="flex items-start mb-4">
@@ -265,17 +263,10 @@ export default function OurClient() {
                 className="text-gray-700 text-base leading-7 font-medium"
                 variants={itemVariants}
               >
-                A company required a proactive sales representative with strong
-                industry connections. While the role seemed ideal for
-                headhunting, we also deployed a broad recruitment strategy
-                combining targeted advertising, marketing campaigns, social
-                media outreach, and database searches. Within two weeks, we
-                secured a candidate with the right personality profile and
-                professional background to excel in the role.
+                {t("homepage.ourCliend.clientRecuitPara")}
               </motion.p>
             </motion.div>
 
-            {/* Decorative Element */}
             <motion.div
               className="absolute bottom-4 right-4 w-8 h-8 bg-secondary/20 rounded-full"
               whileHover={{

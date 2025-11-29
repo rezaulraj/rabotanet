@@ -93,7 +93,7 @@ export default function Hero() {
           >
             <div className="col-span-1 w-full">
               <motion.span
-                className="text-[17px] text-primary font-normal font-sans block"
+                className="text-[17px] text-primary font-normal font-sans block tracking-wider"
                 variants={itemVariants}
               >
                 {t("homepage.hero.heroTopTitle")}

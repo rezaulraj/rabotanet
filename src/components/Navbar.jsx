@@ -67,8 +67,11 @@ export default function Navbar() {
 
   const languages = [
     { code: "en", country: "US", name: "English" },
-    { code: "ru", country: "RU", name: "Russian" },
-    // { code: "ro", country: "RO", name: "Romanian" },
+    { code: "ru", country: "RU", name: "Russian (Russia)" },
+    { code: "ru", country: "BY", name: "Russian (Belarus)" },
+    { code: "ru", country: "KZ", name: "Russian (Kazakhstan)" },
+    { code: "ru", country: "KG", name: "Russian (Kyrgyzstan)" },
+    { code: "ru", country: "TJ", name: "Russian (Tajikistan)" },
   ];
 
   const changeLanguage = (langCode) => {

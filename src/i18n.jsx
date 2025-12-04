@@ -21,6 +21,10 @@ const initializeI18n = async () => {
 
   const languageMap = {
     RU: "ru",
+    BY: "ru",
+    KZ: "ru",
+    KG: "ru",
+    TJ: "ru",
   };
 
   i18n

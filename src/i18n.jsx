@@ -4,6 +4,10 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "./locales/en/translation.json";
 import ru from "./locales/ru/translation.json";
+import by from "./locales/by/translation.json";
+import kz from "./locales/kz/translation.json";
+import kg from "./locales/kg/translation.json";
+import tj from "./locales/tj/translation.json";
 
 const detectCountry = async () => {
   try {
@@ -21,10 +25,10 @@ const initializeI18n = async () => {
 
   const languageMap = {
     RU: "ru",
-    BY: "ru",
-    KZ: "ru",
-    KG: "ru",
-    TJ: "ru",
+    BY: "by",
+    KZ: "kz",
+    KG: "kg",
+    TJ: "tj",
   };
 
   i18n
@@ -34,6 +38,10 @@ const initializeI18n = async () => {
       resources: {
         en: { translation: en },
         ru: { translation: ru },
+        by: { translation: by },
+        kz: { translation: kz },
+        kg: { translation: kg },
+        tj: { translation: tj },
       },
       lng: languageMap[country] || "en",
       fallbackLng: "en",

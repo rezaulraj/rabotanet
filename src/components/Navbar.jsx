@@ -68,10 +68,10 @@ export default function Navbar() {
   const languages = [
     { code: "en", country: "US", name: "English" },
     { code: "ru", country: "RU", name: "Russian (Russia)" },
-    { code: "ru", country: "BY", name: "Russian (Belarus)" },
-    { code: "ru", country: "KZ", name: "Russian (Kazakhstan)" },
-    { code: "ru", country: "KG", name: "Russian (Kyrgyzstan)" },
-    { code: "ru", country: "TJ", name: "Russian (Tajikistan)" },
+    { code: "by", country: "BY", name: "Russian (Belarus)" },
+    { code: "kz", country: "KZ", name: "Russian (Kazakhstan)" },
+    { code: "kg", country: "KG", name: "Russian (Kyrgyzstan)" },
+    { code: "tj", country: "TJ", name: "Russian (Tajikistan)" },
   ];
 
   const changeLanguage = (langCode) => {

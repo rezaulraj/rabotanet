@@ -141,7 +141,7 @@ export default function Footer() {
 
         <motion.div variants={itemVariants}>
           <motion.h3
-            className="text-lg font-bold mb-3"
+            className="text-2xl font-bold mb-3"
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
@@ -199,7 +199,7 @@ export default function Footer() {
 
         <motion.div variants={itemVariants}>
           <motion.h3
-            className="text-lg font-bold mb-3"
+            className="text-2xl font-bold mb-3"
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
@@ -227,7 +227,7 @@ export default function Footer() {
         {/* Office Locations */}
         <motion.div className="space-y-5" variants={itemVariants}>
           <motion.h3
-            className="text-lg font-bold mb-3"
+            className="text-2xl font-bold mb-3"
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >

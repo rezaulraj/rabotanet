@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "employers": "Angajatori",
+    "applicants": "Candidați",
+    "about": "Despre noi",
+    "contact": "Contact",
+    "language": "Limbă",
+    "career": "Cariere",
+    "success": "Povești de succes"
+  },
+  "homepage": {
+    "hero": {
+      "heroTopTitle": "RECRUTARE & HEADHUNTING",
+      "heroBigTitle": "Găsim talente excepționale pentru compania dvs.",
+      "heropara1": "Talentul excepțional este rar — acel tip pe care toți îl caută, dar puțini îl găsesc. În timp ce alții caută fără succes, ",
+      "heropara2": "RabotaNet Recruitment ",
+      "heropara3": "descoperă constant profesioniștii care fac cu adevărat diferența."
+    },
+    "brand": {
+      "brandText": "De încredere pentru profesioniștii HR de peste 15 ani:",
+      "partner": "Partenerii noștri:"
+    },
+    "finding": {
+      "findTopHeading": "MAI MULT DECÂT O AGENȚIE DE STAFFING",
+      "findBig1Heading": "Găsirea talentului potrivit necesită atât expertiză, cât și intuiție.",
+      "findBig2Heading": "Fiecare organizație este construită de oamenii săi, iar aceștia determină succesul. De aceea munca noastră merge dincolo de simpla ocupare a posturilor.",
+      "findParagraph1": "RabotaNet Recruitment ",
+      "findParagraph2": "se angajează în succesul fiecărui angajator și profesionist pe care îl sprijinim. Recunoaștem unicitatea fiecărui client și candidat și abordăm fiecare colaborare cu precizie, dedicare și integritate."
+    },
+    "employer": {
+      "employerExaperence": "Ani de Experiență",
+      "employerHeading1": "SERVICII HR COMPLETE ",
+      "employerHeading2": "PENTRU ANGAJATORI",
+      "employerparagraph": "Oferim soluții de recrutare complete, concepute pentru a identifica talente de top pentru afacerea dvs.",
+      "section1employerHeading1": "Headhunting",
+      "section1employeroara": "Aceasta este mai mult decât o simplă căutare de candidați; este arta strategică de a identifica și atrage profesioniști de înalt calibru care pot oferi valoare măsurabilă și avantaj competitiv.",
+      "section2employerHeading1": "Recrutare",
+      "section2employeroara": "Un proces structurat de identificare, atragere și selectare a candidaților pentru roluri diverse în organizația dvs. Recruiterii noștri folosesc instrumente moderne, campanii țintite și strategii bazate pe date pentru a vă conecta cu oamenii potriviți.",
+      "employerbutton": "Mai multe informații pentru angajatori"
+    },
+    "service": {
+      "serviceTopHeading": "SERVICII PENTRU CANDIDAȚI",
+      "serviceHeading1": "Cum să te remarci în",
+      "serviceHeading2": "piața muncii de astăzi.",
+      "servicePara": "Dacă sunteți în căutarea unei noi oportunități, vă ajutăm să vă prezentați cu încredere și claritate, maximizând șansele de a obține rolul ideal.",
+      "serviceButton": "Mai multe informații pentru candidați",
+      "servicesInterviewheading": "Pregătire pentru interviu",
+      "serviceInterviewPara": "Vă oferim tehnici de interviu, simulări și dezvoltarea încrederii.",
+      "serviceCvHeading": "Îmbunătățirea CV-ului & Profilului LinkedIn",
+      "serviceCvPara": "Optimizăm CV-ul și profilul LinkedIn pentru a crea o primă impresie puternică.",
+      "serviceLaborHeading": "Analiza pieței muncii",
+      "serviceLaborPara": "Analizăm oportunitățile dvs. de carieră în diferite industrii și regiuni, identificând pozițiile potrivite.",
+      "serviceParsonalHeading": "Evaluări de personalitate",
+      "serviceParsonalPara": "Oferim evaluări care ajută atât pe dvs., cât și pe angajatori să înțeleagă punctele forte și compatibilitatea profesională.",
+      "serviceStat1": "interviuri realizate",
+      "serviceStat2": "CV-uri verificate",
+      "serviceStat3": "angajatori mulțumiți",
+      "serviceStat4": "articole profesionale publicate"
+    },
+    "ourCliend": {
+      "cliendTopHeading": "STUDII DE CAZ & REFERINȚE",
+      "cliendHeading1": "Cum am obținut rezultate pentru ",
+      "cliendHeading2": "Clienții noștri",
+      "cliendHeadhuntingHead": "Headhunting",
+      "cliendHeadhuntingPara": "O companie globală căuta urgent să ocupe un rol specializat după ce agenția anterioară nu a oferit candidați potriviți. În urma unei consultări detaliate, am descoperit cerințe tehnice prea restrictive care limitau căutarea. Ajustând criteriile și folosind baza noastră extinsă de talente, am prezentat trei candidați puternici în doar două săptămâni, dintre care doi s-au dovedit a fi potriviți atât tehnic, cât și cultural.",
+      "clientRecuitHead": "Recrutare",
+      "clientRecuitPara": "O companie căuta un reprezentant de vânzări proactiv, cu conexiuni în industrie. Deși rolul părea potrivit pentru headhunting, am implementat o strategie de recrutare mai largă, combinând publicitate țintită, campanii de marketing, social media și căutări în baza de date. În două săptămâni, am identificat și securizat un candidat ale cărui profil personal și profesional se aliniau perfect cerințelor."
+    },
+    "compitator": {
+      "compitatorHeading": "Servicii de recrutare specializate – Alimentate de expertiza noastră",
+      "compitatorButton": "Vreau cei mai buni oameni."
+    },
+    "formModel": {
+      "formHeading": "Contactați-ne",
+      "formPara": "Sunteți interesat de serviciile noastre? Completați formularul scurt și vă vom contacta în curând.",
+      "name": "Nume*",
+      "company": "Companie*",
+      "phone": "Telefon*",
+      "email": "Email*",
+      "report": "Mesaj",
+      "policy": "Am citit Politica privind prelucrarea datelor personale",
+      "button": "Trimite →"
+    },
+    "banner": {
+      "bannertopheading": "Compania RabotaNet Recruitment",
+      "bannerservies": "Serviciu Fleet",
+      "bannerHeading": "Servicii de recrutare specializate – Alimentate de expertiza noastră",
+      "bannerPara1": "Pe lângă soluțiile standard de angajare,",
+      "bannerPara2": "RabotaNet Recruitment",
+      "bannerPara3": "oferă suport specializat de recrutare adaptat afacerilor cu nevoi unice de forță de muncă.",
+      "bannerSecHeading": "Expertiză în diverse industrii",
+      "bannerThiHeading": "Recrutare rapidă și fiabilă",
+      "bannerFortHeading": "Acces la baze de talente diverse",
+      "bannerFiftHeading": "Suport pe termen lung",
+      "bannerLink": "Mai multe despre servicii"
+    }
+  },
+  "employeepage": {
+    "heroEmployee": {
+      "heroEmployeeTopHeading": "SERVICII PENTRU ANGAJATORI",
+      "heroEmployeeHeading": "Soluții personalizate de recrutare și headhunting.",
+      "heroHuntingHead": "Headhunting",
+      "heroHuntingPara": "Headhunting-ul depășește simpla ocupare a rolurilor; este un proces strategic de identificare și atragere a talentelor excepționale capabile să genereze impact real în afaceri și să ofere un avantaj competitiv măsurabil.",
+      "heroHuntingLink": "Mai multe informații",
+      "heroRecuitHead": "Recrutare",
+      "heroRecuitPara": "Un proces structurat și complet de identificare, atragere și angajare a candidaților pentru roluri diverse în organizația dvs. Specialiștii noștri folosesc instrumente moderne, analize de piață și metode dovedite pentru a vă conecta cu oamenii potriviți.",
+      "heroRecuitLink": "Mai multe informații"
+    },
+    "headHunting": {
+      "headHuntingTopHeading": "Headhunting",
+      "headHuntingHeading": "Cum funcționează headhunting-ul la RabotaNet Recruitment",
+      "headHuntingPara": "Headhunterii noștri sunt specializați în identificarea profesioniștilor de înalt calibru care lucrează deja în alte organizații. Aceștia dețin adesea competențele și experiența exactă de care are nevoie afacerea dvs. Abordarea noastră implică identificarea, abordarea și atragerea acestora prin oportunități adaptate."
+    },
+    "success": {
+      "successHeading": "De ce contează headhunting-ul pentru succesul dvs.",
+      "successPara1": "Pe piața competitivă a muncii de astăzi, atragerea și păstrarea performerilor de top este esențială. Mulți dintre profesioniștii valoroși nu caută activ un job. Prin serviciile noastre de headhunting, ",
+      "successPara2": "RabotaNet Recruitment",
+      "successPara3": "vă ajutăm să accesați direct această categorie de talente excepționale.",
+      "successpart": "Succes garantat",
+      "successtats1": "Rată de succes",
+      "successtats2": "Suport",
+      "successtats3": "Clienți"
+    },
+    "advantage": {
+      "advantageTopHeading": "Avantajele serviciului de headhunting RabotaNet Recruitment",
+      "advantageHeadingStats1": "Acces la candidați pasivi",
+      "advantageParaStats1": "Vă ajutăm să ajungeți la profesioniști care nu aplică activ pentru joburi, oferindu-vă șansa de a angaja talente rare.",
+      "advantageHeadingStats2": "Expertiză specifică industriei",
+      "advantageParaStats2": "Headhunterii noștri se concentrează pe industrii și funcții definite, asigurând potrivirea precisă a candidaților.",
+      "advantageHeadingStats3": "Eficiență în timp și resurse",
+      "advantageParaStats3": "Externalizarea către experții noștri economisește timp și resurse interne, asigurând un proces profesionist și discret."
+    },
+    "professional": {
+      "professionalHeading": "Combinând expertiza noastră cu o rețea extinsă de headhunteri profesioniști, vă ajutăm să ridicați procesul de recrutare și să securizați talentele excepționale care generează succes pe termen lung. Obiectivul nostru este simplu: să vă conectăm cu cei mai buni oameni, profesioniștii rari care fac cu adevărat diferența.",
+      "professionalButton": "Vreau cei mai buni oameni.",
+      "textstat": "Să găsim împreună talentul excepțional pe care îl merită afacerea dvs."
+    },
+    "workRecuit": {
+      "workRecuitTopHeading": "Recrutare",
+      "workRecuitHeading": "Cum funcționează procesul de recrutare la RabotaNet Recruitment",
+      "workRecuitPara": "Specialiștii noștri urmează un proces complet care include publicarea joburilor, analizarea și selectarea CV-urilor, coordonarea interviurilor și verificarea referințelor. Punem mare accent pe compatibilitatea valorilor și culturii organizaționale."
+    },
+    "successSection": {
+      "title": "De ce recrutarea este esențială pentru succesul afacerii",
+      "description": "Recrutarea stă la baza unei forțe de muncă motivate și performante. RabotaNet Recruitment înțelege că deciziile de angajare influențează moralul angajaților și cultura companiei, motiv pentru care adaptăm fiecare proces nevoilor fiecărui angajator."
+    },
+    "parsonality": {
+      "parsonalityHeading": "Evaluări de personalitate",
+      "parsonalityPara": "Evaluările noastre oferă informații valoroase despre stilul comportamental și motivațiile candidaților. Ele evidențiază modul în care pot evolua în timp și posibile provocări care le pot afecta performanța, sprijinind decizii de angajare mai inteligente."
+    }
+  },
+  "applicant": {
+    "heroApplicant": {
+      "heroTopHeading": "Servicii pentru candidați",
+      "heroHeading": "Cum să reușești pe piața muncii de astăzi.",
+      "heroSubHeading1": "Consultații",
+      "heroSubPara1": "Consultațiile noastre sunt concepute pentru a vă ajuta să vă prezentați cu încredere. Cu sprijinul consultanților experimentați, vă veți îmbunătăți abilitățile de interviu și brandul personal.",
+      "heroSubHeading2": "Evaluări de personalitate",
+      "heroSubPara2": "Oferim evaluări care ajută la înțelegerea punctelor forte, motivațiilor și stilului de lucru ideal."
+    },
+    "opertunity": {
+      "opertunityHeading": "Consultații pentru candidați – Fiți pregătiți pentru noi oportunități",
+      "opertunityPara": "Consultațiile noastre depășesc pregătirea pentru interviu. Vă ajutăm să vă perfecționați CV-ul, să optimizați profilul LinkedIn și să vă îmbunătățiți vizibilitatea în fața angajatorilor."
+    },
+    "consultation": {
+      "consltationHeading": "Serviciile noastre includ:",
+      "consltationService1": "Pregătire și coaching pentru interviu",
+      "consltationService2": "Editare și îmbunătățire CV",
+      "consltationService3": "Optimizarea profilului LinkedIn",
+      "consltationService4": "Analiză a pieței muncii și orientare în carieră",
+      "consltationService5": "Interviuri simulate",
+      "consltationService6": "Evaluări de personalitate"
+    },
+    "inprove": {
+      "inproveHeading": "Conectăm persoane calificate și harnice cu angajatori care apreciază dedicarea și fiabilitatea. Oferim posturi full-time, part-time sau pe contract în diverse industrii.",
+      "inproveButton": "Vreau cei mai buni oameni."
+    }
+  },
+  "about": {
+    "heroAbout": {
+      "heroTopHeading": "DESPRE NOI",
+      "heroHeading": "15 ani de expertiză în recrutare",
+      "heroPara1": "RabotaNet ",
+      "heroPara2": "este un nume recunoscut în industria resurselor umane din Europa și și-a extins recent operațiunile în Belarus. Cu peste 15 ani de experiență în managementul forței de muncă, oferim soluții adaptate nevoilor fiecărui client.",
+      "heroPara3": "Suntem mândri de capacitatea noastră de a potrivi talentele potrivite cu oportunitățile potrivite, bazându-ne pe resurse de top și cunoștințe dovedite.",
+      "heroPara4": "Serviciile noastre sunt flexibile și personalizate pentru a se potrivi obiectivelor și bugetului fiecărui client. Oferim soluții complete de capital uman.",
+      "heroPara5": "Viziunea noastră este de a fi partenerul HR preferat atât pentru organizațiile guvernamentale, cât și pentru cele neguvernamentale."
+    },
+    "whatValue": {
+      "valueHeading": "Valorile noastre",
+      "valueStatsTitle1": "Calitate",
+      "valueStatsDescription1": "Suntem dedicați furnizării serviciilor de recrutare la cel mai înalt standard.",
+      "valueStatsTitle2": "Flexibilitate",
+      "valueStatsDescription2": "Într-o lume în continuă schimbare, adaptabilitatea este cheia.",
+      "valueStatsTitle3": "Parteneriat",
+      "valueStatsDescription3": "Credem în parteneriate puternice care susțin succesul pe termen lung."
+    },
+    "missionvission": {
+      "heading1": "Scopul ",
+      "heading2": "nostru",
+      "para": "Redefinim recrutarea prin inovație, empatie și parteneriate excepționale care transformă cariere și afaceri.",
+      "missionh": "Misiunea noastră",
+      "missionpara": "Creăm conexiuni valoroase între talente excepționale și organizații vizionare, prin strategii personalizate și empatice.",
+      "missionstat1": "Excelență",
+      "missionstat2": "Conexiune",
+      "missionstat3": "Creștere",
+      "missionstat4": "Impact",
+      "vissionh": "Viziunea noastră",
+      "vissionpara": "Să modelăm viitorul recrutării prin oportunități ideale pentru fiecare profesionist și fiecare organizație.",
+      "vissionstat1": "Inovație",
+      "vissionstat2": "Încredere",
+      "vissionstat3": "Impact Global",
+      "vissionstat4": "Orientare spre viitor",
+      "btn": "Alăturați-vă călătoriei noastre"
+    }
+  },
+  "career": {
+    "careertoph": "Alătură-te echipei noastre",
+    "careerh1": "Construiește-ți cariera cu RabotaNet",
+    "careerpara": "Explorează oportunități interesante și găsește rolul potrivit abilităților tale.",
+    "careerstat1": "Program flexibil",
+    "careerstat2": "100% Plasare în muncă",
+    "careerstat3": "100% Dezvoltare profesională",
+    "careerstat4": "100% Siguranță profesională",
+    "careerbtn1": "Caută joburi",
+    "careerbtn2": "Trimite CV",
+
+    "careersubh": "Joburi disponibile",
+    "careersubpara": "Descoperă următoarea ta oportunitate profesională în diverse industrii.",
+    "careerhero1": "Toate joburile",
+    "careerhero2": "Joburi operaționale",
+    "careerhero3": "Joburi corporate"
+  },
+  "careerform": {
+    "heading": "Trimite CV-ul tău",
+    "name": "Nume complet *",
+    "email": "Adresă email *",
+    "phone": "Număr de telefon *",
+    "subject": "Subiect *",
+    "message": "Mesaj",
+    "cv": "Încarcă CV *",
+    "submit": "Trimite aplicația",
+    "cancel": "Anulează"
+  },
+  "successstory": {
+    "headingsuccess": "Povești de succes – Vize",
+    "paragraph": "Oameni reali, vise reale, povești reale de succes.",
+    "btn": "Începe povestea ta de succes",
+    "subheading1": "Povești",
+    "subheading2": " de succes"
+  },
+
+  "footer": {
+    "footerFront": "RabotaNet Recruitment",
+    "footerPara": "Găsim talente excepționale pentru compania dvs.",
+    "footerContact": "Contactați-ne",
+    "footerOffice": "Birou",
+    "footerAddress": "Adresă:",
+    "footerLink1": "Acasă",
+    "footerLink2": "Angajatori",
+    "footerLink3": "Candidați",
+    "footerLink4": "Despre noi",
+    "footertext": "Linkuri"
+  }
+}

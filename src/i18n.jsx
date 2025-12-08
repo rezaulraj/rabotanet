@@ -10,6 +10,8 @@ import kg from "./locales/kg/translation.json";
 import tj from "./locales/tj/translation.json";
 import ge from "./locales/ge/translation.json";
 import hy from "./locales/hy/translation.json";
+import md from "./locales/md/translation.json";
+import az from "./locales/az/translation.json";
 
 const detectCountry = async () => {
   try {
@@ -33,6 +35,8 @@ const initializeI18n = async () => {
     TJ: "tj",
     GE: "ge",
     HY: "hy",
+    MD: "md",
+    AZ: "az",
   };
 
   i18n
@@ -48,6 +52,8 @@ const initializeI18n = async () => {
         tj: { translation: tj },
         ge: { translation: ge },
         hy: { translation: hy },
+        md: { translation: md },
+        az: { translation: az },
       },
       lng: languageMap[country] || "en",
       fallbackLng: "en",

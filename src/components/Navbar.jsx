@@ -74,6 +74,8 @@ export default function Navbar() {
     { code: "tj", country: "TJ", name: "Russian (Tajikistan)" },
     { code: "ge", country: "GE", name: "Georgian" },
     { code: "hyit", country: "AM", name: "Armenian" },
+    { code: "az", country: "AZ", name: "Azerbaijani" },
+    { code: "md", country: "MD", name: "Moldova (Romanian)" },
   ];
 
   const changeLanguage = (langCode) => {

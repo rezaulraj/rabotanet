@@ -1,0 +1,264 @@
+{
+  "nav": {
+    "home": "Ana Səhifə",
+    "employers": "İşəgötürənlər",
+    "applicants": "Namizədlər",
+    "about": "Haqqımızda",
+    "contact": "Əlaqə",
+    "language": "Dil",
+    "career": "Karyera",
+    "success": "Uğur Hekayələri"
+  },
+  "homepage": {
+    "hero": {
+      "heroTopTitle": "REKRUTİNQ & HEYDHANTİNQ",
+      "heroBigTitle": "Şirkətiniz üçün mükəmməl istedadları tapırıq.",
+      "heropara1": "Əla istedad nadirdir — hər kəsin tapmaq istədiyi, amma az adamın nail olduğu dəyərli peşəkarlardır. Digərləri axtararkən, ",
+      "heropara2": "RabotaNet Recruitment ",
+      "heropara3": "həqiqətən fərq yaradan peşəkarları ardıcıl olaraq kəşf edir."
+    },
+    "brand": {
+      "brandText": "15 ildən artıqdır ki, HR mütəxəssislərinin etibar etdiyi şirkət:",
+      "partner": "Tərəfdaşlarımız:"
+    },
+    "finding": {
+      "findTopHeading": "YALNIZ KADR AGENTLİYİ DEYİL",
+      "findBig1Heading": "Düzgün istedadı tapmaq həm peşəkarlıq, həm də intuisiya tələb edir.",
+      "findBig2Heading": "Hər bir təşkilat insanlar üzərində qurulur və məhz insanlar onun uğurunu müəyyən edir. Buna görə də işimiz sadəcə vakansiyaları doldurmaqdan ibarət deyil.",
+      "findParagraph1": "RabotaNet Recruitment ",
+      "findParagraph2": "həm işəgötürənlərin, həm də peşəkarların uğuruna sadiqdir. Hər bir müştərimizin və namizədimizin unikal olduğunu tanıyırıq və hər əməkdaşlığa dəqiqlik, peşəkarlıq və dürüstlük ilə yanaşırıq."
+    },
+    "employer": {
+      "employerExaperence": "İllik Təcrübə",
+      "employerHeading1": "ƏHATƏLİ HR XİDMƏTLƏRİ ",
+      "employerHeading2": "İŞƏGÖTÜRƏNLƏR ÜÇÜN",
+      "employerparagraph": "Biz biznesiniz üçün yüksək səviyyəli istedadların təmin edilməsinə yönəlmiş hərtərəfli işə qəbul xidmətləri təqdim edirik.",
+      "section1employerHeading1": "Headhunting",
+      "section1employeroara": "Bu, sadəcə namizəd axtarışı deyil; real dəyər və rəqabət üstünlüyü yaradan yüksək səviyyəli peşəkarları müəyyənləşdirmək və cəlb etmək strategiyasıdır.",
+      "section2employerHeading1": "Recruiting",
+      "section2employeroara": "Sizin təşkilatınız üçün müxtəlif rollara namizədlərin tapılması, cəlb olunması və seçilməsi üzrə strukturlaşdırılmış prosesdir. Mütəxəssislərimiz müasir alətlərdən, hədəfli yanaşmadan və məlumat yönümlü strategiyalardan istifadə edirlər.",
+      "employerbutton": "İşəgötürənlər üçün Ətraflı"
+    },
+    "service": {
+      "serviceTopHeading": "NAMİZƏDLƏR ÜÇÜN XİDMƏTLƏR",
+      "serviceHeading1": "Bugünkü əmək",
+      "serviceHeading2": "bazarında necə fərqlənmək olar.",
+      "servicePara": "Yeni bir imkan axtarırsınızsa, biz sizin özünüzü inamla və aydın şəkildə təqdim etməyinizə kömək edirik.",
+      "serviceButton": "Namizədlər üçün Ətraflı",
+      "servicesInterviewheading": "Müsahibəyə Hazırlıq",
+      "serviceInterviewPara": "Sizə müsahibə texnikalarını öyrədir, sınaq müsahibələri aparır və özünüzə inam yaradırıq.",
+      "serviceCvHeading": "CV və LinkedIn Profilinin Təkmilləşdirilməsi",
+      "serviceCvPara": "CV və LinkedIn profilinizi daha təsirli etmək üçün yeniləyirik.",
+      "serviceLaborHeading": "Əmək Bazarı Analizi",
+      "serviceLaborPara": "Fərqli sahələr üzrə karyera imkanlarınızı analiz edir və ən uyğun mövqeləri müəyyənləşdiririk.",
+      "serviceParsonalHeading": "Şəxsiyyət Qiymətləndirmələri",
+      "serviceParsonalPara": "Güclü tərəflərinizi və işə uyğunluğunuzu anlamağa kömək edən qiymətləndirmələr təqdim edirik.",
+      "serviceStat1": "keçirilmiş müsahibə",
+      "serviceStat2": "yoxlanılmış CV",
+      "serviceStat3": "məmnun işəgötürən",
+      "serviceStat4": "dərc edilmiş peşəkar məqalə"
+    },
+    "ourCliend": {
+      "cliendTopHeading": "CASE STUDIES & MÜŞTƏRİ RƏYLERİ",
+      "cliendHeading1": "Biz necə nəticə əldə etmişik —",
+      "cliendHeading2": "Müştərilərimiz üçün",
+      "cliendHeadhuntingHead": "Headhunting",
+      "cliendHeadhuntingPara": "Qlobal bir şirkət əvvəlki agentliyin uyğun namizəd tapa bilməməsi səbəbilə təcili olaraq ixtisaslı mütəxəssis axtarırdı. Müzakirələr zamanı dar texniki tələblərin axtarışı çətinləşdirdiyi aşkarlandı. Şərtləri optimallaşdıraraq, iki həftə ərzində üç güclü namizəd təqdim etdik və onların ikisi həm texniki, həm mədəni uyğunluq baxımından ideal oldu.",
+      "clientRecuitHead": "Recruiting",
+      "clientRecuitPara": "Bir şirkət geniş əlaqələri olan aktiv satış nümayəndəsi axtarırdı. Rol headhunting üçün uyğun görünsə də, biz daha geniş bir işə qəbul strategiyası tətbiq etdik. İki həftə ərzində şəxsi keyfiyyətləri və təcrübəsi vəzifəyə tam uyğun gələn namizəd seçildi."
+    },
+    "compitator": {
+      "compitatorHeading": "İxtisaslaşmış İşə qəbul Xidmətləri – Təcrübəmizlə Gücləndirilmiş",
+      "compitatorButton": "Ən yaxşı insanları istəyirəm."
+    },
+    "formModel": {
+      "formHeading": "Bizimlə əlaqə",
+      "formPara": "Xidmətlərimizlə maraqlanırsınız? Qısa formanı doldurun və tezliklə sizinlə əlaqə saxlayacağıq.",
+      "name": "Ad*",
+      "company": "Şirkət*",
+      "phone": "Telefon*",
+      "email": "Email*",
+      "report": "Mesaj",
+      "policy": "Şəxsi Məlumatların Emalı Siyasətini oxudum",
+      "button": "Göndər →"
+    },
+    "banner": {
+      "bannertopheading": "RabotaNet Recruitment",
+      "bannerservies": "Filo Xidməti",
+      "bannerHeading": "İxtisaslaşmış İşə qəbul Xidmətləri – Təcrübəmizə əsaslanır",
+      "bannerPara1": "Standart işə qəbul həllərindən əlavə,",
+      "bannerPara2": "RabotaNet Recruitment",
+      "bannerPara3": "unikal işçi ehtiyacları olan şirkətlər üçün xüsusi işə qəbul dəstəyi təqdim edir.",
+      "bannerSecHeading": "Sənayelər üzrə ekspertlik",
+      "bannerThiHeading": "Sürətli və etibarlı işə qəbul",
+      "bannerFortHeading": "Geniş istedad bazalarına çıxış",
+      "bannerFiftHeading": "Uzunmüddətli dəstək",
+      "bannerLink": "Xidmətlər haqqında daha çox"
+    }
+  },
+  "employeepage": {
+    "heroEmployee": {
+      "heroEmployeeTopHeading": "İŞƏGÖTÜRƏNLƏR ÜÇÜN XİDMƏTLƏR",
+      "heroEmployeeHeading": "İşəgötürənlər üçün fərdiləşdirilmiş işə qəbul və headhunting həlləri.",
+      "heroHuntingHead": "Headhunting",
+      "heroHuntingPara": "Headhunting yalnız vakansiyaların doldurulması deyil; biznesə real təsir göstərə bilən yüksək səviyyəli istedadları tapmaq və cəlb etmək strategiyasıdır.",
+      "heroHuntingLink": "Ətraflı",
+      "heroRecuitHead": "Recruiting",
+      "heroRecuitPara": "Müxtəlif rollar üçün işçilərin tapılması və seçilməsi üzrə strukturlaşdırılmış və dəqiq prosesdir. Mütəxəssislərimiz müasir alətlər və bazar biliklərindən istifadə edir.",
+      "heroRecuitLink": "Ətraflı"
+    },
+    "headHunting": {
+      "headHuntingTopHeading": "Headhunting",
+      "headHuntingHeading": "RabotaNet Recruitment-də Headhunting Necə İşləyir",
+      "headHuntingPara": "Bizim headhunterlər hazırda işləyən, yüksək ixtisaslı peşəkarları müəyyənləşdirərək, onlara karyera məqsədlərinə uyğun təkliflərlə yanaşırlar."
+    },
+    "success": {
+      "successHeading": "Headhunting Uğurunuz üçün Niyə Vacibdir",
+      "successPara1": "Müasir əmək bazarında yüksək istedadları cəlb etmək və saxlamaq çox vacibdir. Çox peşəkarlar aktiv şəkildə iş axtarmır. ",
+      "successPara2": "RabotaNet Recruitment",
+      "successPara3": "ənənəvi kanallardan kənara çıxaraq bu istedadlarla birbaşa əlaqə yaratmağa imkan verir.",
+      "successpart": "Uğur Zəmanətli",
+      "successtats1": "Uğur nisbəti",
+      "successtats2": "Dəstək",
+      "successtats3": "Müştərilər"
+    },
+    "advantage": {
+      "advantageTopHeading": "RabotaNet Recruitment Headhunting Üstünlükləri",
+      "advantageHeadingStats1": "Aktiv axtarmayan namizədlərə çıxış",
+      "advantageParaStats1": "Axtarışda olmayan, nadir və yüksək səviyyəli istedadlara çıxış əldə etməyinizə kömək edirik.",
+      "advantageHeadingStats2": "Sahə üzrə ekspertlik",
+      "advantageParaStats2": "Hər bir sahə üzrə dərin anlayışımız daha dəqiq uyğunlaşdırmanı təmin edir.",
+      "advantageHeadingStats3": "Vaxt və resurs qənaəti",
+      "advantageParaStats3": "Axtarış prosesini bizə həvalə etməklə həm vaxtınıza, həm resurslarınıza qənaət edirsiniz."
+    },
+    "professional": {
+      "professionalHeading": "Geniş headhunter şəbəkəmiz və ekspertliyimiz sayəsində uzunmüddətli uğur gətirən peşəkarları tapmağınıza kömək edirik.",
+      "professionalButton": "Ən yaxşı insanları istəyirəm.",
+      "textstat": "Biznesiniz üçün ən ideal istedadları tapmağa başlayaq"
+    },
+    "workRecuit": {
+      "workRecuitTopHeading": "Recruiting",
+      "workRecuitHeading": "RabotaNet Recruitment-də Recruiting Necə İşləyir",
+      "workRecuitPara": "Vakansiyaların yerləşdirilməsi, CV-lərin seçilməsi, müsahibələrin təşkili və referans yoxlamaları daxil olmaqla tam proses həyata keçiririk."
+    },
+    "successSection": {
+      "title": "Recruiting Niyə Biznes Uğurunun Əsas Elementidir",
+      "description": "Düzgün işə qəbul motivasiya olunmuş və yüksək performans göstərən komanda formalaşdırır."
+    },
+    "parsonality": {
+      "parsonalityHeading": "Şəxsiyyət Qiymətləndirmələri",
+      "parsonalityPara": "Namizədlərin iş üslubu, motivasiyası və potensial uyğunluqları haqqında dərin məlumat verən testlər təqdim edirik."
+    }
+  },
+  "applicant": {
+    "heroApplicant": {
+      "heroTopHeading": "Namizədlər üçün Xidmətlər",
+      "heroHeading": "Bugünkü əmək bazarında necə uğur qazanmaq olar.",
+      "heroSubHeading1": "Məşvərətlər",
+      "heroSubPara1": "Məşvərətlər özünüzü daha inamlı və peşəkar təqdim etməyinizə kömək edir.",
+      "heroSubHeading2": "Şəxsiyyət Qiymətləndirmələri",
+      "heroSubPara2": "Motivasiya və iş üslubunuzu daha yaxşı başa düşmək üçün şəxsiyyət analizləri təqdim edirik."
+    },
+    "opertunity": {
+      "opertunityHeading": "Namizədlərlə Məşvərət – Yeni İmkanlara Hazır olun",
+      "opertunityPara": "CV, LinkedIn və şəxsi brendinizi təkmilləşdirərək sizi daha görünən edirik."
+    },
+    "consultation": {
+      "consltationHeading": "Məşvərət Xidmətlərimiz:",
+      "consltationService1": "Müsahibəyə hazırlıq",
+      "consltationService2": "CV redaktəsi və təkmilləşdirilməsi",
+      "consltationService3": "LinkedIn optimizasiyası",
+      "consltationService4": "Əmək bazarı təhlili və karyera məsləhəti",
+      "consltationService5": "Sınaq müsahibələri",
+      "consltationService6": "Şəxsiyyət qiymətləndirmələri"
+    },
+    "inprove": {
+      "inproveHeading": "Biz çalışqan və ixtisaslı şəxsləri düzgün işəgötürənlərlə əlaqələndiririk.",
+      "inproveButton": "Ən yaxşı insanları istəyirəm."
+    }
+  },
+  "about": {
+    "heroAbout": {
+      "heroTopHeading": "HAQQIMIZDA",
+      "heroHeading": "15 illik İşə qəbul Təcrübəsi",
+      "heroPara1": "RabotaNet ",
+      "heroPara2": "Avropada tanınmış HR brendidir və Belarusda fəaliyyətini genişləndirib. 15 ildən çox təcrübə ilə, hər bir müştərinin ehtiyaclarına uyğun həllər təqdim edirik.",
+      "heroPara3": "Düzgün istedadı düzgün imkanla birləşdirmək qabiliyyətimizə görə fəxr edirik.",
+      "heroPara4": "Xidmətlərimiz məqsədlərə və büdcəyə uyğun olaraq tam fərdiləşdirilir — qısa müddətli və uzunmüddətli həllər təklif edirik.",
+      "heroPara5": "Hədəfimiz həm dövlət, həm də özəl təşkilatların etibarlı HR tərəfdaşı olmaqdır."
+    },
+    "whatValue": {
+      "valueHeading": "Dəyərlərimiz",
+      "valueStatsTitle1": "Keyfiyyət",
+      "valueStatsDescription1": "İşə qəbul proseslərində ən yüksək standartlara sadiqik.",
+      "valueStatsTitle2": "Elastiklik",
+      "valueStatsDescription2": "Hər müştərinin ehtiyacına uyğun çevik həllər təqdim edirik.",
+      "valueStatsTitle3": "Tərəfdaşlıq",
+      "valueStatsDescription3": "Uzunmüddətli, etibarlı əməkdaşlıq bizim əsas missiyamızdır."
+    },
+    "missionvission": {
+      "heading1": "Bizim ",
+      "heading2": "Məqsədimiz",
+      "para": "İstedad əldə etmə prosesinə dəyər, innovasiya və empatiya gətirməklə həm biznesləri, həm də karyeraları transformasiya etmək.",
+      "missionh": "Missiyamız",
+      "missionpara": "Peşəkarlarla şirkətləri birləşdirərək güclü əməkdaşlıqlar yaratmaq.",
+      "missionstat1": "Mükəmməllik",
+      "missionstat2": "Bağlantı",
+      "missionstat3": "İnkişaf",
+      "missionstat4": "Təsir",
+      "vissionh": "Vizyonumuz",
+      "vissionpara": "Hər peşəkarın ideal işini, hər şirkətin ideal işçisini tapdığı bir dünya qurmaq.",
+      "vissionstat1": "İnnovasiya",
+      "vissionstat2": "Etibar",
+      "vissionstat3": "Qlobal Təsir",
+      "vissionstat4": "Gələcəyə Hazır",
+      "btn": "Mükəmməllik Yolculuğumuza Qoşulun"
+    }
+  },
+  "career": {
+    "careertoph": "Komandamıza Qoşulun",
+    "careerh1": "RabotaNet ilə Karyera Qurun",
+    "careerpara": "Həyəcanverici iş imkanlarını kəşf edin və bacarıqlarınıza uyğun ideal işi tapın.",
+    "careerstat1": "Elastik iş saatları",
+    "careerstat2": "100% İşlə təminat",
+    "careerstat3": "100% Karyera inkişafı",
+    "careerstat4": "100% İş təhlükəsizliyi",
+    "careerbtn1": "İşləri Kəşf edin",
+    "careerbtn2": "CV göndərin",
+    "careersubh": "Mövcud İşlər",
+    "careersubpara": "Fərqli sahələrdə geniş iş imkanları.",
+    "careerhero1": "Bütün İşlər",
+    "careerhero2": "Operativ İşlər",
+    "careerhero3": "Korporativ İşlər"
+  },
+  "careerform": {
+    "heading": "CV-nizi göndərin",
+    "name": "Tam Ad *",
+    "email": "Email Ünvanı *",
+    "phone": "Telefon Nömrəsi *",
+    "subject": "Mövzu *",
+    "message": "Mesaj",
+    "cv": "CV Yüklə *",
+    "submit": "Müraciəti Göndər",
+    "cancel": "Ləğv et"
+  },
+  "successstory": {
+    "headingsuccess": "Viza Uğur Hekayələri",
+    "paragraph": "Real insanlar, real arzular, real uğur hekayələri.",
+    "btn": "Sənin Uğur Hekayənə Başla",
+    "subheading1": "Uğur",
+    "subheading2": " Hekayələri"
+  },
+  "footer": {
+    "footerFront": "RabotaNet Recruitment",
+    "footerPara": "Şirkətiniz üçün ən yaxşı istedadları tapırıq",
+    "footerContact": "Əlaqə",
+    "footerOffice": "Ofis",
+    "footerAddress": "Ünvan:",
+    "footerLink1": "Ana Səhifə",
+    "footerLink2": "İşəgötürənlər",
+    "footerLink3": "Namizədlər",
+    "footerLink4": "Haqqımızda",
+    "footertext": "Keçidlər"
+  }
+}

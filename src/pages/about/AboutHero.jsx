@@ -69,7 +69,7 @@ export default function AboutHero() {
 
   return (
     <motion.section
-      className="py-30 bg-[#F4F4F2] overflow-hidden relative"
+      className="py-36 bg-[#F4F4F2] overflow-hidden relative"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
@@ -88,7 +88,7 @@ export default function AboutHero() {
         />
       </motion.div>
 
-      <div className="container mx-auto max-w-7xl px-4">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div className="flex flex-col" variants={containerVariants}>
             <motion.span

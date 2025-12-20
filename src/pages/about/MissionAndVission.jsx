@@ -88,7 +88,7 @@ const MissionAndVission = () => {
       </div>
 
       <motion.div
-        className="max-w-7xl mx-auto relative z-10"
+        className="container mx-auto relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

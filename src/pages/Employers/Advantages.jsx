@@ -143,7 +143,7 @@ export default function Advantages() {
         />
       </motion.div>
 
-      <div className="container mx-auto max-w-6xl px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="flex flex-col items-center justify-center relative"
           variants={containerVariants}

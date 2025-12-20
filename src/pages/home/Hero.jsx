@@ -84,7 +84,7 @@ export default function Hero() {
           />
         </motion.div>
 
-        <div className="container max-w-7xl mx-auto relative z-10 h-full flex justify-between w-full px-4 py-30">
+        <div className="container mx-auto relative z-10 h-full flex justify-between w-full px-4 py-30">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between items-center w-full"
             variants={containerVariants}

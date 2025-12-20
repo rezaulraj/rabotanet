@@ -81,7 +81,7 @@ export default function SuccessSection({
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
-      <div className="container mx-auto max-w-6xl px-4">
+      <div className="container mx-auto px-4">
         <div
           className={`grid grid-cols-1 md:grid-cols-2 items-center gap-12 ${
             reverse ? "md:flex-row-reverse" : ""
@@ -92,7 +92,7 @@ export default function SuccessSection({
             variants={imageContainerVariants}
           >
             <motion.div
-              className="absolute inset-0 -left-40 -bottom-36 w-full flex justify-center items-center z-0"
+              className="absolute inset-0 -left-40 -bottom-44 w-full flex justify-center items-center z-0"
               variants={rotateVariants}
               animate="rotate"
             >

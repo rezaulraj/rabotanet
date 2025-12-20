@@ -3,6 +3,8 @@
     "home": "Acasă",
     "employers": "Angajatori",
     "applicants": "Candidați",
+    "service": "Servicii",
+    "blog": "Bloguri",
     "about": "Despre noi",
     "contact": "Contact",
     "language": "Limbă",
@@ -262,5 +264,334 @@
     "footerLink3": "Candidați",
     "footerLink4": "Despre noi",
     "footertext": "Linkuri"
+  },
+  "services": {
+    "hero": {
+      "title": "Servicii Complete de Recrutare",
+      "description": "Conectarea talentelor excepționale cu oportunități remarcabile în întreaga Europă. Soluții de recrutare specializate pentru fiecare nevoie industrială.",
+      "stats": "În prezent, deservim peste 100 de clienți în întreaga Europă"
+    },
+    "features": {
+      "feature1": {
+        "title": "Bază Extinsă de Talente",
+        "description": "Acces la peste 50.000 de profesioniști pre-selectați în întreaga Europă"
+      },
+      "feature2": {
+        "title": "Rată de Succes de 98%",
+        "description": "Succes de plasare de top în industrie și retenție a candidaților"
+      },
+      "feature3": {
+        "title": "Plasare Rapidă",
+        "description": "Timpul mediu de angajare redus cu 35% comparativ cu standardele industriei"
+      },
+      "feature4": {
+        "title": "Suport Dedicat",
+        "description": "Suport și consultanță 24/7 pe tot parcursul procesului de recrutare"
+      }
+    },
+    "categories": {
+      "heading": "Categorii de Meserii",
+      "title": "Specializări în Meserii Calificate",
+      "description": "Recrutare expertă pentru profesii practice și meserii tehnice",
+      "professionals": "Profesioniști"
+    },
+    "ourServices": {
+      "heading": "Serviciile Noastre",
+      "title": "Soluții de Recrutare Specializate",
+      "description": "Oferim soluții complete de recrutare, adaptate pentru a satisface nevoile unice ale companiilor din diferite industrii și regiuni.",
+      "keyBenefits": "Beneficii Cheie:",
+      "successRate": "Rată de Succes"
+    },
+    "industryFocus": {
+      "heading": "Focus pe Meserii",
+      "title": "Specialități în Meserii Calificate",
+      "description": "Expertiză profundă în profesii practice și meserii tehnice",
+      "experience": "Experiență în Industrie"
+    },
+    "inDemand": {
+      "title": "Poziții de Meserii cu Cerere Ridicată",
+      "description": "Cei mai căutați profesioniști în meserii calificate pe piețele europene",
+      "category": "Categorie de Meserie",
+      "professional": "Profesional Calificat"
+    },
+    "cta": {
+      "stats": "Activ în peste 15 țări europene",
+      "title": "Pregătit să-ți construiești echipa calificată?",
+      "description": "Colaborează cu principala agenție europeană de recrutare pentru meserii manuale pentru a găsi profesioniștii potriviți pentru organizația ta.",
+      "contactButton": "Contactează-ne",
+      "viewButton": "Vezi Profesioniștii Disponibili"
+    },
+    "services1": {
+      "title": "Achiziție Internațională de Talente",
+      "description": "Ne specializăm în identificarea și recrutarea profesioniștilor de top din întreaga Europă. Rețeaua noastră extinsă și cunoștințele de piață ne permit să găsim candidații perfecți pentru nevoile specifice ale organizației tale.",
+      "benefits": {
+        "benefit1": "Acces la candidați verificați anterior",
+        "benefit2": "Evaluarea compatibilității culturale",
+        "benefit3": "Benchmarking salarial competitiv",
+        "benefit4": "Timp de angajare redus cu 40%"
+      }
+    },
+    "services2": {
+      "title": "Recrutare Specifică Industriei",
+      "description": "Expertiza noastră acoperă mai multe sectoare, inclusiv construcții, sănătate, IT, ospitalitate și producție. Înțelegem cerințele unice ale fiecărei industrii și oferim soluții de recrutare specializate.",
+      "benefits": {
+        "benefit1": "Expertiză specifică industriei",
+        "benefit2": "Verificarea competențelor tehnice",
+        "benefit3": "Respectarea reglementărilor sectoriale",
+        "benefit4": "Garanție de calitate pentru plasamente"
+      }
+    },
+    "services3": {
+      "title": "Proces de Recrutare Complet",
+      "description": "De la consultanța inițială până la plasarea finală, gestionăm întregul ciclu de recrutare. Abordarea noastră cuprinzătoare asigură experiențe de angajare fără probleme pentru angajatori și candidați.",
+      "benefits": {
+        "benefit1": "Gestionarea completă a ciclului de recrutare",
+        "benefit2": "Verificări de fond și confirmări",
+        "benefit3": "Suport pentru negocierea contractelor",
+        "benefit4": "Follow-up post-plasare"
+      }
+    },
+    "services4": {
+      "title": "Asistență pentru Viză și Relocare",
+      "description": "Navigarea reglementărilor internaționale de angajare poate fi complexă. Oferim suport complet pentru permise de muncă, procesarea vizelor și logistică de relocare pentru tranziții fără probleme.",
+      "benefits": {
+        "benefit1": "Ghid pentru cererea de viză",
+        "benefit2": "Asistență pentru conformitate legală",
+        "benefit3": "Coordonare relocare",
+        "benefit4": "Suport pentru integrare culturală"
+      }
+    },
+    "services5": {
+      "title": "Conformitate și Asigurarea Calității",
+      "description": "Menținem cele mai înalte standarde de conformitate cu legislația muncii internaționale și reglementările relevante. Procesele noastre riguroase de control al calității garantează practici etice și legale de recrutare.",
+      "benefits": {
+        "benefit1": "Conformitate cu legislația muncii UE",
+        "benefit2": "Certificare de recrutare etică",
+        "benefit3": "Audituri de control al calității",
+        "benefit4": "Raportare transparentă"
+      }
+    },
+    "services6": {
+      "title": "Soluții Personalizate pentru Forța de Muncă",
+      "description": "Proiectăm strategii de forță de muncă adaptate obiectivelor specifice ale afacerii tale. Fie că ai nevoie de personal temporar sau permanent, creăm soluții care stimulează creșterea.",
+      "benefits": {
+        "benefit1": "Modele flexibile de angajare",
+        "benefit2": "Planificare scalabilă a forței de muncă",
+        "benefit3": "Strategii de optimizare a costurilor",
+        "benefit4": "Abordare pe termen lung în parteneriat"
+      }
+    },
+    "jobCategories": {
+      "category1": {
+        "title": "Meserii de Construcții",
+        "description": "Constructori calificați, tâmplari, zidari și specialiști în construcții",
+        "count": "5.000+"
+      },
+      "category2": {
+        "title": "Electricitate și Mecanică",
+        "description": "Electricieni certificați, mecanici și tehnicieni de echipamente",
+        "count": "4.200+"
+      },
+      "category3": {
+        "title": "Producție și Fabricare",
+        "description": "Lucrători în fabrică, operatori de mașini și profesioniști pe linia de asamblare",
+        "count": "6.800+"
+      },
+      "category4": {
+        "title": "Transport și Logistică",
+        "description": "Șoferi, personal de depozit și personal pentru operațiuni în lanțul de aprovizionare",
+        "count": "8.500+"
+      },
+      "category5": {
+        "title": "Servicii de Întreținere",
+        "description": "Întreținere facilități, tehnicieni de reparații și servicii clădiri",
+        "count": "3.200+"
+      },
+      "category6": {
+        "title": "Ospitalitate și Servicii",
+        "description": "Personal de bucătărie, curățenie și profesioniști în industria serviciilor",
+        "count": "4.500+"
+      }
+    },
+    "industries": {
+      "industry1": {
+        "name": "Meserii de Construcții",
+        "jobs": {
+          "job1": "Tâmplari",
+          "job2": "Zidari",
+          "job3": "Gletari",
+          "job4": "Acoperișari",
+          "job5": "Montatori de Plăci",
+          "job6": "Finisatori Beton"
+        },
+        "experience": "15 ani"
+      },
+      "industry2": {
+        "name": "Electricitate și Cablaje",
+        "jobs": {
+          "job1": "Electricieni",
+          "job2": "Tehnicieni Electrici",
+          "job3": "Montatori de Cablu",
+          "job4": "Montatori Panouri",
+          "job5": "Electricieni întreținere",
+          "job6": "Specialiști Cablaje Industriale"
+        },
+        "experience": "10 ani"
+      },
+      "industry3": {
+        "name": "Instalații Sanitare & HVAC",
+        "jobs": {
+          "job1": "Instalatori",
+          "job2": "Montatori Țevi",
+          "job3": "Tehnicieni HVAC",
+          "job4": "Experți Refrigerare",
+          "job5": "Montatori Centrale",
+          "job6": "Specialiști Drenaj"
+        },
+        "experience": "10 ani"
+      },
+      "industry4": {
+        "name": "Sudură & Metalurgie",
+        "jobs": {
+          "job1": "Sudori",
+          "job2": "Fabricanți",
+          "job3": "Muncitori Metal",
+          "job4": "Muncitori Structuri Metalice",
+          "job5": "Sudori Țevi",
+          "job6": "Specialiști Tabla Metalică"
+        },
+        "experience": "12 ani"
+      },
+      "industry5": {
+        "name": "Automotive & Mecanică",
+        "jobs": {
+          "job1": "Mecanici Auto",
+          "job2": "Tehnicieni Diesel",
+          "job3": "Specialiști Reparații Caroserie",
+          "job4": "Electricieni Auto",
+          "job5": "Tehnicieni Service",
+          "job6": "Întreținere Flotă"
+        },
+        "experience": "10 ani"
+      },
+      "industry6": {
+        "name": "Pictură & Decorare",
+        "jobs": {
+          "job1": "Pictori",
+          "job2": "Decoratori",
+          "job3": "Pictori Industriali",
+          "job4": "Specialiști Tapet",
+          "job5": "Pregătitori Suprafețe",
+          "job6": "Tehnicieni Vopsire Spray"
+        },
+        "experience": "13 ani"
+      },
+      "industry7": {
+        "name": "Producție & Asamblare",
+        "jobs": {
+          "job1": "Operatori Mașini",
+          "job2": "Muncitori Asamblare",
+          "job3": "Inspectori Calitate",
+          "job4": "Tehnicieni Producție",
+          "job5": "Operatori CNC",
+          "job6": "Specialiști Ambalare"
+        },
+        "experience": "15 ani"
+      },
+      "industry8": {
+        "name": "Logistică & Depozitare",
+        "jobs": {
+          "job1": "Operatori Motostivuitor",
+          "job2": "Muncitori Depozit",
+          "job3": "Manipulanți Materiale",
+          "job4": "Clerici Inventar",
+          "job5": "Expediere/Recepție",
+          "job6": "Asistenți Logistică"
+        },
+        "experience": "nu specificat"
+      },
+      "industry9": {
+        "name": "Întreținere & Reparații",
+        "jobs": {
+          "job1": "Tehnicieni Întreținere",
+          "job2": "Reparatori Echipamente",
+          "job3": "Întreținere Facilități",
+          "job4": "Ingineri Clădiri",
+          "job5": "Întreținere HVAC",
+          "job6": "Întreținere Preventivă"
+        },
+        "experience": "10 ani"
+      },
+      "industry10": {
+        "name": "Peisagistică & Îngrijire Spații Verzi",
+        "jobs": {
+          "job1": "Peisagiști",
+          "job2": "Grădinari",
+          "job3": "Îngrijitori Spații Verzi",
+          "job4": "Specialiști Irigații",
+          "job5": "Tăietori Copaci",
+          "job6": "Tehnicieni Întreținere Gazon"
+        },
+        "experience": "10 ani"
+      },
+      "industry11": {
+        "name": "Curățenie & Sănătate",
+        "jobs": {
+          "job1": "Curățenie Industrială",
+          "job2": "Personal Curățenie",
+          "job3": "Spălători Geamuri",
+          "job4": "Lucrători Sanitare",
+          "job5": "Tehnicieni Custodial",
+          "job6": "Specialiști Întreținere Pardoseli"
+        },
+        "experience": "15 ani"
+      },
+      "industry12": {
+        "name": "Servicii Ospitalitate",
+        "jobs": {
+          "job1": "Bucătari Comerciali",
+          "job2": "Asistenți Bucătărie",
+          "job3": "Pregătire Alimente",
+          "job4": "Asistenți Patiserie",
+          "job5": "Personal Catering",
+          "job6": "Tehnicieni Servicii"
+        },
+        "experience": "15 ani"
+      }
+    },
+    "inDemandPositions": {
+      "position1": {
+        "role": "Electricieni Certificați",
+        "level": "Cerere Ridicată"
+      },
+      "position2": {
+        "role": "Tehnicieni HVAC",
+        "level": "Cerere Ridicată"
+      },
+      "position3": {
+        "role": "Tâmplari Construcții",
+        "level": "Cerere Foarte Ridicată"
+      },
+      "position4": {
+        "role": "Sudori Industriali",
+        "level": "Cerere Ridicată"
+      },
+      "position5": {
+        "role": "Șoferi Comerciali",
+        "level": "Cerere Medie"
+      },
+      "position6": {
+        "role": "Tehnicieni Întreținere",
+        "level": "Cerere Ridicată"
+      },
+      "position7": {
+        "role": "Operatori Mașini",
+        "level": "Cerere Medie"
+      },
+      "position8": {
+        "role": "Specialiști Instalații Sanitare",
+        "level": "Cerere Ridicată"
+      }
+    }
   }
 }

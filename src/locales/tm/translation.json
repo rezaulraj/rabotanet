@@ -1,0 +1,598 @@
+{
+  "nav": {
+    "home": "Baş sahypa",
+    "employers": "İş berijiler",
+    "applicants": "İş gözleýänler",
+    "service": "Hyzmatlar",
+    "blog": "Bloglar",
+    "about": "Biz barada",
+    "contact": "Habarlaşmak",
+    "language": "Dil",
+    "career": "Kariýera",
+    "success": "Üstünlik hekaýasy"
+  },
+  "homepage": {
+    "hero": {
+      "heroTopTitle": "KADR TAÝYNLAŞDYRYŞ WE BAŞ KADRLARY IZLÄP TAPYŞ",
+      "heroBigTitle": "Biz siziň kompaniýaňyz üçin aýratyn ussatlygy tapýarys.",
+      "heropara1": "Aýratyn ussatlyk az duş gelýär – her kim tapmagy umyt edýän, ýöne az adam tapýan görnüş. Başgalar bolsa, ",
+      "heropara2": "RabotaNet Recruitment ",
+      "heropara3": "ygtybarly şekilde, hakykatdanam tapawut döredýän hünärmentleri tapýar."
+    },
+    "brand": {
+      "brandText": "15 ýyldan gowrak wagt HR hünärmentleri tarapyndan ygtyýar edilýär:",
+      "partner": "Bize goşulanlar:"
+    },
+    "finding": {
+      "findTopHeading": "DIŇE KADR TAÝYNLAŞDYRYŞ KÄRHANASY DÄL",
+      "findBig1Heading": "Dogry ussatlygy tapmak ussatlyk we çüýşe talap edýär.",
+      "findBig2Heading": "Her gurama öz adamalary bilen gurulýar we şol adamlar onuň üstünligini kesgitleýär. Şonuň üçin biziň işimiz boş ýerleri doldurmakdan has giňdir.",
+      "findParagraph1": "RabotaNet Recruitment ",
+      "findParagraph2": "her iş beriji we hyzmat edýän her hünärmentiň üstünligine söýgüli. Biz her müşderini we ýarşyny özboluşlydyr diýip hasap edýäris we her gurluşa üýtgeşiklik, berlençilik we dogrulyk bilen ýakynlaşýarys."
+    },
+    "employer": {
+      "employerExaperence": "Täjirýeli ýyllar",
+      "employerHeading1": "JEMLEÝJI KADRLAR HYZMATY ",
+      "employerHeading2": "IŞ BERIJILER ÜÇIN",
+      "employerparagraph": "Biz siziň işiňiz üçin ýokary derejeli ussatlygy üpjün etmek üçin gurlan jemleýji kadr taýýarlaýjy çözgütleri hödürleýäris.",
+      "section1employerHeading1": "Baş kadrlary izläp tapyş",
+      "section1employeroara": "Bu diňe ýarşy gözleginden has giňdir; bu ölçeýär baha we bäsdeşlik üstünligi bilen üpjün edip biljek ýokary derejeli hünärmentleri kesgitlemek we işe çekmek strategiki sungatydyr.",
+      "section2employerHeading1": "Kadr taýýarlaşdyryş",
+      "section2employeroara": "Siziň guramanyňyzda dürli wezipeleler üçin ýarşylary gözlemek, çekmek we saýlamak üpjünçiliginiň gurlan tertibidir. Biziň kadr taýýarlaýjylarymyz, dogry adamlara birikmek üçin häzirki guralary, niýetlenen ýetirişi we maglumat esasyndaky strategiýalary ulanyp biljek.",
+      "employerbutton": "Iş berijiler üçin has köp maglumat"
+    },
+    "service": {
+      "serviceTopHeading": "ÝARŞYLAR ÜÇIN HYZMATLAR",
+      "serviceHeading1": "Şu günki iş bazarynda",
+      "serviceHeading2": "özüňizi nähili tapawutlandyrmaly.",
+      "servicePara": "Eger-de täze mümkinçilik gözleýän bolsaňyz, biz özüňizi ygtyýar we açyk-aydyn şekilde hödürlemekde size kömek ederis, arzuw edýän wezipesiňizi gazanmak şansyňyzy iň ýokary derejä ýetireris.",
+      "serviceButton": "Ýarşylar üçin has köp maglumat",
+      "servicesInterviewheading": "Görüşmä taýýarlyk",
+      "serviceInterviewPara": "Biz size interwýu usullary bilen üpjün edýäris, saýlama interwýular geçirýäris we ygtyýaryňyzy ýokarlandyrýarys.",
+      "serviceCvHeading": "Reýume we LinkedIn profili gowulandyryş",
+      "serviceCvPara": "Biz reýume we LinkedIn profiliňizi güýçli ilkinji tesir etmek üçin gowulandyrmakda kömek edýäris.",
+      "serviceLaborHeading": "Zahmet bazarynyň analizi",
+      "serviceLaborPara": "Biz kariýera mümkinçilikleriňizi senagatlar we sebitler boýunça analiz edýäris, iň laýyk wezipeleleri kesgitleýäris.",
+      "serviceParsonalHeading": "Şahsyýet bahalary",
+      "serviceParsonalPara": "Biz size we potensial iş berijilere güýçli tarapyňyzy we iň gowy gabat gelşigiňizi düşünmekde kömek edýän bahalary hödürleýäris.",
+      "serviceStat1": "geçirilen interwýular",
+      "serviceStat2": "barlanan reýumeler",
+      "serviceStat3": "kanagatlanan iş berijiler",
+      "serviceStat4": "çap edilen hünärment makalalar"
+    },
+    "ourCliend": {
+      "cliendTopHeading": "HEKAÝALAR WE MÜŞDERI GÖRKEZMELERI",
+      "cliendHeading1": "Biziň müşderilerimiz üçin",
+      "cliendHeading2": "Netijeleri nädip ýetirdimiz",
+      "cliendHeadhuntingHead": "Baş kadrlary izläp tapyş",
+      "cliendHeadhuntingPara": "Global kompaniýa, öňki agentligi laýyk ýarşylary üpjün edip bilmän soň, aýratyn wezibäni howp bilen doldurmak isledi. Gowy maslahatlaşyk arkaly, gözlegi çäklendirýän gaty çäkli tehniki talablary açdy. Meýilnamalary gowulandyryp we giň ussatlyk maglumat bazamyz ulanyp, diňe iki hepde içinde üç güýçli gysga sanaw ýarşylaryny hödürledik, olaryň ikisi tehniki we medeni taýdan gowy gabat gelýändigi subut edildi.",
+      "clientRecuitHead": "Kadr taýýarlaşdyryş",
+      "clientRecuitPara": "Bir kompaniýa, güýçli senagat birikdirmeleri bilen işjeň satuw wekili gözleýärdi. Eger-de wezipe baş kadrlary izläp tapyş üçin iň gowy laýyk bolsa-da, biz niýetlenen mahabat, marketing kampaniýalary, sosial media ýetirişi we maglumat bazasy gözlegini birleşdirýän giňirdi kadr taýýarlaýjy strategiýasyny ýerine ýetirdik. Diňe iki hepde içinde, şahsyýet profili we hünärment geçmişi wezibäniň talablaryna doly gabat gelýän ýarşyny kesgitlep we üpjün etdik."
+    },
+    "compitator": {
+      "compitatorHeading": "Aýratyn Kadr Taýýarlaşdyryş Hyzmatlary – Biziň Ussatlygymyz Arkaly Güýçlendirilen",
+      "compitatorButton": "Men iň gowy adamlary isleýärin."
+    },
+    "formModel": {
+      "formHeading": "Biz bilen habarlaşyň",
+      "formPara": "Biziň hyzmatlarymyzy gyzyklanýarmy? Gysga formany dolduryň we biz ýakyn wagtda size ýüzlenersiňiz.",
+      "name": "Ady*",
+      "company": "Kompaniýa*",
+      "phone": "Telefon habarlaşma*",
+      "email": "E-poçta*",
+      "report": "Hasabat",
+      "policy": "Men Şahsy Maglumatlary Gaýtadan Işlemek Siyasatyny okadym",
+      "button": "Iber →"
+    },
+    "banner": {
+      "bannertopheading": "RabotaNet Kadr Taýýarlaşdyryş Kompaniýasy",
+      "bannerservies": "Fleet Hyzmaty",
+      "bannerHeading": "Aýratyn Kadr Taýýarlaşdyryş Hyzmatlary – Biziň Ussatlygymyz Arkaly Güýçlendirilen",
+      "bannerPara1": "Standart işe almak çözgütlerine goşmaça,",
+      "bannerPara2": "RabotaNet Recruitment",
+      "bannerPara3": "ýörite iş güýji talaby bolan işewürlere laýyklaşdyrylan aýratyn kadr taýýarlaşdyryş goldawyny ýetirýär.",
+      "bannerSecHeading": "Senagatlar boýunça ussatlyk",
+      "bannerThiHeading": "Çalt we ygtyýarly işe almak",
+      "bannerFortHeading": "Dürli ussatlyk toplumlaryna giriş",
+      "bannerFiftHeading": "Uzaga çeken goldaw",
+      "bannerLink": "Hyzmatlar barada has köp"
+    }
+  },
+  "employeepage": {
+    "heroEmployee": {
+      "heroEmployeeTopHeading": "IŞ BERIJILER ÜÇIN HYZMATLAR",
+      "heroEmployeeHeading": "Iş berijiler üçin laýyklaşdyrylan kadr taýýarlaşdyryş we baş kadrlary izläp tapyş çözgütleri.",
+      "heroHuntingHead": "Baş kadrlary izläp tapyş",
+      "heroHuntingPara": "Baş kadrlary izläp tapyş diňe wezipeleleri doldurmakdan has giňdir; bu hakyky işewürlik täsiri alyp biler we guramanyňyza ölçeýär bäsdeşlik üstünligi berip biljek aýratyn ussatlyklary kesgitlemek we çekmek strategiki tertibidir.",
+      "heroHuntingLink": "Has köp maglumat",
+      "heroRecuitHead": "Kadr taýýarlaşdyryş",
+      "heroRecuitPara": "Siziň guramanyňyzda dürli wezipeleler üçin işgärleri gözlemek, çekmek we üpjün etmek üpjünçiliginiň gurlan we gowy tertibidir. Biziň kadr taýýarlaýjylarymyz, dogry ýarşylara birikmek üçin häzirki guralary, bazara göz aýlawlary we subut edilen usullary ulanyp biljek.",
+      "heroRecuitLink": "Has köp maglumat"
+    },
+    "headHunting": {
+      "headHuntingTopHeading": "Baş kadrlary izläp tapyş",
+      "headHuntingHeading": "RabotaNet Recruitment-da Baş Kadrlary Izläp Tapyş Nähili Işleýär",
+      "headHuntingPara": "Biziň baş kadr izläp tapyjylarymyz, häzirki wagtda beýleki guramalarda işleýän ýokary derejeli hünärmentleri gözlemekde hünärleşdirilendir. Bu şahslar köplenç siziň işiňiziň talap edýän takyk ussatlyklary we täjirýelere eýedir. Biziň ýakynlaşymyz, olary kesgitlemek, ýakynlaşmak we kariýera arzuwlary we kompaniýaňyzyň zerurlyklaryna gabat gelýän laýyklaşdyrylan mümkinçilikler bilen işe çekmekdir."
+    },
+    "success": {
+      "successHeading": "Baş Kadrlary Izläp Tapyş Siziň Üstünligiňiz Üçin Näme Üçin Ähmiýetli",
+      "successPara1": "Şu günki bäsdeş işgüýji bazarynda, ýokary göreldäjileri çekmek we saklamak esasy ähmiýetlidir. Iň ussat hünärmentleriň köpüsi işjeň şekilde täze wezipeleleri gözlemeýär. Biziň baş kadr izläp tapyş hyzmatlarymyz arkaly, ",
+      "successPara2": "RabotaNet Recruitment",
+      "successPara3": "siz geleneksel kanallardan daşary çykmak we bu aýratyn ussatlyk toplumy bilen göni baglanyşyk etmek mümkinçiligini berýär.",
+      "successpart": "Üstünlik Kepillendirilýär",
+      "successtats1": "Üstünlik Derejesi",
+      "successtats2": "Goldaw",
+      "successtats3": "Müşderiler"
+    },
+    "advantage": {
+      "advantageTopHeading": "RabotaNet Recruitment Baş Kadr Izläp Tapyş Üstünlikleri",
+      "advantageHeadingStats1": "Passiw ýarşylara giriş",
+      "advantageParaStats1": "Biz size işjeň şekilde işler üçin ýüz tutmaýan hünärmentler bilen işleşmekde kömek edýäris, size az duş gelýän we aýratyn ussatlygy işe almak mümkinçiligini berýär.",
+      "advantageHeadingStats2": "Senagata aýratyn ussatlyk",
+      "advantageParaStats2": "Biziň baş kadr izläp tapyjylarymyz kesgitlenen senagatlar we işleýiş meýdanlaryna üns berýär, talapyňyzyň has gowy düşünilmegini we has takyk ýarşy gabat gelşigini kepillendirýär.",
+      "advantageHeadingStats3": "Wagt we çeşme netijeliligi",
+      "advantageParaStats3": "Ussatlaramyza daşarky iş gönükdirmek, size gymmatly wagt we içerki çeşmeleri tygşytlaýar, şol bir wagtda hünärment we diskret gözleg tertibini kepillendirýär."
+    },
+    "professional": {
+      "professionalHeading": "Ussatlygymyzy hünärment baş kadr izläp tapyjylarynyň giň toplumy bilen birleşdirip, biz size kadr taýýarlaşdyryş tertibiňizi ýokarlandyrmakda we uzaga çeken üstünlik alýan aýratyn ussatlygyň görnüşini üpjün etmekde kömek edýäris. Biziň maksadymyz ýönekeý: biz size iň gowy adamlara, hakykatdanam tapawut döredýän az duş gelýän hünärmentlere birikdirýäris.",
+      "professionalButton": "Men iň gowy adamlary isleýärin.",
+      "textstat": "Işiňiziň hak edýän aýratyn ussatlygyny tapalyň"
+    },
+    "workRecuit": {
+      "workRecuitTopHeading": "Kadr taýýarlaşdyryş",
+      "workRecuitHeading": "RabotaNet Recruitment-da Kadr Taýýarlaşdyryş Nähili Işleýär",
+      "workRecuitPara": "Biziň kadr taýýarlaşdyryş ussatlarymyz, dogry gabat gelşigi işe almak üçin jemleýji tertibi yzarlaýar. Bu, boş ýerleri niýetlenen platformalarda mahabat etmegi, reýumeleri üýtgeşik gözden geçirmegi we gysga sanawlamagy, interwýulary koordinasiýalamagy we gowy salgyt barlaglar geçirmegi öz içine alýar. Biz hem her ýarşynyň guramanyňyzyň bahalary we medeniýeti bilen gabat gelýändigine üns berýäris. Her ädim, size uzaga çeken üstünlige goşant goşýan güýçli, dowamly toparlary gurmaga kömek etmek üçin gurlan."
+    },
+    "successSection": {
+      "title": "Kadr Taýýarlaşdyryş Näme Üçin Işewürlik Üstünligi Üçin Esasdyr",
+      "description": "Kadr taýýarlaşdyryş, höweslendirilen we ýokary işjeňleşdirilen işgüýjüniň esasyny düzýär. RabotaNet Recruitment, dogry işe almak kararlary işgär ruhyny, netijeliligi we kompaniýa medeniýetini kesgitleýär diýip düşünýär, şonuň üçin biz her bir iş berijiniň özboluşly zerurlyklaryna gabat gelmek üçin her kadr taýýarlaşdyryş tertibini laýyklaşdyrýarys."
+    },
+    "parsonality": {
+      "parsonalityHeading": "Şahsyýet bahalary",
+      "parsonalityPara": "Biziň şahsyýet bahalarymyz, ýarşylaryň hereket ediş usullary we iş ýeri höweslendirişleri barada gymmatly göz aýlawlary hödürleýär. Olar bir şahs has içe garawlymy ýa-da daşyna garawlymy, höwesleri maksatlara ýetirmek ýa-da gatnaşyklary gurmakda ýokarlandyrylmagyny, häsiýetleriniň zaman geçişi bilen nähili ösüp bilerdigini we uzaga çeken işe täsir edip biljek mümkin kynçylyklary açyp görkezmekde kömek edýär. Bu göz aýlawlar, akylly işe almak kararlaryny goldaýar we ýarşylar we gurama zerurlyklarynyň arasynda güýçli gabat gelşigi kepillendirýär."
+    }
+  },
+  "applicant": {
+    "heroApplicant": {
+      "heroTopHeading": "Ýarşylar Üçin Hyzmatlar",
+      "heroHeading": "Şu günki iş bazarynda üstünlik gazanmak nädip.",
+      "heroSubHeading1": "Maslahatlaşyklar",
+      "heroSubPara1": "Biziň ýarşy maslahatlaşyklarymyz, özüňizi ygtyýarly we hünärment şekilde hödürlemekde size kömek etmek üçin gurlan. Täjirýeli maslahatçylaryň gollanmasy bilen, interwýu usullaryňyzy gowulandyrasyňyz, şahsy markaňyzy güýçlendirersiňiz we dogry wezibäni gazanmak şansyňyzy ýokarlandyrarsyňyz.",
+      "heroSubHeading2": "Şahsyýet bahalary",
+      "heroSubPara2": "Biz size we potensial iş berijilere güýçli tarapyňyzy, höweslendirişleriňizi we iň gowy iş usulyňyzy has gowy düşünmekde kömek edýän şahsyýet bahalaryny hödürleýäris. Bu göz aýlawlar, has gowy iş gabat gelşigi we güýçli kariýera ösüşi üçin mümkinçilik berýär."
+    },
+    "opertunity": {
+      "opertunityHeading": "Ýarşylar Bilen Maslahatlaşyklar – Täze Mümkinçilikler Üçin Taýýar Boluň",
+      "opertunityPara": "Biziň maslahatlaşyklarymyz interwýu taýýarlygyndan daşary çykýar. Biz size reýumeňizi gowulandyrmakda, LinkedIn profiliňizi optimalaşdyrmakda we potensial iş berijilere görünmek derejäňizi ýokarlandyrmakda goldaw berýäris. Prezentasiýa usullaryňyzy we hünärment markaňyzy gowulandyryp, bäsdeş bazarda tapawutlanmakda size kömek edýäris we arzuw edýän wezipesiňizi almak şansyňyzy ýokarlandyrýarys."
+    },
+    "consultation": {
+      "consltationHeading": "Biziň Maslahatlaşyk Hyzmatlarymyz:",
+      "consltationService1": "Interwýu taýýarlygy we ýolbaşçylyk",
+      "consltationService2": "Reýume redaktirlenmesi we gowulandyrylyşy",
+      "consltationService3": "LinkedIn profili optimalaşdyrylyşy",
+      "consltationService4": "Zahmet bazary göz aýlawlary we kariýera ýolbaşçylygy",
+      "consltationService5": "Ygtyýar ýokarlandyrmak üçin saýlama interwýular",
+      "consltationService6": "Has gowy özüňizi düşünmek üçin şahsyýet bahalary"
+    },
+    "inprove": {
+      "inproveHeading": "Biz ussat we zähmetkeş adamlary, söýgü, ussatlyk we ygtyýarlylygy gymmatlandyrýan iş berijiler bilen birikdirýäris. Eger-de tolugünlik, wagtlaýyn iş ýa-da şertnama işi gözleýän bolsaňyz, biziň boş ýerlerimiz senagatlar boýunça giň gök ýakaly wezipeleleri öz içine alýar.",
+      "inproveButton": "Men iň gowy adamlary isleýärin."
+    }
+  },
+  "about": {
+    "heroAbout": {
+      "heroTopHeading": "BIZ BARADA",
+      "heroHeading": "15 ýyllyk Kadr Taýýarlaşdyryş Ussatlygy",
+      "heroPara1": "RabotaNet ",
+      "heroPara2": "Ýewropanyň adam çeşmeleri senagatynda tanalýan atdyr we gysga wagt öň işleýişini Belarusda giňeldi. Adam güýjüni dolandyrmakda 15 ýyldan gowrak täjirýe bilen, her müşderiniň özboluşly zerurlyklaryna ýüz tutýan çözgütleri ýetirmekde söýgülidir.",
+      "heroPara3": "Biz iň ýokary derejeli çeşmeler we subut edilen senagat bilimini ulanmak arkaly, dogry ussatlygy dogry mümkinçilikler bilen gabat getirmek ukybymyz bilen gurýarys. Biziň täjirýeli hünärmentler toparymyz, adam güýjüne maslahat bermekde giň täjirýäni getirýär, her basgançakda aýratyn hyzmaty kepillendirýär.",
+      "heroPara4": "Biziň hyzmatlarymyz çeýeplidir we her müşderiniň aýratyn maksatlary we bütje bilen gabat gelmek üçin laýyklaşdyrylan. Wagtlaýyn orunlaşdyrmalardan uzaga çeken kadr taýýarlaşdyryşa çenli, biz jemleýji adam başyna düşüji çözgütleri dünýäde hödürleýäris.",
+      "heroPara5": "Biziň görnüşimiz, hökümet we hökümet däl guramalar üçin ygtyýarly Adam Çeşmeleri ýoldaşy bolmak."
+    },
+    "whatValue": {
+      "valueHeading": "Biziň Gymmatlyklarymyz",
+      "valueStatsTitle1": "Hili",
+      "valueStatsDescription1": "Biz iň ýokary derejeli kadr taýýarlaşdyryş hyzmatlaryny ýetirmekde söýgülidir. Yzygiderli täzeleşme we tertip gowulandyryş arkaly, biz diňe müşderiniň garaýşlaryna ýetirmek däl, eýsem aşmak maksat edinýäris. Biz üçin, hili uzaga çeken üstünligiň esasydyr.",
+      "valueStatsTitle2": "Çeýeplilik",
+      "valueStatsDescription2": "Şu günki çalt üýtgeýän dünýäde, uýumlylyk açardyr. Biz her müşderiniň özboluşly zerurlyklaryna çalt we netijeli jogap berýän çeýepli çözgütleri hödürlemek bilen gurýarys.",
+      "valueStatsTitle3": "Ýoldaşlyk",
+      "valueStatsDescription3": "Biz güýçli, uzaga çeken ýoldaşlyklaryň özara ösüşi alýar diýip ykrar edýäris. Müşderiler we işewür ýoldaşlar bilen ygtyýar gurmak, biziň maksadymyzyň merkezidir, geljekki üstünlik üçin durnukly esas döredýär."
+    },
+    "missionvission": {
+      "heading1": "Biziň ",
+      "heading2": "Maksadymyz",
+      "para": "Kariýeralary we işewürlikleri öwüşgäp, täzeleşme, hemrahlyk we aýratyn ýoldaşlyklar arkaly ussatlygy gazanmagy täzeden kesgitlemek.",
+      "missionh": "Biziň Welaýatymyz",
+      "missionpara": "Aýratyn ussatlyk we düşünje guramalaryň arasynda manyly baglanyşyklary gurmak. Biz diňe wezipeleleri doldurmaýarys—biz kariýeralary güýçlendirýän we şahsy, hemrahly kadr taýýarlaşdyryş strategiýalary arkaly işewürlik ösüşini tizleşdirýän köprüler gurýarys.",
+      "missionstat1": "Aýratynlyk",
+      "missionstat2": "Baglanyşyk",
+      "missionstat3": "Ösüş",
+      "missionstat4": "Täsir",
+      "vissionh": "Biziň Görnüşimiz",
+      "vissionpara": "Her hünärment özüniň kämil wezipesini açýan we her gurama iň gowy ussatlyk gabat gelşigi arkaly doly kuwwatyny açýan dünýä döredip, kadr taýýarlaşdyryşyň geljegini öňe sürmek. Biz mümkinçilik we ösüşiň global ekosistemini göz öňüne getirýäris.",
+      "vissionstat1": "Täzeleşme",
+      "vissionstat2": "Ygtyýar",
+      "vissionstat3": "Global Täsir",
+      "vissionstat4": "Geljek Üçin Taýýar",
+      "btn": "Biziň Aýratynlyk Saparymyza Goşuluň"
+    }
+  },
+  "career": {
+    "careertoph": "Toparymyza Goşuluň",
+    "careerh1": "RabotaNet Bilen Kariýeraňyzy Gurun",
+    "careerpara": "Heýran galdyrýan mümkinçilikleri gözläň, iň ýokary iş berijiler bilen baglanyşyň we ussatlyklaryňyz we arzuwlaryňyz bilen gabat gelýän kämil wezibäni tapyň.",
+    "careerstat1": "Çeýepli Sagatlar",
+    "careerstat2": "100% Iş Orunlaşdyrylyşy",
+    "careerstat3": "100% Kariýera Ösüşi",
+    "careerstat4": "100% Iş Howpsuzlygy",
+    "careerbtn1": "Işleri Gözläň",
+    "careerbtn2": "Reýume Iberiň",
+
+    "careersubh": "Elýeterli Işler",
+    "careersubpara": "Dürli senagatlar we ýerler boýunça dürli wezipelelerimiz bilen indiki kariýera mümkinçiligiňizi açyň.",
+    "careerhero1": "Ähli Işler",
+    "careerhero2": "Amaly Işler",
+    "careerhero3": "Korporatiw Işler"
+  },
+  "careerform": {
+    "heading": "Reýumeňizi Iberiň",
+    "name": "Doly Ady *",
+    "email": "E-poçta Salgysy *",
+    "phone": "Telefon Belgi *",
+    "subject": "Tema *",
+    "message": "Habar",
+    "cv": "Reýume ýükle *",
+    "submit": "Arza Iber",
+    "cancel": "Ýatyrmak"
+  },
+  "successstory": {
+    "headingsuccess": "Wiza Üstünlik Hekaýalary",
+    "paragraph": "Hakyky adamlar, hakyky düýşler, hakyky üstünlik hekaýalary. Biziň wiza hyzmatlarymyz arkaly durmuşlaryny üýtgeden müňlerçe adama goşuluň.",
+    "btn": "Öz Üstünlik Hekaýaňyzy Başlaň",
+    "subheading1": "Üstünlik",
+    "subheading2": " Hekaýalary"
+  },
+
+  "footer": {
+    "footerFront": "RabotaNet Kadr Taýýarlaşdyryş",
+    "footerPara": "Biz siziň kompaniýaňyz üçin aýratyn ussatlygy tapýarys",
+    "footerContact": "Biz bilen habarlaşyň",
+    "footerOffice": "Ofis",
+    "footerAddress": "Salgysy:",
+    "footerLink1": "Baş sahypa",
+    "footerLink2": "Iş berijiler",
+    "footerLink3": "Ýarşylar",
+    "footerLink4": "Biz barada",
+    "blog": "Bloglar",
+    "footertext": "Çykgytlar"
+  },
+  "services": {
+    "hero": {
+      "title": "Jemleýji Kadr Taýýarlaşdyryş Hyzmatlary",
+      "description": "Ýewropa boýunça aýratyn ussatlygy aýratyn mümkinçilikler bilen birikdirýär. Her senagat zerurlygy üçin aýratyn kadr taýýarlaşdyryş çözgütleri.",
+      "stats": "Häzirki wagtda Ýewropa boýunça 100+ müşderä hyzmat edýär"
+    },
+    "features": {
+      "feature1": {
+        "title": "Giň Ussatlyk Toplumu",
+        "description": "Ýewropa boýunça 50,000-den gowrak öň barlanan hünärmentlere giriş"
+      },
+      "feature2": {
+        "title": "98% Üstünlik Derejesi",
+        "description": "Senagata ýolbaşçylyk edýän orunlaşdyrylyş üstünligi we ýarşy saklamak"
+      },
+      "feature3": {
+        "title": "Çalt Orunlaşdyrylyş",
+        "description": "Işe almak üçin ortaça wagt senagat standartlaryna garanyňda 35% peseldi"
+      },
+      "feature4": {
+        "title": "Söýgüli Goldaw",
+        "description": "Kadr taýýarlaşdyryş tertibiniň dowamynda 24/7 goldaw we maslahatlaşyk"
+      }
+    },
+    "categories": {
+      "heading": "Hünär Kategoriýalary",
+      "title": "Ussat Hünär Aýratynlyklary",
+      "description": "Kol we tehniki hünärler üçin hünärment kadr taýýarlaşdyryş",
+      "professionals": "Hünärmentler"
+    },
+    "ourServices": {
+      "heading": "Biziň Hyzmatlarymyz",
+      "title": "Aýratyn Kadr Taýýarlaşdyryş Çözgütleri",
+      "description": "Biz dürli senagatlar we sebitler boýunça işewürleriň özboluşly zerurlyklaryna gabat gelmek üçin laýyklaşdyrylan jemleýji kadr taýýarlaşdyryş çözgütlerini hödürleýäris.",
+      "keyBenefits": "Esas Üstünlikler:",
+      "successRate": "Üstünlik Derejesi"
+    },
+    "industryFocus": {
+      "heading": "Hünär Üns",
+      "title": "Ussat Hünär Aýratynlyklary",
+      "description": "Kol we tehniki hünärlerde çuň ussatlyk",
+      "experience": "Senagat Täjirýesi"
+    },
+    "inDemand": {
+      "title": "Ýokary Talap Edilýän Hünär Wezipeleleri",
+      "description": "Ýewropa bazarlary boýunça iň gözlenýän ussat hünär hünärmentleri",
+      "category": "Hünär Kategoriýasy",
+      "professional": "Ussat Hünärment"
+    },
+    "cta": {
+      "stats": "15+ Ýewropa ýurtlarynda işjeň",
+      "title": "Ussat Toparyňyzy Gurmaga Taýýarmy?",
+      "description": "Guramanyňyz üçin kämil hünär hünärmentlerini tapmak üçin Ýewropanyň ýolbaşçylyk edýän gök ýakaly kadr taýýarlaşdyryş agentligi bilen ýoldaşlaşyň.",
+      "contactButton": "Biz bilen habarlaşyň",
+      "viewButton": "Elýeterli Hünär Hünärmentlerini Görüň"
+    },
+    "services1": {
+      "title": "Halkara Ussatlyk Gazanmak",
+      "description": "Biz Ýewropa boýunça iň ýokary derejeli hünärmentleri gözlemek we kadr taýýarlaşdyryşda hünärleşýäris. Biziň giň toplumymyz we çuň bazar bilimimiz, guramanyňyzyň aýratyn talplary üçin kämil ýarşylary tapmagy kepillendirýär.",
+      "benefits": {
+        "benefit1": "Öň barlanan ýarşylara giriş",
+        "benefit2": "Medeni gabat gelşik bahasy",
+        "benefit3": "Bäsdeş iş haky deňeşdirilmegi",
+        "benefit4": "Işe almak üçin wagt 40% peseldi"
+      }
+    },
+    "services2": {
+      "title": "Senagata Aýratyn Kadr Taýýarlaşdyryş",
+      "description": "Biziň ussatlygymyz gurluşyk, saglygy goraýyş, IT, myhmançylyk we öndürijilik ýaly köp sektorlary öz içine alýar. Biz her senagatyň özboluşly talplaryny düşünýäris we aýratyn kadr taýýarlaşdyryş çözgütlerini ýetirýäris.",
+      "benefits": {
+        "benefit1": "Senagata aýratyn ussatlyk",
+        "benefit2": "Tehniki ussatlyk barlagy",
+        "benefit3": "Sektoryň düzgünlerine boýun egme",
+        "benefit4": "Orunlaşdyrmalarda hilli kepillik"
+      }
+    },
+    "services3": {
+      "title": "Iň Soňuna Çenli Kadr Taýýarlaşdyryş Tertibi",
+      "description": "Ilkinji maslahatlaşykdan soňky orunlaşdyrmaga çenli, biz tutuş kadr taýýarlaşdyryş durmuş aýlawyny dolandyrýarys. Biziň jemleýji ýakynlaşymyz, iş berijiler we ýarşylar üçin yzygiderli işe almak täjirýelerini kepillendirýär.",
+      "benefits": {
+        "benefit1": "Doly kadr taýýarlaşdyryş aýlawyny dolandyryş",
+        "benefit2": "Geçmiş barlaglar & barlag",
+        "benefit3": "Şertnama gepleşik goldawy",
+        "benefit4": "Orunlaşdyrmadan soň yzarlama"
+      }
+    },
+    "services4": {
+      "title": "Wiza & Orun Çalşyşyş Kömegi",
+      "description": "Halkara işe almak düzgünlerini geçmek çylşyrymly bolup biler. Biz iş rugsatlary, wiza işleýiş we orun çalşyşyş logistikasy üçin jemleýji goldawy hödürleýäris, yzygiderli geçişleri kepillendirmek üçin.",
+      "benefits": {
+        "benefit1": "Wiza arza ýolbaşçylygy",
+        "benefit2": "Kanuny boýun egme kömegi",
+        "benefit3": "Orun çalşyşyş koordinasiýasy",
+        "benefit4": "Medeni integrasiýa goldawy"
+      }
+    },
+    "services5": {
+      "title": "Boýun Egme & Hili Kepillik",
+      "description": "Biz halkara işgüýji kanunlarynyň we düzgünleriniň iň ýokary standartlaryny saklaýarys. Biziň gaty hilli kepillik tertibimiz, ahlakly we kanuny kadr taýýarlaşdyryş amallaryny kepillendirýär.",
+      "benefits": {
+        "benefit1": "EU işgüýji kanunyna boýun egme",
+        "benefit2": "Ahlakly kadr taýýarlaşdyryş şahadatnamasy",
+        "benefit3": "Hili kontrol awditleri",
+        "benefit4": "Şeffap hasabatlandyryş"
+      }
+    },
+    "services6": {
+      "title": "Laýyk Işgüýji Çözgütleri",
+      "description": "Biz siziň aýratyn işewürlik maksatlaryňyza gabat gelmek üçin laýyklaşdyrylan işgüýji strategiýalary gurýarys. Eger-de wagtlaýyn işçiler ýa-da uzaga çeken orunlaşdyrmalar zerur bolsa, biz ösüş alyp barýan çözgütleri döredýäris.",
+      "benefits": {
+        "benefit1": "Çeýepli işçiler modelleri",
+        "benefit2": "Ölçeýär işgüýji meýilnamasy",
+        "benefit3": "Bahany optimalaşdyrma strategiýalary",
+        "benefit4": "Uzaga çeken ýoldaşlyk ýakynlaşyşy"
+      }
+    },
+    "jobCategories": {
+      "category1": {
+        "title": "Gurluşyk Hünärleri",
+        "description": "Ussat gurluşykçylar, agaç işleri, kerpiç daýanjylar we gurluşyk ussatlary",
+        "count": "5,000+"
+      },
+      "category2": {
+        "title": "Elektrik & Mekaniki",
+        "description": "Şahadatnamaly elektrikçiler, mehanikler we enjamlaryň tehnikleri",
+        "count": "4,200+"
+      },
+      "category3": {
+        "title": "Öndürijilik & Önüm",
+        "description": "Zawod işçileri, maşyn operatorlary we montaž haty hünärmentleri",
+        "count": "6,800+"
+      },
+      "category4": {
+        "title": "Ulag & Logistika",
+        "description": "Aýdawçylar, ammar işçileri we üpjünçilik zynjyry amallary işgärleri",
+        "count": "8,500+"
+      },
+      "category5": {
+        "title": "Serişdeler Hyzmatlary",
+        "description": "Gurluşygy serişdeler, ussahat tehnikleri we bina hyzmatlary",
+        "count": "3,200+"
+      },
+      "category6": {
+        "title": "Myhmançylyk & Hyzmat",
+        "description": "Aşpezana işçileri, arassalaýjylar we hyzmat senagaty hünärmentleri",
+        "count": "4,500+"
+      }
+    },
+    "industries": {
+      "industry1": {
+        "name": "Gurluşyk Hünärleri",
+        "jobs": {
+          "job1": "Agaç işleri",
+          "job2": "Kerpiç daýanjylar",
+          "job3": "Suwuklar",
+          "job4": "Öýüň üstüni örtüjiler",
+          "job5": "Plitka goýujylar",
+          "job6": "Beton bitirijiler"
+        },
+        "experience": "15 ýyl"
+      },
+      "industry2": {
+        "name": "Elektrik & Sim",
+        "jobs": {
+          "job1": "Elektrikçiler",
+          "job2": "Elektrik tehnikleri",
+          "job3": "Kabel goýujylar",
+          "job4": "Panel gurujylar",
+          "job5": "Serişde elektrikçiler",
+          "job6": "Senagat sim ussatlary"
+        },
+        "experience": "10 ýyl"
+      },
+      "industry3": {
+        "name": "Suw howdy & HVAC",
+        "jobs": {
+          "job1": "Suw howdylar",
+          "job2": "Truba montažçylar",
+          "job3": "HVAC tehnikleri",
+          "job4": "Sowadyjylar ussatlary",
+          "job5": "Kazan goýujylar",
+          "job6": "Drenaj ussatlary"
+        },
+        "experience": "10 ýyl"
+      },
+      "industry4": {
+        "name": "Käsew & Metal işi",
+        "jobs": {
+          "job1": "Käsewçiler",
+          "job2": "Gurujylar",
+          "job3": "Metal işçileri",
+          "job4": "Gurluşyk polat işçileri",
+          "job5": "Truba käsewçileri",
+          "job6": "Ýaprak metal ussatlary"
+        },
+        "experience": "12 ýyl"
+      },
+      "industry5": {
+        "name": "Awto & Mekanikler",
+        "jobs": {
+          "job1": "Awto mekanikler",
+          "job2": "Dizel tehnikleri",
+          "job3": "Göweli ussahat ussatlary",
+          "job4": "Awto elektrikçiler",
+          "job5": "Hyzmat tehnikleri",
+          "job6": "Fleet serişdesi"
+        },
+        "experience": "10 ýyl"
+      },
+      "industry6": {
+        "name": "Boýaw & Bezeme",
+        "jobs": {
+          "job1": "Boýawçylar",
+          "job2": "Bezegijiler",
+          "job3": "Senagat boýawçylary",
+          "job4": "Duwar kagyzy ussatlary",
+          "job5": "Üsti taýýarlaýjylar",
+          "job6": "Sprey boýaw tehnikleri"
+        },
+        "experience": "13 ýyl"
+      },
+      "industry7": {
+        "name": "Öndürijilik & Montaž",
+        "jobs": {
+          "job1": "Maşyn operatorlary",
+          "job2": "Montaž işçileri",
+          "job3": "Hili barlagçylar",
+          "job4": "Önüm tehnikleri",
+          "job5": "ÇNC operatorlary",
+          "job6": "Gaplama ussatlary"
+        },
+        "experience": "15 ýyl"
+      },
+      "industry8": {
+        "name": "Logistika & Ammar",
+        "jobs": {
+          "job1": "Wilka operatorlary",
+          "job2": "Ammar işçileri",
+          "job3": "Material işleýjiler",
+          "job4": "Hasap klerkleri",
+          "job5": "Iberiş/Kabul etme",
+          "job6": "Logistika ýardamçylary"
+        },
+        "experience": "kesgitlenen däl"
+      },
+      "industry9": {
+        "name": "Serişde & Ussahat",
+        "jobs": {
+          "job1": "Serişde tehnikleri",
+          "job2": "Enjam ussahatçylary",
+          "job3": "Gurluşygy serişdeler",
+          "job4": "Bina injenerleri",
+          "job5": "HVAC serişdesi",
+          "job6": "Öňüni aljy serişde"
+        },
+        "experience": "10 ýyl"
+      },
+      "industry10": {
+        "name": "Landşaft & Zemin",
+        "jobs": {
+          "job1": "Landşaftçylar",
+          "job2": "Bagbanlar",
+          "job3": "Zemin saklaýjylar",
+          "job4": "Suwaryş ussatlary",
+          "job5": "Agaç kesijiler",
+          "job6": "Çemen serişde tehnikleri"
+        },
+        "experience": "10 ýyl"
+      },
+      "industry11": {
+        "name": "Arassalaýyş & Sanitariýa",
+        "jobs": {
+          "job1": "Senagat arassalaýjylary",
+          "job2": "Kwartira işçileri",
+          "job3": "Penjire arassalaýjylary",
+          "job4": "Sanitariýa işçileri",
+          "job5": "Kwartira tehnikleri",
+          "job6": "Pol serişde ussatlary"
+        },
+        "experience": "15 ýyl"
+      },
+      "industry12": {
+        "name": "Myhmançylyk Hyzmatlary",
+        "jobs": {
+          "job1": "Kärhana aşpezanlary",
+          "job2": "Aşpezana ýardamçylary",
+          "job3": "Iýmit taýýarlaýyş",
+          "job4": "Çörekçilik ýardamçylary",
+          "job5": "Ketering işçileri",
+          "job6": "Hyzmat tehnikleri"
+        },
+        "experience": "15 ýyl"
+      }
+    },
+    "inDemandPositions": {
+      "position1": {
+        "role": "Şahadatnamaly Elektrikçiler",
+        "level": "Ýokary Talap"
+      },
+      "position2": {
+        "role": "HVAC Tehnikleri",
+        "level": "Ýokary Talap"
+      },
+      "position3": {
+        "role": "Gurluşyk Agaç Işleri",
+        "level": "Örän Ýokary Talap"
+      },
+      "position4": {
+        "role": "Senagat Käsewçileri",
+        "level": "Ýokary Talap"
+      },
+      "position5": {
+        "role": "Kärhana Aýdawçylary",
+        "level": "Orta Talap"
+      },
+      "position6": {
+        "role": "Serişde Tehnikleri",
+        "level": "Ýokary Talap"
+      },
+      "position7": {
+        "role": "Maşyn Operatorlary",
+        "level": "Orta Talap"
+      },
+      "position8": {
+        "role": "Suw Howdy Ussatları",
+        "level": "Ýokary Talap"
+      }
+    }
+  }
+}

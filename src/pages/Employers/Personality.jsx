@@ -90,7 +90,7 @@ export default function Personality() {
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
-      <div className="container mx-auto max-w-4xl px-4">
+      <div className="container mx-auto px-4">
         <motion.h2
           className="lg:text-[48px] text-secondary md:text-4xl font-bold text-center mb-16 leading-tight"
           variants={itemVariants}

@@ -3,6 +3,8 @@
     "home": "Ana Səhifə",
     "employers": "İşəgötürənlər",
     "applicants": "Namizədlər",
+    "service": "Xidmətlər",
+    "blog": "Bloqlar",
     "about": "Haqqımızda",
     "contact": "Əlaqə",
     "language": "Dil",
@@ -260,5 +262,334 @@
     "footerLink3": "Namizədlər",
     "footerLink4": "Haqqımızda",
     "footertext": "Keçidlər"
+  },
+  "services": {
+    "hero": {
+      "title": "Əhatəli İşə Qəbul Xidmətləri",
+      "description": "Avropa üzrə istedadlı mütəxəssisləri yüksək imkanlarla birləşdiririk. Hər bir sənaye sahəsinin ehtiyacına uyğun ixtisaslaşmış işə qəbul həlləri.",
+      "stats": "Hazırda Avropa üzrə 100+ müştəriyə xidmət göstəririk"
+    },
+    "features": {
+      "feature1": {
+        "title": "Geniş İstedad Bazası",
+        "description": "Avropa üzrə 50,000-dən çox əvvəlcədən yoxlanılmış mütəxəssisə çıxış"
+      },
+      "feature2": {
+        "title": "98% Uğur Faizi",
+        "description": "Sənaye lideri yerləşdirmə uğuru və namizədin saxlanma göstəriciləri"
+      },
+      "feature3": {
+        "title": "Sürətli İşə Qəbul",
+        "description": "Orta işə götürmə müddəti sənaye standartları ilə müqayisədə 35% azaldılıb"
+      },
+      "feature4": {
+        "title": "Həsr olunmuş Dəstək",
+        "description": "İşə qəbul prosesi boyunca 24/7 dəstək və məsləhət"
+      }
+    },
+    "categories": {
+      "heading": "Peşə Kateqoriyaları",
+      "title": "İxtisaslaşmış Peşə Sahələri",
+      "description": "Əl ilə işləyən peşələr və texniki sahələr üzrə ekspert işə qəbul",
+      "professionals": "Mütəxəssislər"
+    },
+    "ourServices": {
+      "heading": "Bizim Xidmətlər",
+      "title": "İxtisaslaşmış İşə Qəbul Həlləri",
+      "description": "Müxtəlif sənaye və regionların xüsusi ehtiyaclarına uyğunlaşmış işə qəbul həlləri təqdim edirik.",
+      "keyBenefits": "Əsas Üstünlüklər:",
+      "successRate": "Uğur Faizi"
+    },
+    "industryFocus": {
+      "heading": "Peşə Fokus",
+      "title": "İxtisaslaşmış Peşə Sahələri",
+      "description": "Əməklə bağlı peşələr və texniki sahələr üzrə dərin ekspertiza",
+      "experience": "Sənaye Təcrübəsi"
+    },
+    "inDemand": {
+      "title": "Tələb Olunan Peşə Vəzifələri",
+      "description": "Avropa bazarlarında ən çox tələb olunan ixtisaslı peşəkarlar",
+      "category": "Peşə Kateqoriyası",
+      "professional": "İxtisaslı Mütəxəssis"
+    },
+    "cta": {
+      "stats": "15+ Avropa ölkəsində aktiv",
+      "title": "Peşəkar Komandanızı Qurmağa Hazırsınız?",
+      "description": "Avropanın aparıcı mavi yaxalı işə qəbul agentliyi ilə əməkdaşlıq edin və təşkilatınız üçün ideal mütəxəssisləri tapın.",
+      "contactButton": "Bizimlə Əlaqə",
+      "viewButton": "Mövcud Peşəkarları Görüntülə"
+    },
+    "services1": {
+      "title": "Beynəlxalq İstedad Cəlbi",
+      "description": "Avropa üzrə yüksək səviyyəli mütəxəssislərin axtarışı və işə qəbulu üzrə ixtisaslaşmışıq. Geniş şəbəkəmiz və dərin bazar biliklərimiz ideal namizədləri tapmağımıza kömək edir.",
+      "benefits": {
+        "benefit1": "Əvvəlcədən yoxlanılmış namizədlərə çıxış",
+        "benefit2": "Mədəni uyğunluq qiymətləndirilməsi",
+        "benefit3": "Rəqabətli əməkhaqqı müqayisəsi",
+        "benefit4": "İşə götürmə müddətinin 40% azaldılması"
+      }
+    },
+    "services2": {
+      "title": "Sənaye üzrə İxtisaslaşmış İşə Qəbul",
+      "description": "İxtisasımız tikinti, səhiyyə, İT, qonaqpərvərlik və istehsalat kimi müxtəlif sahələri əhatə edir. Hər bir sənayenin özəl tələblərini anlayırıq və bunun üçün xüsusi həllər təqdim edirik.",
+      "benefits": {
+        "benefit1": "Sənaye üzrə ekspertiza",
+        "benefit2": "Texniki bacarıq yoxlanışı",
+        "benefit3": "Sahə tələblərinə uyğunluq",
+        "benefit4": "Yerləşdirmə keyfiyyətinə zəmanət"
+      }
+    },
+    "services3": {
+      "title": "Tam İşə Qəbul Prosesi",
+      "description": "İlkin məsləhətdən son yerləşdirməyə qədər bütün işə qəbul prosesini idarə edirik. Bu, həm işəgötürənlər, həm də namizədlər üçün problemsiz təcrübə yaradır.",
+      "benefits": {
+        "benefit1": "Tam işə qəbul dövrünün idarə olunması",
+        "benefit2": "Arxa fond yoxlaması və təsdiqləmə",
+        "benefit3": "Müqavilə danışıqlarına dəstək",
+        "benefit4": "Yerləşdirmədən sonra izləmə"
+      }
+    },
+    "services4": {
+      "title": "Viza və Köçürülmə Dəstəyi",
+      "description": "Beynəlxalq işə qəbul qaydalarını idarə etmək çətin ola bilər. İş icazələri, viza prosesi və köçürülmə ilə bağlı ətraflı dəstək göstəririk.",
+      "benefits": {
+        "benefit1": "Viza müraciəti üzrə bələdçilik",
+        "benefit2": "Hüquqi uyğunluq dəstəyi",
+        "benefit3": "Köçürülmə koordinasiyası",
+        "benefit4": "Mədəni uyğunlaşma dəstəyi"
+      }
+    },
+    "services5": {
+      "title": "Uyğunluq və Keyfiyyət Təminatı",
+      "description": "Beynəlxalq əmək qanunlarına uyğunluğun ən yüksək standartlarını qoruyuruq. Keyfiyyət təminatı proseslərimiz etik və qanuni işə qəbul təcrübəsinə zəmanət verir.",
+      "benefits": {
+        "benefit1": "Aİ əmək qanunlarına uyğunluq",
+        "benefit2": "Etik işə qəbul sertifikatı",
+        "benefit3": "Keyfiyyət nəzarəti auditləri",
+        "benefit4": "Şəffaf hesabatlılıq"
+      }
+    },
+    "services6": {
+      "title": "Fərdi Kadr Həlləri",
+      "description": "Biznes məqsədlərinizə uyğunlaşdırılmış kadr strategiyaları hazırlayırıq. Müvəqqəti və ya daimi işçilərə ehtiyacınız olmasından asılı olmayaraq, böyüməni dəstəkləyən həllər yaradırıq.",
+      "benefits": {
+        "benefit1": "Elastik kadr modelləri",
+        "benefit2": "Miqyaslana bilən işçi qüvvəsi planlaması",
+        "benefit3": "Xərc optimizasiya strategiyaları",
+        "benefit4": "Uzunmüddətli tərəfdaşlıq yanaşması"
+      }
+    },
+    "jobCategories": {
+      "category1": {
+        "title": "Tikinti Peşələri",
+        "description": "İxtisaslı ustalar, dülgərlər, daş ustaları və tikinti mütəxəssisləri",
+        "count": "5,000+"
+      },
+      "category2": {
+        "title": "Elektrik və Mexanika",
+        "description": "Sertifikatlı elektrikçilər, mexaniklər və avadanlıq texnikləri",
+        "count": "4,200+"
+      },
+      "category3": {
+        "title": "İstehsalat və Üretim",
+        "description": "Zavod işçiləri, dəzgah operatorları və montaj xətti mütəxəssisləri",
+        "count": "6,800+"
+      },
+      "category4": {
+        "title": "Nəqliyyat və Logistika",
+        "description": "Sürücülər, anbar işçiləri və təchizat zənciri personalı",
+        "count": "8,500+"
+      },
+      "category5": {
+        "title": "Texniki Xidmətlər",
+        "description": "Obyektlərin texniki xidməti, təmir ustaları və bina xidmətləri",
+        "count": "3,200+"
+      },
+      "category6": {
+        "title": "Qonaqpərvərlik və Xidmət",
+        "description": "Mətbəx personalı, təmizlik işçiləri və xidmət sahəsi mütəxəssisləri",
+        "count": "4,500+"
+      }
+    },
+    "industries": {
+      "industry1": {
+        "name": "Tikinti Peşələri",
+        "jobs": {
+          "job1": "Dülgərlər",
+          "job2": "Daş ustaları",
+          "job3": "Suvaqçılar",
+          "job4": "Dam ustaları",
+          "job5": "Kafel ustaları",
+          "job6": "Beton ustaları"
+        },
+        "experience": "15 il"
+      },
+      "industry2": {
+        "name": "Elektrik və Naqilləmə",
+        "jobs": {
+          "job1": "Elektrikçilər",
+          "job2": "Elektrik texnikləri",
+          "job3": "Kabel çəkənlər",
+          "job4": "Panel yığanlar",
+          "job5": "Texniki xidmət elektrikçiləri",
+          "job6": "Sənaye naqilləmə mütəxəssisləri"
+        },
+        "experience": "10 il"
+      },
+      "industry3": {
+        "name": "Santexnika və HVAC",
+        "jobs": {
+          "job1": "Santexniklər",
+          "job2": "Boru montajçıları",
+          "job3": "HVAC texnikləri",
+          "job4": "Soyutma mütəxəssisləri",
+          "job5": "Katil quraşdırıcıları",
+          "job6": "Drenaj ustaları"
+        },
+        "experience": "10 il"
+      },
+      "industry4": {
+        "name": "Qaynaq və Metallurgiya",
+        "jobs": {
+          "job1": "Qaynaqçılar",
+          "job2": "Metalkəsənlər",
+          "job3": "Metal işçiləri",
+          "job4": "Konstruksiya polad işçiləri",
+          "job5": "Boru qaynaqçıları",
+          "job6": "Sac metall ustaları"
+        },
+        "experience": "12 il"
+      },
+      "industry5": {
+        "name": "Avtomobil və Mexanika",
+        "jobs": {
+          "job1": "Avtomobil mexanikləri",
+          "job2": "Dizel texnikləri",
+          "job3": "Kuzov təmir ustaları",
+          "job4": "Avtomobil elektrikçiləri",
+          "job5": "Xidmət texnikləri",
+          "job6": "Avtopark xidmətləri"
+        },
+        "experience": "10 il"
+      },
+      "industry6": {
+        "name": "Rəngsazlıq və Dekorasiya",
+        "jobs": {
+          "job1": "Rəngsazlar",
+          "job2": "Dekor ustaları",
+          "job3": "Sənaye rəngsazları",
+          "job4": "Divar kağızı ustaları",
+          "job5": "Səth hazırlayıcıları",
+          "job6": "Sprey boya texnikləri"
+        },
+        "experience": "13 il"
+      },
+      "industry7": {
+        "name": "İstehsalat və Montaj",
+        "jobs": {
+          "job1": "Dəzgah operatorları",
+          "job2": "Montaj işçiləri",
+          "job3": "Keyfiyyət yoxlayıcıları",
+          "job4": "İstehsalat texnikləri",
+          "job5": "CNC operatorları",
+          "job6": "Qablaşdırma mütəxəssisləri"
+        },
+        "experience": "15 il"
+      },
+      "industry8": {
+        "name": "Logistika və Anbar",
+        "jobs": {
+          "job1": "Forklift operatorları",
+          "job2": "Anbar işçiləri",
+          "job3": "Material daşıyanlar",
+          "job4": "İnventar nəzarətçiləri",
+          "job5": "Göndərmə/Qəbul",
+          "job6": "Logistika köməkçiləri"
+        },
+        "experience": "qeyd olunmayıb"
+      },
+      "industry9": {
+        "name": "Texniki Xidmət və Təmir",
+        "jobs": {
+          "job1": "Texniki xidmət ustaları",
+          "job2": "Avadanlıq təmirçiləri",
+          "job3": "Obyektlərin texniki xidməti",
+          "job4": "Bina mühəndisləri",
+          "job5": "HVAC xidmət",
+          "job6": "Profilaktik baxım"
+        },
+        "experience": "10 il"
+      },
+      "industry10": {
+        "name": "Landşaft və Sahə Qulluğu",
+        "jobs": {
+          "job1": "Landşaft ustaları",
+          "job2": "Bağbanlar",
+          "job3": "Sahə nəzarətçiləri",
+          "job4": "Suvarma mütəxəssisləri",
+          "job5": "Ağac budayıcıları",
+          "job6": "Qazon qulluq texnikləri"
+        },
+        "experience": "10 il"
+      },
+      "industry11": {
+        "name": "Təmizlik və Sanitariya",
+        "jobs": {
+          "job1": "Sənaye təmizləyiciləri",
+          "job2": "Texniki xidmət təmizləyiciləri",
+          "job3": "Pəncərə təmizləyiciləri",
+          "job4": "Sanitariya işçiləri",
+          "job5": "Xidmət texnikləri",
+          "job6": "Döşəmə baxım mütəxəssisləri"
+        },
+        "experience": "15 il"
+      },
+      "industry12": {
+        "name": "Qonaqpərvərlik Xidmətləri",
+        "jobs": {
+          "job1": "Aşpazlar",
+          "job2": "Mətbəx köməkçiləri",
+          "job3": "Qida hazırlığı",
+          "job4": "Çörək sexi köməkçiləri",
+          "job5": "Katering personalı",
+          "job6": "Xidmət texnikləri"
+        },
+        "experience": "15 il"
+      }
+    },
+    "inDemandPositions": {
+      "position1": {
+        "role": "Sertifikatlı Elektrikçilər",
+        "level": "Yüksək Tələb"
+      },
+      "position2": {
+        "role": "HVAC Texnikləri",
+        "level": "Yüksək Tələb"
+      },
+      "position3": {
+        "role": "Tikinti Dülgərləri",
+        "level": "Çox Yüksək Tələb"
+      },
+      "position4": {
+        "role": "Sənaye Qaynaqçıları",
+        "level": "Yüksək Tələb"
+      },
+      "position5": {
+        "role": "Kommersiya Sürücüləri",
+        "level": "Orta Tələb"
+      },
+      "position6": {
+        "role": "Texniki Xidmət Ustaları",
+        "level": "Yüksək Tələb"
+      },
+      "position7": {
+        "role": "Dəzgah Operatorları",
+        "level": "Orta Tələb"
+      },
+      "position8": {
+        "role": "Santexnika Mütəxəssisləri",
+        "level": "Yüksək Tələb"
+      }
+    }
   }
 }

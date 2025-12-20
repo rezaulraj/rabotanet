@@ -344,7 +344,7 @@ const Services = () => {
       description: t("services.jobCategories.category1.description"),
       count: t("services.jobCategories.category1.count"),
       icon: "🏗️",
-      animation: "hover:animate-bounce",
+      animation: "hover:animate-pulse",
     },
     {
       title: t("services.jobCategories.category2.title"),
@@ -365,7 +365,7 @@ const Services = () => {
       description: t("services.jobCategories.category4.description"),
       count: t("services.jobCategories.category4.count"),
       icon: "🚚",
-      animation: "hover:animate-bounce",
+      animation: "hover:animate-pulse",
     },
     {
       title: t("services.jobCategories.category5.title"),
@@ -500,7 +500,6 @@ const Services = () => {
         />
         <meta name="keywords" content={seoKeywords.join(", ")} />
 
-        {/* Open Graph Meta Tags */}
         <meta property="og:title" content={`Services`} />
         <meta
           property="og:description"
@@ -973,11 +972,11 @@ const Services = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
-                  whileHover={{
-                    scale: 1.05,
-                    rotateY: 180,
-                    transition: { duration: 0.6 },
-                  }}
+                  // whileHover={{
+                  //   scale: 1.05,
+                  //   rotateY: 180,
+                  //   transition: { duration: 0.6 },
+                  // }}
                   className="relative bg-white rounded-xl p-5 border border-gray-200 hover:shadow-2xl transition-all duration-300 group"
                   style={{ perspective: "1000px" }}
                 >
@@ -1032,7 +1031,7 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-6xl mx-auto px-8 py-16 text-center"
+            className="container mx-auto px-8 py-16 text-center"
           >
             <motion.div
               className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6"

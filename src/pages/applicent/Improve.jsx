@@ -8,7 +8,7 @@ export default function Improve() {
 
   return (
     <section className="py-20 bg-[#F4F4F2]">
-      <div className="container max-w-6xl mx-auto text-center px-4 space-y-5">
+      <div className="container mx-auto text-center px-4 space-y-5">
         <h2 className="text-[33px] font-medium font-sans mt-4 text-secondary">
           {t("applicant.inprove.inproveHeading")}
         </h2>

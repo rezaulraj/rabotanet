@@ -94,7 +94,7 @@ export default function Employers() {
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-center">
           <motion.div className="relative" variants={itemVariants}>
             <motion.div

@@ -213,7 +213,7 @@ export default function Footer() {
               { to: "/applicants", label: t("footer.footerLink3") },
               { to: "/about", label: t("footer.footerLink4") },
               { to: "/career", label: t("nav.career") },
-              { to: "/blogs", label: t("footer.blog") },
+              { to: "/blogs", label: t("nav.blog") },
             ].map((link, index) => (
               <motion.li key={index} whileHover="hover">
                 <motion.div variants={linkVariants}>

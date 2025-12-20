@@ -101,7 +101,7 @@ export default function Whatvalue() {
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12">
         <motion.h2
           className="lg:text-[48px] md:text-3xl font-bold text-center mb-12 text-secondary font-sans"
           variants={itemVariants}

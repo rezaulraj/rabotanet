@@ -167,7 +167,7 @@ export default function Consultations() {
         />
       </motion.div>
 
-      <div className="container max-w-7xl mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           className="text-center lg:text-[48px] md:text-2xl font-semibold text-gray-800 mb-12 leading-tight"
           variants={itemVariants}

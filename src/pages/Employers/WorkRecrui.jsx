@@ -77,7 +77,7 @@ export default function WorkRecrui() {
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
-      <div className="container mx-auto max-w-6xl px-4">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-12">
           <motion.div variants={containerVariants}>
             <div className="flex flex-col justify-center items-start">
@@ -107,7 +107,7 @@ export default function WorkRecrui() {
             variants={imageContainerVariants}
           >
             <motion.div
-              className="absolute inset-0 left-40 -top-36 flex w-full justify-center items-center z-0"
+              className="absolute inset-0 left-40 -top-20 flex w-full justify-center items-center z-0"
               variants={rotateVariants}
               animate="rotate"
             >

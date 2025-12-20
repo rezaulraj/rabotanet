@@ -3,6 +3,8 @@
     "home": "Home",
     "employers": "Employers",
     "applicants": "Applicants",
+    "service": "Services",
+    "blog": "Blogs",
     "about": "About Us",
     "contact": "Contact Us",
     "language": "Language",
@@ -240,8 +242,8 @@
     "subject": "Subject *",
     "message": "Message",
     "cv": "Upload CV *",
-    "submit":"Submit Application",
-    "cancel":"Cancel"
+    "submit": "Submit Application",
+    "cancel": "Cancel"
   },
   "successstory": {
     "headingsuccess": "Visa Success Stories",
@@ -261,6 +263,336 @@
     "footerLink2": "Employers",
     "footerLink3": "Applicants",
     "footerLink4": "About Us",
+    "blog": "Blogs",
     "footertext": "Links"
+  },
+  "services": {
+    "hero": {
+      "title": "Comprehensive Recruitment Services",
+      "description": "Connecting exceptional talent with outstanding opportunities across Europe. Specialized recruitment solutions for every industry need.",
+      "stats": "Currently serving 100+ clients across Europe"
+    },
+    "features": {
+      "feature1": {
+        "title": "Extensive Talent Pool",
+        "description": "Access to over 50,000 pre-screened professionals across Europe"
+      },
+      "feature2": {
+        "title": "98% Success Rate",
+        "description": "Industry-leading placement success and candidate retention"
+      },
+      "feature3": {
+        "title": "Fast Placement",
+        "description": "Average time-to-hire reduced by 35% compared to industry standards"
+      },
+      "feature4": {
+        "title": "Dedicated Support",
+        "description": "24/7 support and consultation throughout the recruitment process"
+      }
+    },
+    "categories": {
+      "heading": "Trade Categories",
+      "title": "Skilled Trade Specializations",
+      "description": "Expert recruitment for hands-on professions and technical trades",
+      "professionals": "Professionals"
+    },
+    "ourServices": {
+      "heading": "Our Services",
+      "title": "Specialized Recruitment Solutions",
+      "description": "We provide comprehensive recruitment solutions tailored to meet the unique needs of businesses across various industries and regions.",
+      "keyBenefits": "Key Benefits:",
+      "successRate": "Success Rate"
+    },
+    "industryFocus": {
+      "heading": "Trade Focus",
+      "title": "Skilled Trade Specialties",
+      "description": "Deep expertise in hands-on professions and technical trades",
+      "experience": "Industry Experience"
+    },
+    "inDemand": {
+      "title": "High-Demand Trade Positions",
+      "description": "Most sought-after skilled trade professionals across European markets",
+      "category": "Trade Category",
+      "professional": "Skilled Professional"
+    },
+    "cta": {
+      "stats": "Active in 15+ European Countries",
+      "title": "Ready to Build Your Skilled Team?",
+      "description": "Partner with Europe's leading blue-collar recruitment agency to find the perfect trade professionals for your organization.",
+      "contactButton": "Contact US",
+      "viewButton": "View Available Trade Professionals"
+    },
+    "services1": {
+      "title": "International Talent Acquisition",
+      "description": "We specialize in sourcing and recruiting top-tier professionals from across Europe. Our extensive network and deep market knowledge ensure we find the perfect candidates for your organization's specific needs.",
+      "benefits": {
+        "benefit1": "Access to pre-vetted candidates",
+        "benefit2": "Cultural fit assessment",
+        "benefit3": "Competitive salary benchmarking",
+        "benefit4": "Reduced time-to-hire by 40%"
+      }
+    },
+    "services2": {
+      "title": "Industry-Specific Recruitment",
+      "description": "Our expertise spans across multiple sectors including construction, healthcare, IT, hospitality, and manufacturing. We understand the unique requirements of each industry and deliver specialized recruitment solutions.",
+      "benefits": {
+        "benefit1": "Industry-specific expertise",
+        "benefit2": "Technical skill verification",
+        "benefit3": "Compliance with sector regulations",
+        "benefit4": "Quality guarantee on placements"
+      }
+    },
+    "services3": {
+      "title": "End-to-End Recruitment Process",
+      "description": "From initial consultation to final placement, we manage the entire recruitment lifecycle. Our comprehensive approach ensures seamless hiring experiences for both employers and candidates.",
+      "benefits": {
+        "benefit1": "Full recruitment cycle management",
+        "benefit2": "Background checks & verification",
+        "benefit3": "Contract negotiation support",
+        "benefit4": "Post-placement follow-up"
+      }
+    },
+    "services4": {
+      "title": "Visa & Relocation Assistance",
+      "description": "Navigating international hiring regulations can be complex. We provide comprehensive support for work permits, visa processing, and relocation logistics to ensure smooth transitions.",
+      "benefits": {
+        "benefit1": "Visa application guidance",
+        "benefit2": "Legal compliance assistance",
+        "benefit3": "Relocation coordination",
+        "benefit4": "Cultural integration support"
+      }
+    },
+    "services5": {
+      "title": "Compliance & Quality Assurance",
+      "description": "We maintain the highest standards of compliance with international labor laws and regulations. Our rigorous quality assurance processes guarantee ethical and legal recruitment practices.",
+      "benefits": {
+        "benefit1": "EU labor law compliance",
+        "benefit2": "Ethical recruitment certification",
+        "benefit3": "Quality control audits",
+        "benefit4": "Transparent reporting"
+      }
+    },
+    "services6": {
+      "title": "Custom Workforce Solutions",
+      "description": "We design tailored workforce strategies to meet your specific business objectives. Whether you need temporary staff or permanent placements, we create solutions that drive growth.",
+      "benefits": {
+        "benefit1": "Flexible staffing models",
+        "benefit2": "Scalable workforce planning",
+        "benefit3": "Cost optimization strategies",
+        "benefit4": "Long-term partnership approach"
+      }
+    },
+    "jobCategories": {
+      "category1": {
+        "title": "Construction Trades",
+        "description": "Skilled builders, carpenters, masons, and construction specialists",
+        "count": "5,000+"
+      },
+      "category2": {
+        "title": "Electrical & Mechanical",
+        "description": "Certified electricians, mechanics, and equipment technicians",
+        "count": "4,200+"
+      },
+      "category3": {
+        "title": "Manufacturing & Production",
+        "description": "Factory workers, machine operators, and assembly line professionals",
+        "count": "6,800+"
+      },
+      "category4": {
+        "title": "Transport & Logistics",
+        "description": "Drivers, warehouse staff, and supply chain operations personnel",
+        "count": "8,500+"
+      },
+      "category5": {
+        "title": "Maintenance Services",
+        "description": "Facility maintenance, repair technicians, and building services",
+        "count": "3,200+"
+      },
+      "category6": {
+        "title": "Hospitality & Service",
+        "description": "Kitchen staff, cleaners, and service industry professionals",
+        "count": "4,500+"
+      }
+    },
+    "industries": {
+      "industry1": {
+        "name": "Construction Trades",
+        "jobs": {
+          "job1": "Carpenters",
+          "job2": "Masons",
+          "job3": "Plasterers",
+          "job4": "Roofers",
+          "job5": "Tile Setters",
+          "job6": "Concrete Finishers"
+        },
+        "experience": "15 years"
+      },
+      "industry2": {
+        "name": "Electrical & Wiring",
+        "jobs": {
+          "job1": "Electricians",
+          "job2": "Electrical Technicians",
+          "job3": "Cable Installers",
+          "job4": "Panel Builders",
+          "job5": "Maintenance Electricians",
+          "job6": "Industrial Wiring Specialists"
+        },
+        "experience": "10 years"
+      },
+      "industry3": {
+        "name": "Plumbing & HVAC",
+        "jobs": {
+          "job1": "Plumbers",
+          "job2": "Pipe Fitters",
+          "job3": "HVAC Technicians",
+          "job4": "Refrigeration Experts",
+          "job5": "Boiler Installers",
+          "job6": "Drainage Specialists"
+        },
+        "experience": "10 years"
+      },
+      "industry4": {
+        "name": "Welding & Metalwork",
+        "jobs": {
+          "job1": "Welders",
+          "job2": "Fabricators",
+          "job3": "Metal Workers",
+          "job4": "Structural Steel Workers",
+          "job5": "Pipe Welders",
+          "job6": "Sheet Metal Specialists"
+        },
+        "experience": "12 years"
+      },
+      "industry5": {
+        "name": "Automotive & Mechanics",
+        "jobs": {
+          "job1": "Auto Mechanics",
+          "job2": "Diesel Technicians",
+          "job3": "Body Repair Specialists",
+          "job4": "Auto Electricians",
+          "job5": "Service Technicians",
+          "job6": "Fleet Maintenance"
+        },
+        "experience": "10 years"
+      },
+      "industry6": {
+        "name": "Painting & Decorating",
+        "jobs": {
+          "job1": "Painters",
+          "job2": "Decorators",
+          "job3": "Industrial Painters",
+          "job4": "Wallpaper Specialists",
+          "job5": "Surface Preparators",
+          "job6": "Spray Paint Technicians"
+        },
+        "experience": "13 years"
+      },
+      "industry7": {
+        "name": "Manufacturing & Assembly",
+        "jobs": {
+          "job1": "Machine Operators",
+          "job2": "Assembly Workers",
+          "job3": "Quality Inspectors",
+          "job4": "Production Technicians",
+          "job5": "CNC Operators",
+          "job6": "Packaging Specialists"
+        },
+        "experience": "15 years"
+      },
+      "industry8": {
+        "name": "Logistics & Warehousing",
+        "jobs": {
+          "job1": "Forklift Operators",
+          "job2": "Warehouse Workers",
+          "job3": "Material Handlers",
+          "job4": "Inventory Clerks",
+          "job5": "Shipping/Receiving",
+          "job6": "Logistics Assistants"
+        },
+        "experience": "not specific"
+      },
+      "industry9": {
+        "name": "Maintenance & Repair",
+        "jobs": {
+          "job1": "Maintenance Technicians",
+          "job2": "Equipment Repairers",
+          "job3": "Facility Maintenance",
+          "job4": "Building Engineers",
+          "job5": "HVAC Maintenance",
+          "job6": "Preventive Maintenance"
+        },
+        "experience": "10 years"
+      },
+      "industry10": {
+        "name": "Landscaping & Grounds",
+        "jobs": {
+          "job1": "Landscapers",
+          "job2": "Gardeners",
+          "job3": "Groundskeepers",
+          "job4": "Irrigation Specialists",
+          "job5": "Tree Trimmers",
+          "job6": "Lawn Care Technicians"
+        },
+        "experience": "10 years"
+      },
+      "industry11": {
+        "name": "Cleaning & Sanitation",
+        "jobs": {
+          "job1": "Industrial Cleaners",
+          "job2": "Janitorial Staff",
+          "job3": "Window Cleaners",
+          "job4": "Sanitation Workers",
+          "job5": "Custodial Technicians",
+          "job6": "Floor Care Specialists"
+        },
+        "experience": "15 years"
+      },
+      "industry12": {
+        "name": "Hospitality Services",
+        "jobs": {
+          "job1": "Commercial Cooks",
+          "job2": "Kitchen Assistants",
+          "job3": "Food Preparation",
+          "job4": "Bakery Assistants",
+          "job5": "Catering Staff",
+          "job6": "Service Technicians"
+        },
+        "experience": "15 years"
+      }
+    },
+    "inDemandPositions": {
+      "position1": {
+        "role": "Certified Electricians",
+        "level": "High Demand"
+      },
+      "position2": {
+        "role": "HVAC Technicians",
+        "level": "High Demand"
+      },
+      "position3": {
+        "role": "Construction Carpenters",
+        "level": "Very High Demand"
+      },
+      "position4": {
+        "role": "Industrial Welders",
+        "level": "High Demand"
+      },
+      "position5": {
+        "role": "Commercial Drivers",
+        "level": "Medium Demand"
+      },
+      "position6": {
+        "role": "Maintenance Technicians",
+        "level": "High Demand"
+      },
+      "position7": {
+        "role": "Machine Operators",
+        "level": "Medium Demand"
+      },
+      "position8": {
+        "role": "Plumbing Specialists",
+        "level": "High Demand"
+      }
+    }
   }
 }

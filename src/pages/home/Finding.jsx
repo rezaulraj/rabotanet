@@ -66,7 +66,16 @@ export default function Finding() {
       },
     },
   };
-
+  const rotateVariants = {
+    rotate: {
+      rotate: 360,
+      transition: {
+        duration: 20,
+        repeat: Infinity,
+        ease: "linear",
+      },
+    },
+  };
   return (
     <motion.section
       className="py-20 bg-[#F4F4F2] overflow-hidden"
@@ -75,7 +84,7 @@ export default function Finding() {
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
     >
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-between items-center">
           <motion.div
             className="col-span-1 w-full"
@@ -106,7 +115,9 @@ export default function Finding() {
               className="text-[16px] text-secondary text-normal font-sans mt-6 leading-7"
               variants={itemVariants}
             >
-              <strong className="text-primary">{t("homepage.finding.findParagraph1")}</strong>{" "}
+              <strong className="text-primary">
+                {t("homepage.finding.findParagraph1")}
+              </strong>{" "}
               {t("homepage.finding.findParagraph2")}
             </motion.p>
           </motion.div>
@@ -115,6 +126,18 @@ export default function Finding() {
             className="col-span-1 flex lg:flex-row flex-col md:flex-col justify-center items-center lg:space-x-8 space-y-8 lg:space-y-0"
             variants={slideInFromRight}
           >
+            <motion.div
+              className="absolute max-w-[500px] max-h-[400px] flex justify-center items-center"
+              variants={rotateVariants}
+              animate="rotate"
+            >
+              <img
+                src="/images/round.png"
+                alt="Rotating"
+                className="rounded-full object-cover w-full h-full"
+              />
+            </motion.div>
+
             <motion.div
               className="relative"
               variants={floatingImageVariants}

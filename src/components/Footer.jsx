@@ -208,10 +208,12 @@ export default function Footer() {
           <ul className="space-y-2">
             {[
               { to: "/", label: t("footer.footerLink1") },
+              { to: "/services", label: t("nav.service") },
               { to: "/employers", label: t("footer.footerLink2") },
               { to: "/applicants", label: t("footer.footerLink3") },
               { to: "/about", label: t("footer.footerLink4") },
               { to: "/career", label: t("nav.career") },
+              { to: "/blogs", label: t("footer.blog") },
             ].map((link, index) => (
               <motion.li key={index} whileHover="hover">
                 <motion.div variants={linkVariants}>

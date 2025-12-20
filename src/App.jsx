@@ -7,6 +7,9 @@ import AboutPage from "./pages/about/AboutPage";
 import CareerPage from "./pages/career/CareerPage";
 import ScrollToTop from "./components/ScrollToTop";
 import NotFoundPage from "./components/NotFoundPage";
+import Blogs from "./pages/blog/Blogs";
+import BlogDetails from "./pages/blog/BlogDetails";
+import Services from "./pages/services/Services";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
             <Route path="applicants" element={<ApplicentPage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="career" element={<CareerPage />} />
+            <Route path="services" element={<Services />} />
+            <Route path="blogs" element={<Blogs />} />
+            <Route path="/blog/:id" element={<BlogDetails />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

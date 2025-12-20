@@ -89,6 +89,7 @@ export default function Navbar() {
 
   const navItems = [
     { href: "/", label: t("nav.home") },
+    { href: "/services", label: t("nav.service") },
     { href: "/employers", label: t("nav.employers") },
     { href: "/applicants", label: t("nav.applicants") },
     { href: "/about", label: t("nav.about") },
@@ -389,7 +390,7 @@ export default function Navbar() {
         isScrolled ? "bg-white shadow-md" : "bg-[#F4F4F2]"
       }`}
     >
-      <div className="container max-w-7xl mx-auto flex items-center justify-between py-3 px-4">
+      <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <Link to="/" className="flex items-center gap-2">
           <img
             src="/logo.png"

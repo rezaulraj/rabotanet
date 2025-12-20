@@ -149,7 +149,7 @@ export default function Banner() {
     >
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-          <motion.div className="col-span-7" variants={imageVariants}>
+          <motion.div className="col-span-6" variants={imageVariants}>
             <motion.div variants={floatingImageVariants} animate="float">
               <motion.img
                 src="/images/bannerb.png"
@@ -164,7 +164,7 @@ export default function Banner() {
           </motion.div>
 
           <motion.div
-            className="col-span-5 flex flex-col justify-center items-start"
+            className="col-span-6 flex flex-col justify-center items-start"
             variants={contentVariants}
           >
             <motion.h2
@@ -237,7 +237,7 @@ export default function Banner() {
             </motion.div>
 
             <motion.a
-              href="/about"
+              href="/services"
               className="text-[20px] font-bold font-sans text-white bg-primary hover:bg-secondary px-12 py-4 rounded-4xl mt-12 shadow-lg hover:shadow-xl relative overflow-hidden"
               variants={buttonVariants}
               initial="initial"

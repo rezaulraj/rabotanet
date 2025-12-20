@@ -337,7 +337,6 @@ const Services = () => {
     },
   ];
 
-  // Job Categories data from JSON
   const jobCategories = [
     {
       title: t("services.jobCategories.category1.title"),
@@ -383,7 +382,6 @@ const Services = () => {
     },
   ];
 
-  // Most In-Demand Positions from JSON
   const inDemandPositions = [
     {
       role: t("services.inDemandPositions.position1.role"),
@@ -436,8 +434,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F4F4F2] to-white py-22">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-b from-[#F4F4F2] to-white py-22 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -465,7 +462,6 @@ const Services = () => {
         </div>
       </motion.div>
 
-      {/* Features Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
@@ -491,7 +487,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Job Categories Overview */}
       <div className="container mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0 }}
@@ -554,7 +549,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Services Section */}
       <div className="container mx-auto px-4 py-8 pb-16">
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-2 bg-[#DB4F3C]/10 rounded-full mb-4">
@@ -666,7 +660,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Industry Expertise Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0 }}
@@ -758,7 +751,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Most In-Demand Positions */}
       <div className="bg-gradient-to-r from-gray-50 to-white border-y border-gray-200 py-16">
         <div className="container mx-auto px-4">
           <motion.div
@@ -837,7 +829,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl mx-4 lg:mx-8 my-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import ModeForm from "../../components/ModeForm";
 
 const partners = [
   "/images/partners1.png",
@@ -21,6 +22,7 @@ const brand = [
 ];
 
 export default function Brand() {
+  const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -42,7 +44,7 @@ export default function Brand() {
 
   return (
     <section id="brand" className="py-20 bg-[#F4F4F2]">
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container mx-auto px-4">
         <h4 className="text-secondary text-center text-[26px] font-bold">
           {t("homepage.brand.brandText")}
         </h4>
@@ -74,7 +76,7 @@ export default function Brand() {
           </AnimatePresence>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="container mx-auto">
           <p className="text-secondary text-center text-[20px] font-semibold">
             {t("homepage.brand.partner")}
           </p>
@@ -88,8 +90,31 @@ export default function Brand() {
               />
             ))}
           </div>
+          <div className="flex items-center justify-center mt-10">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsOpen(true)}
+              className="text-[20px] cursor-pointer font-bold font-sans text-white bg-primary px-10 py-3 rounded-4xl mt-5 hover:bg-secondary duration-300"
+            >
+              {t("homepage.brand.partnerbtn")}
+            </motion.button>
+          </div>
         </div>
       </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            key="modal"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ModeForm isOpen={isOpen} setIsOpen={setIsOpen} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

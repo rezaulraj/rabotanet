@@ -226,7 +226,6 @@ export default function Footer() {
           </ul>
         </motion.div>
 
-        {/* Office Locations */}
         <motion.div className="space-y-5" variants={itemVariants}>
           <motion.h3
             className="text-2xl font-bold mb-3"
@@ -291,7 +290,6 @@ export default function Footer() {
         </motion.div>
       </motion.div>
 
-      {/* Copyright */}
       <motion.div
         className="border-t border-gray-600 mt-10 pt-6 text-sm text-gray-400 text-center container max-w-7xl mx-auto px-6"
         initial={{ opacity: 0, y: 20 }}

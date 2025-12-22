@@ -37,7 +37,6 @@ const Services = () => {
     setIsVisible(true);
   }, []);
 
-  // Services data - now using translations
   const services = [
     {
       id: 1,
@@ -154,7 +153,6 @@ const Services = () => {
     },
   ];
 
-  // Industries data from JSON
   const industries = [
     {
       name: t("services.industries.industry1.name"),
@@ -434,7 +432,7 @@ const Services = () => {
     },
   ];
 
-  // SEO Keywords Generation
+  // SEO Keywords
   const industryNames = [
     t("services.industries.industry1.name"),
     t("services.industries.industry2.name"),

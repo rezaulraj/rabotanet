@@ -12,7 +12,6 @@ const Blogs = () => {
     setVisibleBlogs((prev) => prev + 6);
   };
 
-  // Group blogs into pairs for side-by-side display
   const blogPairs = [];
   for (let i = 0; i < visibleBlogs; i += 2) {
     if (i + 1 < blogData.length) {
@@ -22,7 +21,6 @@ const Blogs = () => {
     }
   }
 
-  // Alternate between orange and white cards
   const getCardColor = (index) => {
     return index % 2 === 0 ? "bg-white" : "bg-[#DB4F3C]";
   };
@@ -31,7 +29,6 @@ const Blogs = () => {
     return index % 2 === 0 ? "text-gray-800" : "text-white";
   };
 
-  // Extract keywords from all blogs for meta keywords
   const allKeywords = blogData.reduce((keywords, blog) => {
     return [
       ...keywords,

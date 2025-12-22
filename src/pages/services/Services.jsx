@@ -630,12 +630,12 @@ const Services = () => {
           })}
         </script>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-b from-[#F4F4F2] to-white py-22 overflow-hidden">
+      <div className="min-h-screen bg-linear-to-b from-[#F4F4F2] to-white py-22 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative overflow-hidden bg-gradient-to-r from-[#DB4F3C] via-[#E55B47] to-[#DB4F3C] py-20 px-4"
+          className="relative overflow-hidden bg-linear-to-r from-[#DB4F3C] via-[#E55B47] to-[#DB4F3C] py-20 px-4"
         >
           <div className="absolute inset-0 bg-black/10" />
           <div className="relative container mx-auto text-center">
@@ -670,7 +670,7 @@ const Services = () => {
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
               >
                 <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-r ${services[index]?.color} flex items-center justify-center mb-4`}
+                  className={`w-12 h-12 rounded-lg bg-linear-to-r ${services[index]?.color} flex items-center justify-center mb-4`}
                 >
                   <div className="text-white">{feature.icon}</div>
                 </div>
@@ -775,7 +775,7 @@ const Services = () => {
                 <div className="lg:w-1/2">
                   <div className={`inline-flex items-center gap-3 mb-6`}>
                     <div
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center`}
+                      className={`w-14 h-14 rounded-xl bg-linear-to-r ${service.color} flex items-center justify-center`}
                     >
                       <div className="text-white">{service.icon}</div>
                     </div>
@@ -801,7 +801,7 @@ const Services = () => {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: benefitIndex * 0.1 }}
                         >
-                          <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
                             <CheckCircle className="w-4 h-4 text-green-600" />
                           </div>
                           <span className="text-gray-700">{benefit}</span>
@@ -813,9 +813,9 @@ const Services = () => {
 
                 <div className="lg:w-1/2">
                   <div className="relative group">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+                    <div className="absolute -inset-4 bg-linear-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl transform transition-transform duration-300 group-hover:scale-[1.02]">
-                      <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300">
+                      <div className="aspect-[4/3] bg-linear-to-br from-gray-200 to-gray-300">
                         <img
                           src={service.image}
                           alt={service.title}
@@ -824,7 +824,7 @@ const Services = () => {
                       </div>
 
                       <div
-                        className={`absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r ${service.color}`}
+                        className={`absolute bottom-0 left-0 right-0 h-2 bg-linear-to-r ${service.color}`}
                       />
                     </div>
 
@@ -835,7 +835,7 @@ const Services = () => {
                     >
                       <div className="flex items-center gap-3">
                         <div
-                          className={`w-10 h-10 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center`}
+                          className={`w-10 h-10 rounded-lg bg-linear-to-r ${service.color} flex items-center justify-center`}
                         >
                           <TrendingUp className="w-5 h-5 text-white" />
                         </div>
@@ -947,7 +947,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-gray-50 to-white border-y border-gray-200 py-16">
+        <div className="bg-linear-to-r from-gray-50 to-white border-y border-gray-200 py-16">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -996,7 +996,7 @@ const Services = () => {
                       {job.icon}
                     </motion.div>
                     <motion.span
-                      className={`px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r ${job.color} text-white`}
+                      className={`px-3 py-1 text-xs font-semibold rounded-full bg-linear-to-r ${job.color} text-white`}
                       whileHover={{ scale: 1.1 }}
                     >
                       {job.level}
@@ -1013,7 +1013,7 @@ const Services = () => {
                   </div>
 
                   <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#DB4F3C] to-transparent"
+                    className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-[#DB4F3C] to-transparent"
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true }}
@@ -1025,7 +1025,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl mx-4 lg:mx-8 my-20">
+        <div className="bg-linear-to-r from-gray-900 to-gray-800 rounded-3xl mx-4 lg:mx-8 my-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

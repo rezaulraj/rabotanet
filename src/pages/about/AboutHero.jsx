@@ -164,7 +164,7 @@ export default function AboutHero() {
                 }}
               >
                 <motion.img
-                  src="/images/logo3.png"
+                  src="/logo.png"
                   alt="RabotaNet Logo"
                   className="w-80 h-80 object-contain"
                   initial={{ scale: 0.8, opacity: 0 }}

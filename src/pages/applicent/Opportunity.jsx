@@ -97,7 +97,7 @@ export default function Opportunity() {
             </motion.div>
 
             <motion.div
-              className="relative z-10 p-[4px] rounded-4xl"
+              className="relative z-10 p-1 rounded-4xl"
               style={{
                 background:
                   "linear-gradient(45deg, #dd0525, transparent, #dd0525)",

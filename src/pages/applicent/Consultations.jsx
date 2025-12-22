@@ -188,7 +188,7 @@ export default function Consultations() {
               className="bg-white rounded-xl p-6 flex flex-col items-start text-start border-2 border-transparent hover:border-primary/20 relative overflow-hidden cursor-pointer"
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 hover:opacity-100"
+                className="absolute inset-0 bg-linear-to-br from-primary/5 to-transparent opacity-0 hover:opacity-100"
                 transition={{ duration: 0.3 }}
               />
 

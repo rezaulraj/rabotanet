@@ -3,6 +3,7 @@ import { FaPlayCircle } from "react-icons/fa";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -64,8 +65,95 @@ export default function Hero() {
     },
   };
 
+  const seoTitle =
+    "RabotaNet | Leading Recruitment Agency & Job Placement Services";
+  const seoDescription =
+    "Find top talent or your dream job with RabotaNet - your trusted recruitment partner. We connect employers with qualified candidates across industries.";
+  const seoKeywords =
+    "recruitment agency, job placement, find employees, hire talent, staffing solutions, career opportunities, employment agency";
+  const canonicalUrl = "https://rabotanet.com";
+  const siteName = "RabotaNet Recruitment Agency";
+
   return (
     <>
+      <Helmet>
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta name="keywords" content={seoKeywords} />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="RabotaNet" />
+        <meta name="copyright" content="RabotaNet" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content={siteName} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
+        <meta property="og:image" content="https://rabotanet.com/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+          property="og:image:alt"
+          content="RabotaNet Recruitment Agency - Connecting Talent with Opportunities"
+        />
+        <meta property="og:locale" content="en_US" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@RabotaNet" />
+        <meta name="twitter:creator" content="@RabotaNet" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+        <meta name="twitter:image" content="https://rabotanet.com/logo.png" />
+        <meta
+          name="twitter:image:alt"
+          content="RabotaNet Recruitment Services"
+        />
+
+        <link rel="canonical" href={canonicalUrl} />
+        <meta name="language" content="English" />
+        <meta name="rating" content="General" />
+        <meta name="distribution" content="Global" />
+        <meta name="revisit-after" content="7 days" />
+
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "EmploymentAgency",
+              "@id": "${canonicalUrl}#organization",
+              "name": "RabotaNet",
+              "description": "${seoDescription}",
+              "url": "${canonicalUrl}",
+              "logo": "https://rabotanet.com/logo.png",
+              "foundingDate": "2010",
+              "sameAs": [
+                "https://www.facebook.com/RabotaNet00",
+                "https://www.instagram.com/rabotanet01"
+                "http://www.youtube.com/@RabotaNet01"
+                "https://x.com/RabotaNet01"
+                "https://www.tiktok.com/@rabotanet1"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "manager@rabotanet.com",
+                "contactType": "customer service",
+                "availableLanguage": ["English", "Russian", "Georgian", "Armenian", "Azerbaijani", "Romanian", "Turkmen", "Uzbek"]
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Multiple Countries"
+              },
+              "serviceType": [
+                "Permanent Recruitment",
+                "Temporary Staffing",
+                "Executive Search",
+                "Contract Staffing",
+                "Workforce Solutions"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+
       <section className="relative h-screen overflow-hidden">
         <motion.div
           className="absolute inset-0 z-0"

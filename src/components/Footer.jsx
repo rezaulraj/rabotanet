@@ -176,7 +176,7 @@ export default function Footer() {
               { icon: FaTiktok, href: "https://www.tiktok.com/@rabotanet1" },
               {
                 icon: FaPinterest,
-                href: "https://www.pinterest.com/dizirabotanet/",
+                href: "https://www.tiktok.com/@rabotanet1",
               },
             ].map((SocialIcon, index) => (
               <motion.a

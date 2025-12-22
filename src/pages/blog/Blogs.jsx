@@ -99,7 +99,7 @@ const Blogs = () => {
       </Helmet>
 
       <div className="min-h-screen bg-[#F4F4F2] py-22 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto mb-16 text-center">
+        <div className="container mx-auto mb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Recruitment Insights & Job Guides
           </h1>

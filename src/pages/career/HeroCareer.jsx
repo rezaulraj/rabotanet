@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaUpload, FaCheck, FaSpinner } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 const HeroCareer = () => {
   const { t } = useTranslation();
@@ -130,9 +131,101 @@ const HeroCareer = () => {
     visible: { opacity: 1 },
     exit: { opacity: 0 },
   };
-
+  const seoTitle = "Career Opportunities & Job Openings | Apply Now";
+  const seoDescription =
+    "Join our team or find your next career opportunity. Upload your CV and explore job openings with our recruitment agency. We're hiring across multiple industries.";
+  const seoKeywords =
+    "career opportunities, job openings, apply for jobs, upload CV, career form, employment application, job vacancies";
+  const canonicalUrl = "https://rabotanet.com/career";
+  const pageH1 = t("career.careerh1") || "Build Your Career With Us";
   return (
     <>
+      <Helmet>
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta name="keywords" content={seoKeywords} />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
+        <meta
+          property="og:image"
+          content="https://rabotanet.com/images/career.jpg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Career Opportunities - RabotaNet Recruitment"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+        <meta
+          name="twitter:image"
+          content="https://rabotanet.com/images/career.jpg"
+        />
+
+        <link rel="canonical" href={canonicalUrl} />
+
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Career Opportunities",
+              "description": "${seoDescription}",
+              "url": "${canonicalUrl}",
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://rabotanet.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Careers",
+                    "item": "${canonicalUrl}"
+                  }
+                ]
+              },
+              "mainEntity": {
+                "@type": "ItemList",
+                "name": "Job Openings",
+                "description": "Current career opportunities available",
+                "numberOfItems": 15,
+                "itemListOrder": "https://schema.org/ItemListOrderDescending"
+              }
+            }
+          `}
+        </script>
+
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Job Application Form",
+              "url": "${canonicalUrl}",
+              "applicationCategory": "JobApplication",
+              "browserRequirements": "Requires JavaScript. Requires HTML5.",
+              "operatingSystem": "Any",
+              "description": "Online job application form for submitting resumes and applying for positions",
+              "featureList": [
+                "File Upload",
+                "Form Validation",
+                "Progress Tracking"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+
       <section className="relative bg-primary text-white py-30">
         <div className="relative container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           <div className="flex-1 text-center md:text-left">

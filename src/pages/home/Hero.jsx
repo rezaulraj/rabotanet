@@ -70,7 +70,7 @@ export default function Hero() {
   const seoDescription =
     "Find top talent or your dream job with RabotaNet - your trusted recruitment partner. We connect employers with qualified candidates across industries.";
   const seoKeywords =
-    "recruitment agency, job placement, find employees, hire talent, staffing solutions, career opportunities, employment agency";
+    "recruitment agency, job placement, find employees, hire talent, staffing solutions, career opportunities, employment agency, recuritment agent Russia, recuritment agent Kazakhstan, recuritment agent Belarus, recuritment agent Kazakhstan, recuritment agent Tajikistan, recuritment agent Georgia,recuritment agent Armenia, recuritment agent Azerbaijan, recuritment agent Moldova, recuritment agent Turkmenistan, recuritment agent Uzbekistan";
   const canonicalUrl = "https://rabotanet.com";
   const siteName = "RabotaNet Recruitment Agency";
 

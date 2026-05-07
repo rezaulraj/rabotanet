@@ -3,10 +3,12 @@
     "home": "Главная",
     "employers": "Работодателям",
     "applicants": "Соискателям",
+    "service": "Услуги",
+    "blog": "Блог",
     "about": "О нас",
     "contact": "Связаться с нами",
     "language": "Язык",
-    "career": "Здравствуйте",
+    "career": "Карьера",
     "success": "Истории успеха"
   },
   "homepage": {

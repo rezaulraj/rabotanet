@@ -117,27 +117,101 @@ const countryCodes = {
   "Any Nationality": "UN",
 };
 
+// Nationality / demonym forms (e.g. "Indian", "Bangladeshi") mapped straight to
+// their flag code, so CandidatesOrigin can be stored either as a country name
+// ("India") or a nationality ("Indian") and still resolve to the right flag.
+const nationalityCodes = {
+  Indian: "IN",
+  Bangladeshi: "BD",
+  Pakistani: "PK",
+  Nepali: "NP",
+  Nepalese: "NP",
+  Sri_Lankan: "LK",
+  Bhutanese: "BT",
+  Afghan: "AF",
+  Filipino: "PH",
+  Filipina: "PH",
+  Indonesian: "ID",
+  Malaysian: "MY",
+  Vietnamese: "VN",
+  Thai: "TH",
+  Cambodian: "KH",
+  Burmese: "MM",
+  Chinese: "CN",
+  Mongolian: "MN",
+  Kazakh: "KZ",
+  Uzbek: "UZ",
+  Kyrgyz: "KG",
+  Tajik: "TJ",
+  Turkmen: "TM",
+  Egyptian: "EG",
+  Nigerian: "NG",
+  Kenyan: "KE",
+  Ghanaian: "GH",
+  Ethiopian: "ET",
+  Ugandan: "UG",
+  Moroccan: "MA",
+  Tunisian: "TN",
+  Jordanian: "JO",
+  Lebanese: "LB",
+  Syrian: "SY",
+  Iraqi: "IQ",
+  Iranian: "IR",
+  Turkish: "TR",
+  Romanian: "RO",
+  Serbian: "RS",
+  Ukrainian: "UA",
+  Russian: "RU",
+  American: "US",
+  Canadian: "CA",
+  Australian: "AU",
+  Brazilian: "BR",
+  Mexican: "MX",
+  South_African: "ZA",
+};
+
+// Resolve a country flag code from either a country name or a nationality
+// (demonym), falling back to a neutral "UN" flag if nothing matches.
+const getFlagCode = (label) => {
+  if (!label) return "UN";
+  const key = label.replace(/\s+/g, "_");
+  return (
+    countryCodes[label] || countryCodes[key] || nationalityCodes[key] || "UN"
+  );
+};
+
 const SharePopup = ({ job, onClose }) => {
   const shareUrl = typeof window !== "undefined" ? window.location.href : "";
   const shareText = `Check out this ${job.Title} position at ${job.Industry} in ${job.Country}`;
+  const [copied, setCopied] = useState(false);
 
   const shareLinks = {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-      shareUrl
+      shareUrl,
     )}`,
     twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-      shareText
+      shareText,
     )}&url=${encodeURIComponent(shareUrl)}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-      shareUrl
+      shareUrl,
     )}`,
     whatsapp: `https://wa.me/?text=${encodeURIComponent(
-      shareText + " " + shareUrl
+      shareText + " " + shareUrl,
     )}`,
   };
 
   const handleShare = (platform) => {
     window.open(shareLinks[platform], "_blank", "width=600,height=400");
+  };
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy link:", err);
+    }
   };
 
   return (
@@ -165,7 +239,7 @@ const SharePopup = ({ job, onClose }) => {
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-2 gap-4 mb-4">
           <button
             onClick={() => handleShare("facebook")}
             className="flex items-center justify-center p-3 bg-[#1877F2] text-white rounded-lg hover:bg-[#1664D9] transition-colors"
@@ -222,46 +296,71 @@ const SharePopup = ({ job, onClose }) => {
             WhatsApp
           </button>
         </div>
+
+        <div className="flex items-center gap-2 border-t border-gray-200 pt-4">
+          <input
+            type="text"
+            readOnly
+            value={shareUrl}
+            className="flex-1 min-w-0 px-3 py-2 text-sm text-gray-600 bg-gray-50 border border-gray-300 rounded-lg truncate"
+          />
+          <button
+            onClick={handleCopyLink}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-colors whitespace-nowrap ${
+              copied
+                ? "bg-green-500 text-white"
+                : "bg-[#db4f3c] text-white hover:bg-[#c94535]"
+            }`}
+          >
+            {copied ? (
+              <>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Copied
+              </>
+            ) : (
+              <>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 4h8a2 2 0 012 2v8a2 2 0 01-2 2h-8a2 2 0 01-2-2v-8a2 2 0 012-2z"
+                  />
+                </svg>
+                Copy Link
+              </>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-const ApplicationForm = ({ job, onClose, onSubmit }) => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    coverLetter: "",
-    cv: null,
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "cv") {
-      setFormData((prev) => ({ ...prev, cv: files[0] }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    onSubmit(formData);
-    setIsSubmitting(false);
-    onClose();
-  };
+const ApplicationForm = ({ job, onClose }) => {
+  const [applicantType, setApplicantType] = useState("candidate");
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center mb-4">
           <div>
             <h3 className="text-2xl font-bold text-gray-800">
               Apply for {job.Title}
@@ -290,169 +389,336 @@ const ApplicationForm = ({ job, onClose, onSubmit }) => {
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Applicant type tabs */}
+        <div className="flex bg-gray-100 rounded-xl p-1 mb-6">
+          <button
+            type="button"
+            onClick={() => setApplicantType("candidate")}
+            className={`flex-1 py-2.5 rounded-lg font-medium transition-all ${
+              applicantType === "candidate"
+                ? "bg-[#db4f3c] text-white shadow-md"
+                : "text-gray-600 hover:text-gray-900"
+            }`}
+          >
+            Candidate Apply
+          </button>
+          <button
+            type="button"
+            onClick={() => setApplicantType("agent")}
+            className={`flex-1 py-2.5 rounded-lg font-medium transition-all ${
+              applicantType === "agent"
+                ? "bg-[#db4f3c] text-white shadow-md"
+                : "text-gray-600 hover:text-gray-900"
+            }`}
+          >
+            Agent Apply
+          </button>
+        </div>
+
+        {applicantType === "candidate" ? (
+          <form
+            action="https://formsubmit.co/c1d43152b428ec51129c2dd47b1799b0"
+            method="POST"
+            encType="multipart/form-data"
+            className="space-y-6"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  name="Full Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  name="Email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  name="Phone"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Job Subject
+                </label>
+                <input
+                  type="text"
+                  value={job.Title}
+                  disabled
+                  className="w-full px-4 py-3 border border-gray-300 bg-gray-100 rounded-lg text-gray-600 cursor-not-allowed"
+                />
+              </div>
+            </div>
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Full Name *
+                Cover Letter *
               </label>
-              <input
-                type="text"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleChange}
+              <textarea
+                name="Cover Letter"
                 required
+                rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter your full name"
+                placeholder="Tell us why you're interested in this position..."
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email Address *
+                Upload CV/Resume *
               </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter your email"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number *
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter your phone number"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Job Subject
-              </label>
-              <input
-                type="text"
-                value={job.Title}
-                disabled
-                className="w-full px-4 py-3 border border-gray-300 bg-gray-100 rounded-lg text-gray-600 cursor-not-allowed"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Cover Letter *
-            </label>
-            <textarea
-              name="coverLetter"
-              value={formData.coverLetter}
-              onChange={handleChange}
-              required
-              rows={4}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-              placeholder="Tell us why you're interested in this position..."
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Upload CV/Resume *
-            </label>
-            <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center transition-colors hover:border-[#db4f3c]">
-              <input
-                type="file"
-                name="cv"
-                onChange={handleChange}
-                required
-                accept=".pdf,.doc,.docx"
-                className="hidden"
-                id="cv-upload"
-              />
-              <label htmlFor="cv-upload" className="cursor-pointer">
-                <svg
-                  className="w-12 h-12 mx-auto text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                  />
-                </svg>
-                <p className="mt-2 text-sm text-gray-600">
-                  <span className="font-medium text-[#db4f3c]">
-                    Click to upload
-                  </span>{" "}
-                  or drag and drop
-                </p>
-                <p className="text-xs text-gray-500">
-                  PDF, DOC, DOCX up to 10MB
-                </p>
-              </label>
-            </div>
-            {formData.cv && (
-              <p className="mt-2 text-sm text-green-600">
-                Selected: {formData.cv.name}
-              </p>
-            )}
-          </div>
-
-          <div className="flex gap-4 pt-4">
-            <button
-              type="button"
-              onClick={onClose}
-              className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="flex-1 px-6 py-3 bg-[#db4f3c] text-white rounded-lg hover:bg-[#c94535] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center"
-            >
-              {isSubmitting ? (
-                <>
+              <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center transition-colors hover:border-[#db4f3c]">
+                <input
+                  type="file"
+                  name="CV"
+                  required
+                  accept=".pdf,.doc,.docx"
+                  className="hidden"
+                  id="cv-upload"
+                />
+                <label htmlFor="cv-upload" className="cursor-pointer">
                   <svg
-                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    className="w-12 h-12 mx-auto text-gray-400"
                     fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
                     <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    ></path>
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                    />
                   </svg>
-                  Submitting...
-                </>
-              ) : (
-                "Submit Application"
-              )}
-            </button>
-          </div>
-        </form>
+                  <p className="mt-2 text-sm text-gray-600">
+                    <span className="font-medium text-[#db4f3c]">
+                      Click to upload
+                    </span>{" "}
+                    or drag and drop
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    PDF, DOC, DOCX up to 10MB
+                  </p>
+                </label>
+              </div>
+            </div>
+
+            <input type="hidden" name="Job Subject" value={job.Title} />
+            <input type="hidden" name="Country" value={job.Country} />
+            <input type="hidden" name="Applicant Type" value="Candidate" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_subject"
+              value={`New Candidate Application - ${job.Title}`}
+            />
+            <input type="hidden" name="_next" value="https://rabotanet.com" />
+
+            <div className="flex gap-4 pt-4">
+              <button
+                type="button"
+                onClick={onClose}
+                className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="flex-1 px-6 py-3 bg-[#db4f3c] text-white rounded-lg hover:bg-[#c94535] transition-colors"
+              >
+                Submit Application
+              </button>
+            </div>
+          </form>
+        ) : (
+          <form
+            action="https://formsubmit.co/c1d43152b428ec51129c2dd47b1799b0"
+            method="POST"
+            className="space-y-6"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Agency Name *
+                </label>
+                <input
+                  type="text"
+                  name="Agency Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter your agency name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Candidate's Name *
+                </label>
+                <input
+                  type="text"
+                  name="Candidate Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Candidate's full name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Passport Number *
+                </label>
+                <input
+                  type="text"
+                  name="Passport Number"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter passport number"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Date of Birth *
+                </label>
+                <input
+                  type="date"
+                  name="Date of Birth"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Father's Name *
+                </label>
+                <input
+                  type="text"
+                  name="Father Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter father's name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Mother's Name *
+                </label>
+                <input
+                  type="text"
+                  name="Mother Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter mother's name"
+                />
+              </div>
+
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Location (as per passport) *
+                </label>
+                <input
+                  type="text"
+                  name="Location"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter location as shown on passport"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  name="Phone"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter phone number"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  name="Email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter email address"
+                />
+              </div>
+
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Job Subject
+                </label>
+                <input
+                  type="text"
+                  value={job.Title}
+                  disabled
+                  className="w-full px-4 py-3 border border-gray-300 bg-gray-100 rounded-lg text-gray-600 cursor-not-allowed"
+                />
+              </div>
+            </div>
+
+            <input type="hidden" name="Job Subject" value={job.Title} />
+            <input type="hidden" name="Country" value={job.Country} />
+            <input type="hidden" name="Applicant Type" value="Agent" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_subject"
+              value={`New Agent Application - ${job.Title}`}
+            />
+            <input type="hidden" name="_next" value="https://rabotanet.com" />
+
+            <div className="flex gap-4 pt-4">
+              <button
+                type="button"
+                onClick={onClose}
+                className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="flex-1 px-6 py-3 bg-[#db4f3c] text-white rounded-lg hover:bg-[#c94535] transition-colors"
+              >
+                Submit Application
+              </button>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );
@@ -496,7 +762,7 @@ const JobCard = ({ job, onApply, onShare }) => {
           <div className="flex items-center gap-3 mb-2">
             <div className="flex items-center gap-2">
               <ReactCountryFlag
-                countryCode={countryCodes[job.Country]}
+                countryCode={getFlagCode(job.Country)}
                 svg
                 style={{ width: "24px", height: "24px" }}
                 title={job.Country}
@@ -523,7 +789,7 @@ const JobCard = ({ job, onApply, onShare }) => {
 
       <div className="flex items-center gap-2 mb-4 p-3 bg-gray-50 rounded-lg">
         <ReactCountryFlag
-          countryCode={countryCodes[job.CandidatesOrigin] || "UN"}
+          countryCode={getFlagCode(job.CandidatesOrigin)}
           svg
           style={{ width: "20px", height: "20px" }}
           title={job.CandidatesOrigin}
@@ -722,7 +988,7 @@ const JobPage = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          "https://script.google.com/macros/s/AKfycbxSihU_-lx49-gr1h4oe6w1H621Nxy2QHfMEx87gGGQKzfvwyQ3V3TMOxx9ypsR_JFdow/exec?site=Divine_Group"
+          "https://script.google.com/macros/s/AKfycbxSihU_-lx49-gr1h4oe6w1H621Nxy2QHfMEx87gGGQKzfvwyQ3V3TMOxx9ypsR_JFdow/exec?site=Divine_Group",
         );
         const data = await response.json();
         setJobs(data);
@@ -799,11 +1065,6 @@ const JobPage = () => {
   const handleShare = (job) => {
     setSelectedJob(job);
     setShowSharePopup(true);
-  };
-
-  const handleApplicationSubmit = (formData) => {
-    console.log("Application submitted:", { job: selectedJob, formData });
-    alert("Application submitted successfully!");
   };
 
   const displayedJobs = filteredJobs.slice(0, visibleJobs);
@@ -921,7 +1182,6 @@ const JobPage = () => {
           <ApplicationForm
             job={selectedJob}
             onClose={() => setShowApplicationForm(false)}
-            onSubmit={handleApplicationSubmit}
           />
         )}
       </div>

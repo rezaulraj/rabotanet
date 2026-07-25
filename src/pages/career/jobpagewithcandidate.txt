@@ -355,13 +355,15 @@ const SharePopup = ({ job, onClose }) => {
 };
 
 const ApplicationForm = ({ job, onClose }) => {
+  const [applicantType, setApplicantType] = useState("candidate");
+
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center mb-4">
           <div>
             <h3 className="text-2xl font-bold text-gray-800">
-              Agent Apply — {job.Title}
+              Apply for {job.Title}
             </h3>
             <p className="text-gray-600 mt-1">
               {job.Industry} • {job.Country}
@@ -387,209 +389,336 @@ const ApplicationForm = ({ job, onClose }) => {
           </button>
         </div>
 
-        <form
-          action="https://formsubmit.co/c1d43152b428ec51129c2dd47b1799b0"
-          method="POST"
-          encType="multipart/form-data"
-          className="space-y-6"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="md:col-span-2">
+        {/* Applicant type tabs */}
+        <div className="flex bg-gray-100 rounded-xl p-1 mb-6">
+          <button
+            type="button"
+            onClick={() => setApplicantType("candidate")}
+            className={`flex-1 py-2.5 rounded-lg font-medium transition-all ${
+              applicantType === "candidate"
+                ? "bg-[#db4f3c] text-white shadow-md"
+                : "text-gray-600 hover:text-gray-900"
+            }`}
+          >
+            Candidate Apply
+          </button>
+          <button
+            type="button"
+            onClick={() => setApplicantType("agent")}
+            className={`flex-1 py-2.5 rounded-lg font-medium transition-all ${
+              applicantType === "agent"
+                ? "bg-[#db4f3c] text-white shadow-md"
+                : "text-gray-600 hover:text-gray-900"
+            }`}
+          >
+            Agent Apply
+          </button>
+        </div>
+
+        {applicantType === "candidate" ? (
+          <form
+            action="https://formsubmit.co/c1d43152b428ec51129c2dd47b1799b0"
+            method="POST"
+            encType="multipart/form-data"
+            className="space-y-6"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  name="Full Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  name="Email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  name="Phone"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Job Subject
+                </label>
+                <input
+                  type="text"
+                  value={job.Title}
+                  disabled
+                  className="w-full px-4 py-3 border border-gray-300 bg-gray-100 rounded-lg text-gray-600 cursor-not-allowed"
+                />
+              </div>
+            </div>
+
+            <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Agency Name *
+                Cover Letter *
               </label>
-              <input
-                type="text"
-                name="Agency Name"
+              <textarea
+                name="Cover Letter"
                 required
+                rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter your agency name"
+                placeholder="Tell us why you're interested in this position..."
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Candidate's Name *
+                Upload CV/Resume *
               </label>
-              <input
-                type="text"
-                name="Candidate Name"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Candidate's full name"
-              />
+              <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center transition-colors hover:border-[#db4f3c]">
+                <input
+                  type="file"
+                  name="CV"
+                  required
+                  accept=".pdf,.doc,.docx"
+                  className="hidden"
+                  id="cv-upload"
+                />
+                <label htmlFor="cv-upload" className="cursor-pointer">
+                  <svg
+                    className="w-12 h-12 mx-auto text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                    />
+                  </svg>
+                  <p className="mt-2 text-sm text-gray-600">
+                    <span className="font-medium text-[#db4f3c]">
+                      Click to upload
+                    </span>{" "}
+                    or drag and drop
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    PDF, DOC, DOCX up to 10MB
+                  </p>
+                </label>
+              </div>
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Passport Number *
-              </label>
-              <input
-                type="text"
-                name="Passport Number"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter passport number"
-              />
+            <input type="hidden" name="Job Subject" value={job.Title} />
+            <input type="hidden" name="Country" value={job.Country} />
+            <input type="hidden" name="Applicant Type" value="Candidate" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_subject"
+              value={`New Candidate Application - ${job.Title}`}
+            />
+            <input type="hidden" name="_next" value="https://rabotanet.com" />
+
+            <div className="flex gap-4 pt-4">
+              <button
+                type="button"
+                onClick={onClose}
+                className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="flex-1 px-6 py-3 bg-[#db4f3c] text-white rounded-lg hover:bg-[#c94535] transition-colors"
+              >
+                Submit Application
+              </button>
+            </div>
+          </form>
+        ) : (
+          <form
+            action="https://formsubmit.co/c1d43152b428ec51129c2dd47b1799b0"
+            method="POST"
+            className="space-y-6"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Agency Name *
+                </label>
+                <input
+                  type="text"
+                  name="Agency Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter your agency name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Candidate's Name *
+                </label>
+                <input
+                  type="text"
+                  name="Candidate Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Candidate's full name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Passport Number *
+                </label>
+                <input
+                  type="text"
+                  name="Passport Number"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter passport number"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Date of Birth *
+                </label>
+                <input
+                  type="date"
+                  name="Date of Birth"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Father's Name *
+                </label>
+                <input
+                  type="text"
+                  name="Father Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter father's name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Mother's Name *
+                </label>
+                <input
+                  type="text"
+                  name="Mother Name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter mother's name"
+                />
+              </div>
+
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Location (as per passport) *
+                </label>
+                <input
+                  type="text"
+                  name="Location"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter location as shown on passport"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  name="Phone"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter phone number"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  name="Email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
+                  placeholder="Enter email address"
+                />
+              </div>
+
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Job Subject
+                </label>
+                <input
+                  type="text"
+                  value={job.Title}
+                  disabled
+                  className="w-full px-4 py-3 border border-gray-300 bg-gray-100 rounded-lg text-gray-600 cursor-not-allowed"
+                />
+              </div>
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Date of Birth *
-              </label>
-              <input
-                type="date"
-                name="Date of Birth"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-              />
+            <input type="hidden" name="Job Subject" value={job.Title} />
+            <input type="hidden" name="Country" value={job.Country} />
+            <input type="hidden" name="Applicant Type" value="Agent" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_subject"
+              value={`New Agent Application - ${job.Title}`}
+            />
+            <input type="hidden" name="_next" value="https://rabotanet.com" />
+
+            <div className="flex gap-4 pt-4">
+              <button
+                type="button"
+                onClick={onClose}
+                className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="flex-1 px-6 py-3 bg-[#db4f3c] text-white rounded-lg hover:bg-[#c94535] transition-colors"
+              >
+                Submit Application
+              </button>
             </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Father's Name *
-              </label>
-              <input
-                type="text"
-                name="Father Name"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter father's name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Mother's Name *
-              </label>
-              <input
-                type="text"
-                name="Mother Name"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter mother's name"
-              />
-            </div>
-
-            <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Location (as per passport) *
-              </label>
-              <input
-                type="text"
-                name="Location"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter location as shown on passport"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number *
-              </label>
-              <input
-                type="tel"
-                name="Phone"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter phone number"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email Address *
-              </label>
-              <input
-                type="email"
-                name="Email"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#db4f3c] focus:border-transparent transition-all"
-                placeholder="Enter email address"
-              />
-            </div>
-
-            <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Job Subject
-              </label>
-              <input
-                type="text"
-                value={job.Title}
-                disabled
-                className="w-full px-4 py-3 border border-gray-300 bg-gray-100 rounded-lg text-gray-600 cursor-not-allowed"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Upload CV/Resume *
-            </label>
-            <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center transition-colors hover:border-[#db4f3c]">
-              <input
-                type="file"
-                name="CV"
-                required
-                accept=".pdf,.doc,.docx"
-                className="hidden"
-                id="cv-upload"
-              />
-              <label htmlFor="cv-upload" className="cursor-pointer">
-                <svg
-                  className="w-12 h-12 mx-auto text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                  />
-                </svg>
-                <p className="mt-2 text-sm text-gray-600">
-                  <span className="font-medium text-[#db4f3c]">
-                    Click to upload
-                  </span>{" "}
-                  or drag and drop
-                </p>
-                <p className="text-xs text-gray-500">
-                  PDF, DOC, DOCX up to 10MB
-                </p>
-              </label>
-            </div>
-          </div>
-
-          <input type="hidden" name="Job Subject" value={job.Title} />
-          <input type="hidden" name="Country" value={job.Country} />
-          <input type="hidden" name="Applicant Type" value="Agent" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="hidden"
-            name="_subject"
-            value={`New Agent Application - ${job.Title}`}
-          />
-          <input type="hidden" name="_next" value="https://rabotanet.com" />
-
-          <div className="flex gap-4 pt-4">
-            <button
-              type="button"
-              onClick={onClose}
-              className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="flex-1 px-6 py-3 bg-[#db4f3c] text-white rounded-lg hover:bg-[#c94535] transition-colors"
-            >
-              Submit Application
-            </button>
-          </div>
-        </form>
+          </form>
+        )}
       </div>
     </div>
   );
